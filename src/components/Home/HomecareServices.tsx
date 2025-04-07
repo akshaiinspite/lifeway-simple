@@ -74,9 +74,15 @@ const HomecareServices = () => {
               </div>
             </div>
             
-            <Link to="/contact" className="btn-primary">
-              Request Home Services
-            </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/home-services" className="btn-primary">
+                Explore Home Services
+              </Link>
+              
+              <Link to="/appointments" className="btn-secondary">
+                Request Home Services
+              </Link>
+            </div>
           </div>
         </div>
       </div>
