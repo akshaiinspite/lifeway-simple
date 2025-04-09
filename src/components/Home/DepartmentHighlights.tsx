@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { MouseEvent, useRef, useState } from "react";
+import { MouseEvent, useRef, useState, useEffect } from "react";
 import { 
   ActivitySquare, 
   Activity, 
@@ -60,13 +60,43 @@ const DepartmentHighlights = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [autoScrollPaused, setAutoScrollPaused] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    let autoScrollInterval: NodeJS.Timeout;
+    
+    const startAutoScroll = () => {
+      if (!autoScrollPaused && sliderRef.current) {
+        autoScrollInterval = setInterval(() => {
+          if (sliderRef.current) {
+            // Check if we're near the end, if so, return to beginning
+            const isAtEnd = sliderRef.current.scrollLeft + sliderRef.current.clientWidth >= sliderRef.current.scrollWidth - 20;
+            
+            if (isAtEnd) {
+              sliderRef.current.scrollLeft = 0;
+            } else {
+              sliderRef.current.scrollLeft += 340; // Adjust this value based on card width + gap
+            }
+          }
+        }, 4000); // Change slides every 4 seconds
+      }
+    };
+
+    startAutoScroll();
+
+    return () => {
+      clearInterval(autoScrollInterval);
+    };
+  }, [autoScrollPaused]);
 
   const handleMouseDown = (e: MouseEvent) => {
     if (!sliderRef.current) return;
     setIsDragging(true);
     setStartX(e.pageX - sliderRef.current.offsetLeft);
     setScrollLeft(sliderRef.current.scrollLeft);
+    setAutoScrollPaused(true); // Pause auto-scroll when user interacts
   };
 
   const handleMouseMove = (e: MouseEvent) => {
@@ -79,6 +109,21 @@ const DepartmentHighlights = () => {
 
   const stopDragging = () => {
     setIsDragging(false);
+    // Resume auto-scroll after 5 seconds of user inactivity
+    setTimeout(() => {
+      setAutoScrollPaused(false);
+    }, 5000);
+  };
+
+  const handleTouchStart = () => {
+    setAutoScrollPaused(true); // Pause auto-scroll on touch
+  };
+
+  const handleTouchEnd = () => {
+    // Resume auto-scroll after 5 seconds of user inactivity
+    setTimeout(() => {
+      setAutoScrollPaused(false);
+    }, 5000);
   };
 
   return (
@@ -104,7 +149,9 @@ const DepartmentHighlights = () => {
             onMouseUp={stopDragging}
             onMouseLeave={stopDragging}
             onMouseMove={handleMouseMove}
-            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            style={{ cursor: isDragging ? 'grabbing' : 'grab', scrollBehavior: 'smooth' }}
           >
             {departments.map((dept) => (
               <div 
