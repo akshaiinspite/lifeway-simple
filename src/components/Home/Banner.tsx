@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Brain, Child, Heart, MessageSquare, Users } from "lucide-react";
+import { Brain, Baby, Heart, MessageSquare, Users } from "lucide-react";
 
 const Banner = () => {
   return (
@@ -36,7 +36,7 @@ const Banner = () => {
               <Brain size={18} className="text-lifeway-red" /> <span>Physical</span>
             </div>
             <div className="flex items-center gap-1">
-              <Child size={18} className="text-lifeway-red" /> <span>Pediatric</span>
+              <Baby size={18} className="text-lifeway-red" /> <span>Pediatric</span>
             </div>
             <div className="flex items-center gap-1">
               <Users size={18} className="text-lifeway-red" /> <span>Occupational</span>
