@@ -1,9 +1,10 @@
 
 import { Link } from "react-router-dom";
+import { Brain, Child, Heart, MessageSquare, Users } from "lucide-react";
 
 const Banner = () => {
   return (
-    <section className="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0"
@@ -16,22 +17,57 @@ const Banner = () => {
       />
       
       {/* Content */}
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-10 py-16 md:py-24">
         <div className="max-w-2xl text-white">
-          <h1 className="heading-xl mb-6 animate-fade-in">
-            The Reason for Your <span className="text-lifeway-red">Smile!</span>
+          <h1 className="heading-xl mb-2 animate-fade-in">
+            <span className="text-lifeway-red">🌿</span> Lifeway Rehabilitation and Child Development
           </h1>
-          <p className="text-xl mb-8 animate-fade-in" style={{animationDelay: '0.2s'}}>
-            At Lifeway, we provide exceptional rehabilitation and developmental services 
-            tailored to help your child reach their full potential.
+          <h2 className="text-2xl mb-6 font-serif animate-fade-in" style={{animationDelay: '0.1s'}}>
+            Healing. Growing. Thriving.
+          </h2>
+          <p className="text-lg mb-6 animate-fade-in" style={{animationDelay: '0.2s'}}>
+            At Lifeway, we believe in whole-person care that transforms lives. Our expert team provides 
+            compassionate, evidence-based rehabilitation and developmental support for both adults and children. 
+            Whether it's recovering from injury or empowering a child's growth, we're with you every step of the way.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: '0.4s'}}>
+          
+          <div className="flex flex-wrap gap-4 mb-6 animate-fade-in" style={{animationDelay: '0.3s'}}>
+            <div className="flex items-center gap-1">
+              <Brain size={18} className="text-lifeway-red" /> <span>Physical</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Child size={18} className="text-lifeway-red" /> <span>Pediatric</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Users size={18} className="text-lifeway-red" /> <span>Occupational</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <MessageSquare size={18} className="text-lifeway-red" /> <span>Speech & Language</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Heart size={18} className="text-lifeway-red" /> <span>Emotional Wellness</span>
+            </div>
+          </div>
+          
+          <p className="text-lg mb-2 animate-fade-in" style={{animationDelay: '0.4s'}}>
+            Experience care that's as unique as you are.
+          </p>
+          <p className="text-lg mb-8 animate-fade-in italic" style={{animationDelay: '0.5s'}}>
+            Let's walk the Lifeway—together.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: '0.6s'}}>
             <Link to="/departments" className="btn-primary">
               Explore Our Services
             </Link>
             <Link to="/contact" className="btn-secondary text-lifeway-black">
               Book Appointment
             </Link>
+          </div>
+          
+          <div className="mt-8 text-sm text-gray-300 animate-fade-in" style={{animationDelay: '0.7s'}}>
+            <p>📍 LifeWay Rehabilitation and Child Development Centre, Alangaden Arcade, Calicut Road, Near nursing home, Perinthalmanna, Kerala 679322</p>
+            <p>📞 [Your Contact Info] 🌐 [Website]</p>
           </div>
         </div>
       </div>
