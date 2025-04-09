@@ -11,30 +11,35 @@ const Introduction = () => {
               <span className="text-lifeway-red font-medium uppercase tracking-widest text-sm">About Us</span>
             </div>
             <h2 className="heading-lg mb-6">
-              Welcome to Lifeway Rehabilitation & Child Development Hospital
+              Welcome to Lifeway Rehabilitation and Child Development
             </h2>
             <p className="mb-6 text-gray-700">
-              Founded in 2010, Lifeway is committed to providing exceptional care for children 
-              with developmental challenges. Our expert team uses evidence-based approaches to 
-              create personalized treatment plans that help children reach their milestones and thrive.
+              At Lifeway, we are dedicated to providing holistic, patient-centered rehabilitation 
+              services for individuals of all ages. Our mission is to empower both adults and children 
+              on their journey to recovery, growth, and improved well-being.
             </p>
             <div className="mb-8 border-l-4 border-lifeway-red pl-4 italic text-gray-600">
-              We believe every child deserves the opportunity to develop to their fullest potential, 
-              and we're here to support them every step of the way.
+              With a compassionate, multidisciplinary team of specialists, we offer tailored care that 
+              integrates the latest therapeutic technologies and evidence-based practices. Whether 
+              supporting a child's developmental milestones or guiding an adult through physical or 
+              neurological rehabilitation, we focus on the whole person—mind, body, and spirit.
             </div>
+            <p className="mb-8 text-gray-700">
+              At Lifeway, we don't just treat conditions—we nurture potential, restore hope, and enhance lives.
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               <div>
                 <h4 className="font-bold mb-3 text-xl">Our Mission</h4>
                 <p className="text-gray-700">
-                  To provide compassionate, comprehensive rehabilitation services that empower children 
-                  and support families on their journey to independence.
+                  To provide compassionate, comprehensive rehabilitation services that empower 
+                  individuals and support families on their journey to independence.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold mb-3 text-xl">Our Vision</h4>
                 <p className="text-gray-700">
-                  To be the leading rehabilitation center, recognized for excellence in child-centered 
-                  care and innovative treatments.
+                  To be the leading rehabilitation center, recognized for excellence in 
+                  patient-centered care and innovative treatments.
                 </p>
               </div>
             </div>
