@@ -1,14 +1,22 @@
 
 import { Link } from "react-router-dom";
 import { MouseEvent, useRef, useState } from "react";
-import { Yoga, Activity, MessageCircle, Sparkles, Dumbbell, Stethoscope, Users } from "lucide-react";
+import { 
+  ActivitySquare, 
+  Activity, 
+  MessageCircle, 
+  Sparkles, 
+  Dumbbell, 
+  Stethoscope, 
+  Users 
+} from "lucide-react";
 
 const departments = [
   {
     id: 1,
     name: "Occupational Therapy",
     description: "Helping individuals build independence in everyday tasks through personalized strategies that enhance motor skills, coordination, and self-care abilities.",
-    icon: <Yoga className="h-10 w-10 text-lifeway-red" />,
+    icon: <ActivitySquare className="h-10 w-10 text-lifeway-red" />,
   },
   {
     id: 2,
