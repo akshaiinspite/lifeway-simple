@@ -1,49 +1,50 @@
 
 import { Link } from "react-router-dom";
 import { MouseEvent, useRef, useState } from "react";
+import { Yoga, Activity, MessageCircle, Sparkles, Dumbbell, Stethoscope, Users } from "lucide-react";
 
 const departments = [
   {
     id: 1,
     name: "Occupational Therapy",
-    description: "Helping children develop the skills needed for daily activities and independent living.",
-    icon: "https://images.unsplash.com/photo-1571172964276-91faaa704e1f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Helping individuals build independence in everyday tasks through personalized strategies that enhance motor skills, coordination, and self-care abilities.",
+    icon: <Yoga className="h-10 w-10 text-lifeway-red" />,
   },
   {
     id: 2,
     name: "Physiotherapy",
-    description: "Improving movement, strength, and physical function through specialized exercises.",
-    icon: "https://images.unsplash.com/photo-1570691079236-4bca6c45a9a6?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Focused on restoring movement, strength, and physical function—our physiotherapists use advanced techniques to support recovery from injury, surgery, or chronic conditions.",
+    icon: <Activity className="h-10 w-10 text-lifeway-red" />,
   },
   {
     id: 3,
     name: "Speech Therapy",
-    description: "Enhancing communication skills and addressing speech and language disorders.",
-    icon: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Supporting communication and swallowing challenges, our speech-language therapists work with both children and adults to improve speech clarity, language development, and social interaction.",
+    icon: <MessageCircle className="h-10 w-10 text-lifeway-red" />,
   },
   {
     id: 4,
-    name: "Special Education",
-    description: "Customized educational strategies to support diverse learning needs.",
-    icon: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Special Therapy",
+    description: "Tailored interventions for children with special needs—combining behavioral therapy, sensory integration, and developmental support to unlock each child's full potential.",
+    icon: <Sparkles className="h-10 w-10 text-lifeway-red" />,
   },
   {
     id: 5,
     name: "Kinesiology",
-    description: "Scientific study of movement focusing on prevention and rehabilitation.",
-    icon: "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=2526&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Using the science of human movement, our kinesiologists design exercise programs to enhance strength, flexibility, posture, and overall physical health.",
+    icon: <Dumbbell className="h-10 w-10 text-lifeway-red" />,
   },
   {
     id: 6,
-    name: "Clinical Psychology",
-    description: "Supporting mental health and emotional well-being through evidence-based therapy.",
-    icon: "https://images.unsplash.com/photo-1590650213165-c1fef80648c7?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Clinical Services",
+    description: "Providing medical oversight and diagnostic support, our clinical team ensures holistic and coordinated care across all therapeutic services.",
+    icon: <Stethoscope className="h-10 w-10 text-lifeway-red" />,
   },
   {
     id: 7,
-    name: "Parent Spring",
-    description: "Coaching and support services designed specifically for parents and caregivers.",
-    icon: "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Parent & Family Support",
+    description: "Empowering families with guidance, training, and emotional support to be active partners in their loved one's care and progress—because healing is a team effort.",
+    icon: <Users className="h-10 w-10 text-lifeway-red" />,
   },
 ];
 
@@ -78,11 +79,12 @@ const DepartmentHighlights = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-lifeway-red font-medium uppercase tracking-widest text-sm">Our Specialties</span>
           <h2 className="heading-lg mt-3 mb-6">
-            Specialized Departments for Comprehensive Care
+            🌟 Department Highlights<br/>
+            <span className="text-2xl font-normal">Empowering Every Step of the Journey</span>
           </h2>
           <p className="text-gray-700">
-            Our multidisciplinary approach ensures that every child receives the specific care and support
-            they need to develop, learn, and thrive in all areas of their life.
+            Our multidisciplinary approach ensures that every individual receives the specific care and support
+            they need to develop, heal, and thrive in all areas of their life.
           </p>
         </div>
 
@@ -101,19 +103,15 @@ const DepartmentHighlights = () => {
                 key={dept.id}
                 className="min-w-[280px] w-[280px] sm:min-w-[320px] sm:w-[320px] bg-white rounded-lg shadow-lg overflow-hidden flex flex-col snap-start shrink-0 transition-transform hover:translate-y-[-5px]"
               >
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src={dept.icon} 
-                    alt={dept.name} 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold mb-2">{dept.name}</h3>
-                  <p className="text-gray-700 mb-4 flex-grow">{dept.description}</p>
+                  <div className="flex justify-center mb-4">
+                    {dept.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-center">{dept.name}</h3>
+                  <p className="text-gray-700 mb-4 flex-grow text-center">{dept.description}</p>
                   <Link 
                     to={`/departments#${dept.name.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-lifeway-red font-medium hover:underline flex items-center"
+                    className="text-lifeway-red font-medium hover:underline flex items-center justify-center"
                   >
                     Learn More
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
