@@ -7,23 +7,23 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
 
-    --card: 0 0% 0%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
 
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 200 54% 98%;
-    --primary-foreground: 210 89% 31%;
+    --primary: 210 89% 31%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 89% 31%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 200 54% 98%;
+    --secondary-foreground: 210 89% 31%;
 
-    --muted: 210 40% 13%;
-    --muted-foreground: 215.4 16.3% 56.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
     --accent: 173 48% 40%;
     --accent-foreground: 0 0% 100%;
@@ -31,9 +31,9 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 21.4%;
-    --input: 214.3 31.8% 21.4%;
-    --ring: 200 54% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 89% 31%;
 
     --radius: 0.5rem;
   }
@@ -80,19 +80,19 @@
     @apply bg-lifeway-blue text-white py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-blue-700 transition-colors shadow-soft font-medium text-sm md:text-base;
   }
   .btn-secondary {
-    @apply bg-black text-lifeway-blue border border-lifeway-grey py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-gray-900 transition-colors shadow-soft font-medium text-sm md:text-base;
+    @apply bg-white text-lifeway-blue border border-lifeway-grey py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-gray-50 transition-colors shadow-soft font-medium text-sm md:text-base;
   }
   .section-padding {
     @apply py-16 md:py-24;
   }
   .card-modern {
-    @apply bg-black rounded-lg overflow-hidden shadow-card border border-gray-800 hover:shadow-elevated transition-shadow;
+    @apply bg-white rounded-lg overflow-hidden shadow-card border border-gray-100 hover:shadow-elevated transition-shadow;
   }
   .link-hover {
     @apply relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-lifeway-blue after:scale-x-0 after:origin-right after:transition-transform hover:after:scale-x-100 hover:after:origin-left;
   }
   .gradient-overlay {
-    @apply relative before:absolute before:inset-0 before:bg-gradient-to-t before:from-white/70 before:to-transparent before:z-0;
+    @apply relative before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/70 before:to-transparent before:z-0;
   }
   /* Hide scrollbar for carousel components while maintaining functionality */
   .hide-scrollbar {

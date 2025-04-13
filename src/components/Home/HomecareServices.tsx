@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HomecareServices = () => {
   return (
-    <section className="py-16 md:py-24 bg-black">
+    <section className="py-16 md:py-24 bg-white">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
@@ -21,10 +21,10 @@ const HomecareServices = () => {
             <div className="mb-4">
               <span className="text-lifeway-red font-medium uppercase tracking-widest text-sm">Homecare Services</span>
             </div>
-            <h2 className="heading-lg mb-6 text-white">
+            <h2 className="heading-lg mb-6">
               Bringing Expert Care to Your Home
             </h2>
-            <p className="mb-6 text-gray-300">
+            <p className="mb-6 text-gray-700">
               We understand that some children thrive best in familiar environments. Our homecare services 
               bring our expert therapists to your home, ensuring your child receives consistent care in 
               a comfortable setting.
@@ -38,8 +38,8 @@ const HomecareServices = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold mb-1 text-white">Personalized Home Environment</h4>
-                  <p className="text-gray-300">
+                  <h4 className="font-bold mb-1">Personalized Home Environment</h4>
+                  <p className="text-gray-700">
                     Therapy in the comfort of your home, using your own environment and routines as part of treatment.
                   </p>
                 </div>
@@ -52,8 +52,8 @@ const HomecareServices = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold mb-1 text-white">Parent Training</h4>
-                  <p className="text-gray-300">
+                  <h4 className="font-bold mb-1">Parent Training</h4>
+                  <p className="text-gray-700">
                     We coach parents on techniques to continue therapeutic activities between sessions.
                   </p>
                 </div>
@@ -66,8 +66,8 @@ const HomecareServices = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold mb-1 text-white">Flexible Scheduling</h4>
-                  <p className="text-gray-300">
+                  <h4 className="font-bold mb-1">Flexible Scheduling</h4>
+                  <p className="text-gray-700">
                     Appointments that work around your family's schedule for minimal disruption.
                   </p>
                 </div>
