@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -77,10 +76,10 @@
     @apply text-lg sm:text-xl md:text-2xl font-serif;
   }
   .btn-primary {
-    @apply bg-lifeway-red text-white py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-red-600 transition-colors font-medium text-sm md:text-base;
+    @apply bg-lifeway-red text-white py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-[#C6161E] transition-colors font-medium text-sm md:text-base;
   }
   .btn-secondary {
-    @apply bg-white text-lifeway-black border border-lifeway-grey py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-gray-50 transition-colors font-medium text-sm md:text-base;
+    @apply bg-white text-lifeway-red border border-lifeway-red py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-lifeway-red/10 transition-colors font-medium text-sm md:text-base;
   }
   /* Hide scrollbar for carousel components while maintaining functionality */
   .hide-scrollbar {
