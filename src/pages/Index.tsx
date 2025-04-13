@@ -10,16 +10,18 @@ import Footer from "@/components/Layout/Footer";
 
 const Index = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <Banner />
-      <Introduction />
-      <DepartmentHighlights />
-      <HomeCareServiceTeaser />
-      <HomecareServices />
-      <Testimonials />
+      <main className="flex-grow">
+        <Banner />
+        <Introduction />
+        <DepartmentHighlights />
+        <HomeCareServiceTeaser />
+        <HomecareServices />
+        <Testimonials />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -53,6 +53,11 @@
   p, span, li, a {
     @apply font-sans;
   }
+  /* Prevent horizontal scrolling on mobile */
+  html, body {
+    @apply overflow-x-hidden;
+    width: 100%;
+  }
 }
 
 @layer components {
@@ -60,21 +65,29 @@
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
   .heading-xl {
-    @apply text-4xl md:text-5xl lg:text-6xl font-serif font-bold;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold;
   }
   .heading-lg {
-    @apply text-3xl md:text-4xl font-serif font-medium;
+    @apply text-2xl sm:text-3xl md:text-4xl font-serif font-medium;
   }
   .heading-md {
-    @apply text-2xl md:text-3xl font-serif;
+    @apply text-xl sm:text-2xl md:text-3xl font-serif;
   }
   .heading-sm {
-    @apply text-xl md:text-2xl font-serif;
+    @apply text-lg sm:text-xl md:text-2xl font-serif;
   }
   .btn-primary {
-    @apply bg-lifeway-red text-white py-3 px-6 rounded-md hover:bg-red-600 transition-colors font-medium;
+    @apply bg-lifeway-red text-white py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-red-600 transition-colors font-medium text-sm md:text-base;
   }
   .btn-secondary {
-    @apply bg-white text-lifeway-black border border-lifeway-grey py-3 px-6 rounded-md hover:bg-gray-50 transition-colors font-medium;
+    @apply bg-white text-lifeway-black border border-lifeway-grey py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-gray-50 transition-colors font-medium text-sm md:text-base;
+  }
+  /* Hide scrollbar for carousel components while maintaining functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
   }
 }

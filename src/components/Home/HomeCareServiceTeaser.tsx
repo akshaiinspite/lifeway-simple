@@ -8,12 +8,15 @@ import {
   CarouselNext, 
   CarouselPrevious 
 } from "@/components/ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const HomeCareServiceTeaser = () => {
+  const isMobile = useIsMobile();
+  
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-12 md:py-24 bg-gray-50">
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="order-2 lg:order-1">
             <div className="mb-4">
               <span className="text-lifeway-red font-medium uppercase tracking-widest text-sm flex items-center">
@@ -21,29 +24,29 @@ const HomeCareServiceTeaser = () => {
                 Home Care Services
               </span>
             </div>
-            <h2 className="heading-lg mb-6">
+            <h2 className="heading-lg mb-4 md:mb-6">
               🏡 Lifeway Home Care Services
             </h2>
-            <p className="mb-6 text-gray-700 italic text-lg font-serif">
+            <p className="mb-4 md:mb-6 text-gray-700 italic text-lg font-serif">
               "The reason for your smile" – now right at home.
             </p>
-            <p className="mb-6 text-gray-700">
+            <p className="mb-4 md:mb-6 text-gray-700">
               At Lifeway, we understand that healing is personal—and often, it begins at home. 
               That's why our expert therapists bring compassionate, personalized care directly to your door.
             </p>
 
-            <div className="mb-8">
+            <div className="mb-6 md:mb-8">
               <Carousel className="w-full">
                 <CarouselContent className="-ml-2 md:-ml-4">
                   {[
-                    { icon: <SmilePlus className="h-6 w-6 text-lifeway-red" />, text: "Pediatric therapy in a familiar environment" },
-                    { icon: <Heart className="h-6 w-6 text-lifeway-red" />, text: "Post-surgical rehabilitation at home" },
-                    { icon: <Star className="h-6 w-6 text-lifeway-red" />, text: "Ongoing developmental support" }
+                    { icon: <SmilePlus className="h-5 w-5 md:h-6 md:w-6 text-lifeway-red" />, text: "Pediatric therapy in a familiar environment" },
+                    { icon: <Heart className="h-5 w-5 md:h-6 md:w-6 text-lifeway-red" />, text: "Post-surgical rehabilitation at home" },
+                    { icon: <Star className="h-5 w-5 md:h-6 md:w-6 text-lifeway-red" />, text: "Ongoing developmental support" }
                   ].map((item, index) => (
                     <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2">
-                      <div className="p-4 border border-gray-100 rounded-lg bg-white flex items-center shadow-sm">
-                        <div className="mr-4">{item.icon}</div>
-                        <p className="text-gray-700">{item.text}</p>
+                      <div className="p-3 md:p-4 border border-gray-100 rounded-lg bg-white flex items-center shadow-sm">
+                        <div className="mr-3 md:mr-4 flex-shrink-0">{item.icon}</div>
+                        <p className="text-gray-700 text-sm md:text-base">{item.text}</p>
                       </div>
                     </CarouselItem>
                   ))}
@@ -55,22 +58,22 @@ const HomeCareServiceTeaser = () => {
               </Carousel>
             </div>
             
-            <p className="mb-8 text-gray-700">
+            <p className="mb-6 md:mb-8 text-gray-700">
               Our Home Care Services are designed to fit seamlessly into your life—ensuring comfort, consistency, and results.
-              <span className="block mt-4 font-medium">Let us be the reason for your smile, wherever you are.</span>
+              <span className="block mt-3 md:mt-4 font-medium">Let us be the reason for your smile, wherever you are.</span>
             </p>
             
-            <div className="flex flex-wrap gap-4">
-              <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex-grow">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="bg-white p-3 md:p-4 rounded-lg shadow-sm border border-gray-100 flex-grow">
                 <p className="text-center font-medium mb-2">Experience expert care without leaving home.</p>
                 <div className="flex items-center justify-center">
-                  <Phone className="h-5 w-5 text-lifeway-red mr-2" />
-                  <span className="font-bold">Schedule your home visit today!</span>
+                  <Phone className="h-4 w-4 md:h-5 md:w-5 text-lifeway-red mr-2" />
+                  <span className="font-bold text-sm md:text-base">Schedule your home visit today!</span>
                 </div>
               </div>
               
-              <Link to="/home-services" className="btn-primary flex items-center">
-                <Calendar className="mr-2 h-5 w-5" />
+              <Link to="/home-services" className="btn-primary flex items-center justify-center">
+                <Calendar className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Book Home Care Visit
               </Link>
             </div>
@@ -84,7 +87,7 @@ const HomeCareServiceTeaser = () => {
                 className="w-full h-auto rounded-lg shadow-xl"
               />
             </div>
-            <div className="absolute inset-0 -z-10 translate-x-6 translate-y-6 bg-lifeway-red rounded-lg hidden md:block"></div>
+            <div className="absolute inset-0 -z-10 translate-x-4 translate-y-4 md:translate-x-6 md:translate-y-6 bg-lifeway-red rounded-lg hidden sm:block"></div>
           </div>
         </div>
       </div>
