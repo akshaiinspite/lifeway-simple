@@ -50,14 +50,14 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+        isScrolled ? "bg-black shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
       <div className="container-custom flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <div className="text-3xl font-serif font-bold text-lifeway-red">
             Lifeway
-            <span className="block text-sm font-sans text-lifeway-black">
+            <span className="block text-sm font-sans text-white">
               The reason for your smile!
             </span>
           </div>
@@ -72,7 +72,7 @@ const Navbar = () => {
               className={`font-medium hover:text-lifeway-red transition-colors ${
                 location.pathname === link.path
                   ? "text-lifeway-red"
-                  : "text-lifeway-black"
+                  : "text-white"
               }`}
             >
               {link.name}
@@ -89,7 +89,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-lifeway-black hover:text-lifeway-red transition-colors"
+          className="md:hidden text-white hover:text-lifeway-red transition-colors"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -98,7 +98,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-white z-40 pt-20 px-4">
+        <div className="md:hidden fixed inset-0 bg-black z-40 pt-20 px-4">
           <nav className="flex flex-col space-y-6 items-center">
             {navLinks.map((link) => (
               <Link
@@ -107,7 +107,7 @@ const Navbar = () => {
                 className={`text-xl font-medium hover:text-lifeway-red transition-colors ${
                   location.pathname === link.path
                     ? "text-lifeway-red"
-                    : "text-lifeway-black"
+                    : "text-white"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
