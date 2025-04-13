@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Card } from '@/components/ui/card';
 
 export interface TeamMemberProps {
   id: number;
@@ -19,39 +18,30 @@ const TeamMemberCard: React.FC<TeamMemberProps> = ({
   image,
 }) => {
   return (
-    <Card className="overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 border border-gray-100 h-full flex flex-col bg-white">
-      <div className="h-64 overflow-hidden relative">
+    <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+      <div className="h-64 overflow-hidden">
         <img
           src={image}
           alt={`${name}, ${role}`}
-          className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute top-0 right-0 bg-lifeway-blue text-white text-xs font-bold px-3 py-1 m-3 rounded-full">
-          {department}
-        </div>
       </div>
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-lifeway-blue">{name}</h3>
-        <p className="text-lifeway-green font-medium mb-1">{role}</p>
-        <div className="h-px w-16 bg-gray-200 my-3"></div>
-        <p className="text-gray-700 mb-4 line-clamp-4 flex-grow">{bio}</p>
+      <div className="p-6">
+        <h3 className="text-xl font-bold">{name}</h3>
+        <p className="text-lifeway-red font-medium mb-1">{role}</p>
+        <p className="text-gray-500 text-sm mb-4">{department}</p>
+        <p className="text-gray-700 mb-4 line-clamp-4">{bio}</p>
         <button
-          className="text-lifeway-blue font-medium hover:text-lifeway-blue/80 flex items-center group mt-3 transition-colors"
+          className="text-lifeway-red font-medium hover:underline flex items-center"
           aria-label={`Learn more about ${name}`}
         >
           Read Full Bio
-          <svg 
-            className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
       </div>
-    </Card>
+    </div>
   );
 };
 
