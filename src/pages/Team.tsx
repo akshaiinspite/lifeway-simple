@@ -3,6 +3,8 @@ import { useState, useMemo } from "react";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import TeamMemberCard, { TeamMemberProps } from "@/components/Team/TeamMemberCard";
+import { Search } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 const teamMembers: TeamMemberProps[] = [
   {
@@ -111,14 +113,14 @@ const Team = () => {
       <Navbar />
       <div className="pt-20 pb-16">
         {/* Hero Section */}
-        <div className="bg-lifeway-red py-16">
+        <div className="bg-gradient-to-r from-lifeway-blue to-lifeway-blue/80 py-16 md:py-20">
           <div className="container-custom">
             <div className="max-w-3xl">
               <h1 className="heading-xl text-white mb-6">
                 Meet Our Expert Team
               </h1>
-              <p className="text-white/90 text-lg">
-                Our multidisciplinary team of professionals is dedicated to providing the highest quality care for your child's development and rehabilitation needs.
+              <p className="text-white/90 text-lg leading-relaxed">
+                Our multidisciplinary team of professionals is dedicated to providing the highest quality care for your child's development and rehabilitation needs. With extensive experience and specialized training, each member brings unique expertise to ensure comprehensive care.
               </p>
             </div>
           </div>
@@ -127,44 +129,50 @@ const Team = () => {
         {/* Team Content */}
         <div className="container-custom py-16">
           {/* Filter and Search Controls */}
-          <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center mb-10">
-            <div className="w-full md:w-auto">
-              <label htmlFor="department-filter" className="block mb-2 font-medium">Filter by Department</label>
-              <select
-                id="department-filter"
-                value={selectedDepartment}
-                onChange={(e) => setSelectedDepartment(e.target.value)}
-                className="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lifeway-red focus:border-lifeway-red outline-none"
-              >
-                {departments.map((dept) => (
-                  <option key={dept} value={dept}>
-                    {dept}
-                  </option>
-                ))}
-              </select>
+          <Card className="p-6 mb-10 shadow-soft border border-gray-100">
+            <div className="flex flex-col md:flex-row gap-6 justify-between items-start md:items-end">
+              <div className="w-full md:w-1/3">
+                <label htmlFor="department-filter" className="block mb-2 font-medium text-gray-700">Filter by Department</label>
+                <select
+                  id="department-filter"
+                  value={selectedDepartment}
+                  onChange={(e) => setSelectedDepartment(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lifeway-blue focus:border-lifeway-blue outline-none shadow-sm"
+                >
+                  {departments.map((dept) => (
+                    <option key={dept} value={dept}>
+                      {dept}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              
+              <div className="w-full md:w-2/3">
+                <label htmlFor="search-team" className="block mb-2 font-medium text-gray-700">Search Team Members</label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    id="search-team"
+                    placeholder="Search by name, role, or department..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lifeway-blue focus:border-lifeway-blue outline-none shadow-sm"
+                  />
+                  <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
+                </div>
+              </div>
             </div>
-            
-            <div className="w-full md:w-auto">
-              <label htmlFor="search-team" className="block mb-2 font-medium">Search</label>
-              <input
-                type="text"
-                id="search-team"
-                placeholder="Search by name, role..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full md:w-80 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lifeway-red focus:border-lifeway-red outline-none"
-              />
-            </div>
-          </div>
+          </Card>
 
           {/* Results Count */}
-          <p className="mb-8 text-gray-600">
+          <p className="mb-8 text-gray-600 font-medium">
             Showing {filteredTeamMembers.length} team members
+            {selectedDepartment !== "All Departments" ? ` in ${selectedDepartment}` : ""}
           </p>
 
           {/* Team Grid */}
           {filteredTeamMembers.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
               {filteredTeamMembers.map((member) => (
                 <TeamMemberCard key={member.id} {...member} />
               ))}

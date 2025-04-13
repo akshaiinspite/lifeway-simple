@@ -16,24 +16,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 0%;
 
-    --primary: 358 85% 52%;
+    --primary: 210 89% 31%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 89%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 200 54% 98%;
+    --secondary-foreground: 210 89% 31%;
 
-    --muted: 0 0% 89%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 0 0% 89%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 173 48% 40%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 89%;
-    --input: 0 0% 89%;
-    --ring: 358 85% 52%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 89% 31%;
 
     --radius: 0.5rem;
   }
@@ -65,22 +65,34 @@
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
   .heading-xl {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight;
   }
   .heading-lg {
-    @apply text-2xl sm:text-3xl md:text-4xl font-serif font-medium;
+    @apply text-2xl sm:text-3xl md:text-4xl font-serif font-medium leading-tight;
   }
   .heading-md {
-    @apply text-xl sm:text-2xl md:text-3xl font-serif;
+    @apply text-xl sm:text-2xl md:text-3xl font-serif leading-snug;
   }
   .heading-sm {
-    @apply text-lg sm:text-xl md:text-2xl font-serif;
+    @apply text-lg sm:text-xl md:text-2xl font-serif leading-snug;
   }
   .btn-primary {
-    @apply bg-lifeway-red text-white py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-red-600 transition-colors font-medium text-sm md:text-base;
+    @apply bg-lifeway-blue text-white py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-blue-700 transition-colors shadow-soft font-medium text-sm md:text-base;
   }
   .btn-secondary {
-    @apply bg-white text-lifeway-black border border-lifeway-grey py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-gray-50 transition-colors font-medium text-sm md:text-base;
+    @apply bg-white text-lifeway-blue border border-lifeway-grey py-2 px-4 md:py-3 md:px-6 rounded-md hover:bg-gray-50 transition-colors shadow-soft font-medium text-sm md:text-base;
+  }
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  .card-modern {
+    @apply bg-white rounded-lg overflow-hidden shadow-card border border-gray-100 hover:shadow-elevated transition-shadow;
+  }
+  .link-hover {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-lifeway-blue after:scale-x-0 after:origin-right after:transition-transform hover:after:scale-x-100 hover:after:origin-left;
+  }
+  .gradient-overlay {
+    @apply relative before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/70 before:to-transparent before:z-0;
   }
   /* Hide scrollbar for carousel components while maintaining functionality */
   .hide-scrollbar {
