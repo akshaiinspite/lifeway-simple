@@ -13,7 +13,7 @@ import FAQSection from "@/components/FAQ/FAQSection";
 const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="fixed inset-0 pointer-events-none z-0 opacity-5">
+      <div className="fixed inset-0 pointer-events-none z-0 opacity-10">
         <div
           className="w-full h-full"
           style={{

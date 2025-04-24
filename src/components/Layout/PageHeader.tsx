@@ -10,7 +10,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
   return (
     <div className="relative overflow-hidden bg-lifeway-grey py-16 md:py-24">
       <div
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: "url('/lovable-uploads/af6dca26-4f7c-4559-a3bd-7a401a03ea95.png')",
           backgroundRepeat: "repeat",
