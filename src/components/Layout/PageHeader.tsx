@@ -12,7 +12,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
       <div
         className="absolute inset-0 opacity-10"
         style={{
-          backgroundImage: "url('/lovable-uploads/3bf3492c-0322-46de-9dfa-1d7b4f757ab9.png')",
+          backgroundImage: "url('/lovable-uploads/af6dca26-4f7c-4559-a3bd-7a401a03ea95.png')",
           backgroundRepeat: "repeat",
           backgroundSize: "300px",
         }}

@@ -13,8 +13,18 @@ import FAQSection from "@/components/FAQ/FAQSection";
 const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
+      <div className="fixed inset-0 pointer-events-none z-0 opacity-5">
+        <div
+          className="w-full h-full"
+          style={{
+            backgroundImage: "url('/lovable-uploads/af6dca26-4f7c-4559-a3bd-7a401a03ea95.png')",
+            backgroundRepeat: "repeat",
+            backgroundSize: "300px",
+          }}
+        />
+      </div>
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow relative z-10">
         <Banner />
         <Introduction />
         <DepartmentHighlights />
