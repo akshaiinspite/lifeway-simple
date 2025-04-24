@@ -1,191 +1,107 @@
-
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React from "react";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
-import DepartmentCard from "@/components/Departments/DepartmentCard";
+import PageHeader from "@/components/Layout/PageHeader";
+import FAQSection from "@/components/FAQ/FAQSection";
+import ChatBot from "@/components/Chat/ChatBot";
 
-const departments = [
-  {
-    id: "occupational-therapy",
-    name: "Occupational Therapy",
-    description: "Our occupational therapy department helps children develop the skills needed for daily activities and independent living. We focus on fine motor skills, sensory processing, visual perception, and self-care abilities to enhance your child's participation in school, home, and community activities.",
-    services: [
-      "Fine Motor Skill Development",
-      "Sensory Integration Therapy",
-      "Visual-Motor Coordination",
-      "Self-Care Skills Training",
-      "Handwriting Development",
-      "Adaptive Equipment Consultation",
-    ],
-    ageGroups: ["Infants (0-1)", "Toddlers (1-3)", "Preschoolers (3-5)", "School-Age (6-12)", "Adolescents (13-18)"],
-    image: "https://images.unsplash.com/photo-1571172964276-91faaa704e1f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "physiotherapy",
-    name: "Physiotherapy",
-    description: "Our physiotherapy services aim to improve movement, strength, and physical function through specialized exercises and techniques. We address gross motor delays, movement disorders, orthopedic conditions, and neurological challenges to enhance your child's mobility and independence.",
-    services: [
-      "Gross Motor Development",
-      "Strength and Coordination Training",
-      "Gait Training",
-      "Balance Improvement",
-      "Post-Surgery Rehabilitation",
-      "Neurological Rehabilitation",
-    ],
-    ageGroups: ["Infants (0-1)", "Toddlers (1-3)", "Preschoolers (3-5)", "School-Age (6-12)", "Adolescents (13-18)"],
-    image: "https://images.unsplash.com/photo-1570691079236-4bca6c45a9a6?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "speech-therapy",
-    name: "Speech Therapy",
-    description: "Our speech therapy department addresses communication challenges by enhancing speech clarity, language comprehension, and expression. We work with children who have articulation disorders, language delays, stuttering, voice disorders, and social communication difficulties.",
-    services: [
-      "Speech Sound Disorders Treatment",
-      "Language Development",
-      "Social Communication Skills",
-      "Fluency Therapy",
-      "Feeding and Swallowing Therapy",
-      "Augmentative Communication",
-    ],
-    ageGroups: ["Infants (0-1)", "Toddlers (1-3)", "Preschoolers (3-5)", "School-Age (6-12)", "Adolescents (13-18)"],
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "special-education",
-    name: "Special Education",
-    description: "Our special education department provides customized educational strategies to support diverse learning needs. We help children with learning disabilities, attention disorders, autism spectrum disorders, and intellectual disabilities develop academic skills and learning strategies.",
-    services: [
-      "Individualized Learning Programs",
-      "Reading and Literacy Skills",
-      "Mathematics Skills Development",
-      "Executive Functioning Support",
-      "Study Skills Training",
-      "School Readiness Preparation",
-    ],
-    ageGroups: ["Preschoolers (3-5)", "School-Age (6-12)", "Adolescents (13-18)"],
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "kinesiology",
-    name: "Kinesiology",
-    description: "Our kinesiology department applies the scientific study of movement to prevention and rehabilitation. We assess biomechanics, develop exercise programs, and address sports injuries to help children and adolescents maintain physical fitness and health.",
-    services: [
-      "Movement Analysis",
-      "Athletic Performance Enhancement",
-      "Sport-Specific Training",
-      "Injury Prevention Programs",
-      "Adaptive Physical Education",
-      "Physical Fitness Assessment",
-    ],
-    ageGroups: ["School-Age (6-12)", "Adolescents (13-18)"],
-    image: "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=2526&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "clinical-psychology",
-    name: "Clinical Psychology",
-    description: "Our clinical psychology department supports mental health and emotional well-being through evidence-based therapy. We address anxiety, depression, behavioral challenges, trauma, and developmental disorders to foster resilience and coping skills.",
-    services: [
-      "Psychological Assessment",
-      "Cognitive Behavioral Therapy",
-      "Play Therapy",
-      "Parent-Child Relationship Therapy",
-      "Anxiety and Depression Management",
-      "Social Skills Development",
-    ],
-    ageGroups: ["Preschoolers (3-5)", "School-Age (6-12)", "Adolescents (13-18)"],
-    image: "https://images.unsplash.com/photo-1590650213165-c1fef80648c7?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "parent-spring",
-    name: "Parent Spring (Parent Support & Coaching)",
-    description: "Our Parent Spring program offers coaching and support specifically for parents and caregivers. We provide guidance on behavior management, developmental milestones, home therapy techniques, and strategies for supporting your child's unique needs.",
-    services: [
-      "Parent Education Workshops",
-      "Family Therapy",
-      "Behavior Management Strategies",
-      "Home Program Development",
-      "Parent-Child Interaction Coaching",
-      "Support Groups",
-    ],
-    ageGroups: ["Parents of All Age Groups"],
-    image: "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-];
-
-const Departments = () => {
-  const location = useLocation();
-  const hash = location.hash.replace('#', '');
-
-  useEffect(() => {
-    if (hash) {
-      const element = document.getElementById(hash);
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      }
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [hash]);
-
+const Services = () => {
   return (
     <>
       <Navbar />
-      <div className="pt-20 pb-16">
-        {/* Hero section */}
-        <div className="bg-lifeway-red py-16">
-          <div className="container-custom">
-            <div className="max-w-3xl">
-              <h1 className="heading-xl text-white mb-6">
-                Our Specialized Departments
-              </h1>
-              <p className="text-white/90 text-lg">
-                At Lifeway, our multidisciplinary departments work together to provide comprehensive care for your child's unique needs. Explore our specialized services below.
+      <PageHeader
+        title="Our Services"
+        description="Comprehensive therapy and support services for children and families"
+      />
+      <div className="py-12 md:py-16 bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h1 className="heading-lg mb-4">Our Specialized Services</h1>
+            <p className="text-gray-700 max-w-2xl mx-auto">
+              Explore our range of therapeutic services designed to support your child's development and well-being.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Occupational Therapy */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-semibold mb-4">Occupational Therapy</h2>
+              <p className="text-gray-600 mb-4">
+                Enhance your child's fine motor skills, sensory processing, and daily living activities through our personalized occupational therapy programs.
               </p>
+              <ul className="list-disc pl-5 text-gray-600">
+                <li>Handwriting improvement</li>
+                <li>Sensory integration</li>
+                <li>Adaptive equipment training</li>
+              </ul>
             </div>
-          </div>
-        </div>
-
-        {/* Department Navigation */}
-        <div className="bg-white py-6 sticky top-20 z-30 shadow-sm">
-          <div className="container-custom">
-            <div className="overflow-x-auto">
-              <div className="flex space-x-6 min-w-max pb-2">
-                {departments.map((dept) => (
-                  <a
-                    key={dept.id}
-                    href={`#${dept.id}`}
-                    className={`whitespace-nowrap font-medium py-2 border-b-2 transition-colors ${
-                      hash === dept.id
-                        ? "text-lifeway-red border-lifeway-red"
-                        : "text-gray-600 border-transparent hover:text-lifeway-red hover:border-lifeway-red"
-                    }`}
-                  >
-                    {dept.name.split(' ')[0]}
-                  </a>
-                ))}
-              </div>
+            {/* Physiotherapy */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-semibold mb-4">Physiotherapy</h2>
+              <p className="text-gray-600 mb-4">
+                Improve your child's gross motor skills, balance, and coordination with our specialized physiotherapy interventions.
+              </p>
+              <ul className="list-disc pl-5 text-gray-600">
+                <li>Gait training</li>
+                <li>Strength and conditioning</li>
+                <li>Postural correction</li>
+              </ul>
             </div>
-          </div>
-        </div>
-        
-        {/* Department Listings */}
-        <div className="container-custom py-16">
-          <div className="space-y-12">
-            {departments.map((department) => (
-              <DepartmentCard
-                key={department.id}
-                {...department}
-              />
-            ))}
+            {/* Speech Therapy */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-semibold mb-4">Speech Therapy</h2>
+              <p className="text-gray-600 mb-4">
+                Enhance your child's communication skills, language development, and speech clarity through our comprehensive speech therapy sessions.
+              </p>
+              <ul className="list-disc pl-5 text-gray-600">
+                <li>Articulation therapy</li>
+                <li>Language intervention</li>
+                <li>Fluency management</li>
+              </ul>
+            </div>
+            {/* Special Education */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-semibold mb-4">Special Education</h2>
+              <p className="text-gray-600 mb-4">
+                Support your child's academic growth and learning potential with our tailored special education programs and strategies.
+              </p>
+              <ul className="list-disc pl-5 text-gray-600">
+                <li>Individualized education plans (IEPs)</li>
+                <li>Learning strategies</li>
+                <li>Behavioral support</li>
+              </ul>
+            </div>
+            {/* Clinical Psychology */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-semibold mb-4">Clinical Psychology</h2>
+              <p className="text-gray-600 mb-4">
+                Address your child's emotional and behavioral challenges with our compassionate clinical psychology services and therapeutic interventions.
+              </p>
+              <ul className="list-disc pl-5 text-gray-600">
+                <li>Counseling and therapy</li>
+                <li>Behavior management</li>
+                <li>Emotional regulation</li>
+              </ul>
+            </div>
+            {/* Home Services */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl font-semibold mb-4">Home Services</h2>
+              <p className="text-gray-600 mb-4">
+                Receive therapy services in the comfort of your own home with our convenient and personalized home-based therapy programs.
+              </p>
+              <ul className="list-disc pl-5 text-gray-600">
+                <li>In-home assessments</li>
+                <li>Family-centered therapy</li>
+                <li>Flexible scheduling</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+      <FAQSection />
+      <ChatBot />
       <Footer />
     </>
   );
 };
 
-export default Departments;
+export default Services;
