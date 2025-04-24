@@ -7,6 +7,8 @@ import HomeCareServiceTeaser from "@/components/Home/HomeCareServiceTeaser";
 import Testimonials from "@/components/Home/Testimonials";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
+import ChatBot from "@/components/Chat/ChatBot";
+import FAQSection from "@/components/FAQ/FAQSection";
 
 const Index = () => {
   return (
@@ -18,8 +20,10 @@ const Index = () => {
         <DepartmentHighlights />
         <HomeCareServiceTeaser />
         <HomecareServices />
+        <FAQSection />
         <Testimonials />
       </main>
+      <ChatBot />
       <Footer />
     </div>
   );
