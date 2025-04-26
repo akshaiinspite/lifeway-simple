@@ -136,8 +136,13 @@ const ChatBot = () => {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type your message..."
                 className="flex-1"
+                disabled={isLoading}
               />
-              <Button type="submit" className="bg-lifeway-red hover:bg-lifeway-red/90">
+              <Button 
+                type="submit" 
+                className="bg-lifeway-red hover:bg-lifeway-red/90"
+                disabled={isLoading}
+              >
                 Send
               </Button>
             </form>
@@ -156,4 +161,3 @@ const ChatBot = () => {
 };
 
 export default ChatBot;
-
