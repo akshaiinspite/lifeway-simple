@@ -37,7 +37,7 @@ const ChatBot = () => {
     if (!apiKey) {
       toast({
         title: "API Key Required",
-        description: "Please enter your Perplexity API key to use the chatbot.",
+        description: "Please enter your Google API key to use the chatbot.",
         variant: "destructive",
       });
       return;
@@ -49,24 +49,22 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://api.perplexity.ai/chat/completions', {
+      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${apiKey}`,
           'Content-Type': 'application/json',
+          'x-goog-api-key': apiKey,
         },
         body: JSON.stringify({
-          model: 'llama-3.1-sonar-small-128k-online',
-          messages: [
-            {
-              role: 'system',
-              content: 'You are a helpful assistant at Lifeway Healthcare, focusing on providing information about healthcare services, therapy, and medical assistance. Be professional, empathetic, and concise.'
-            },
-            ...messages,
-            userMessage
-          ],
-          temperature: 0.7,
-          max_tokens: 500,
+          contents: [{
+            parts: [{
+              text: `You are a helpful assistant at Lifeway Healthcare, focusing on providing information about healthcare services, therapy, and medical assistance. Be professional, empathetic, and concise. User message: ${input}`
+            }]
+          }],
+          generationConfig: {
+            temperature: 0.7,
+            maxOutputTokens: 500,
+          },
         }),
       });
 
@@ -77,7 +75,7 @@ const ChatBot = () => {
       const data = await response.json();
       const aiMessage = {
         role: "assistant",
-        content: data.choices[0].message.content,
+        content: data.candidates[0].content.parts[0].text,
       } as Message;
       
       setMessages((prev) => [...prev, aiMessage]);
@@ -112,20 +110,20 @@ const ChatBot = () => {
               <div className="mb-4">
                 <Input
                   type="password"
-                  placeholder="Enter your Perplexity API key"
+                  placeholder="Enter your Google API key"
                   value={apiKey}
                   onChange={(e) => setApiKey(e.target.value)}
                   className="mb-2"
                 />
                 <p className="text-xs text-gray-500">
-                  Enter your Perplexity API key to enable the chatbot. Get one at{" "}
+                  Enter your Google API key to enable the chatbot. Get one at{" "}
                   <a
-                    href="https://www.perplexity.ai/"
+                    href="https://makersuite.google.com/app/apikey"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lifeway-red hover:underline"
                   >
-                    perplexity.ai
+                    Google AI Studio
                   </a>
                 </p>
               </div>
