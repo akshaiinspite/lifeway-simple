@@ -17,6 +17,8 @@ interface Message {
   content: string;
 }
 
+const DEFAULT_API_KEY = "AIzaSyAv3YkRfiVlCrtYsXwzR_Wvt-82B8wZhEg";
+
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -27,21 +29,12 @@ const ChatBot = () => {
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [apiKey, setApiKey] = useState("");
+  const [apiKey, setApiKey] = useState(DEFAULT_API_KEY);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim()) return;
-
-    if (!apiKey) {
-      toast({
-        title: "API Key Required",
-        description: "Please enter your Google API key to use the chatbot.",
-        variant: "destructive",
-      });
-      return;
-    }
 
     const userMessage = { role: "user", content: input } as Message;
     setMessages((prev) => [...prev, userMessage]);
@@ -106,29 +99,30 @@ const ChatBot = () => {
             </Button>
           </CardHeader>
           <CardContent className="flex-1 p-4">
-            {!apiKey && (
-              <div className="mb-4">
-                <Input
-                  type="password"
-                  placeholder="Enter your Google API key"
-                  value={apiKey}
-                  onChange={(e) => setApiKey(e.target.value)}
-                  className="mb-2"
-                />
-                <p className="text-xs text-gray-500">
-                  Enter your Google API key to enable the chatbot. Get one at{" "}
-                  <a
-                    href="https://makersuite.google.com/app/apikey"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lifeway-red hover:underline"
-                  >
-                    Google AI Studio
-                  </a>
-                </p>
-              </div>
+            {apiKey === DEFAULT_API_KEY && (
+              <p className="text-xs text-gray-500 mb-4">
+                Using default API key. You can provide your own key below for enhanced access.
+              </p>
             )}
-            <ScrollArea className="h-[350px] pr-4">
+            <Input
+              type="password"
+              placeholder="Enter your Google API key (optional)"
+              value={apiKey}
+              onChange={(e) => setApiKey(e.target.value || DEFAULT_API_KEY)}
+              className="mb-2"
+            />
+            <p className="text-xs text-gray-500 mb-4">
+              You can get your own API key at{" "}
+              <a
+                href="https://makersuite.google.com/app/apikey"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lifeway-red hover:underline"
+              >
+                Google AI Studio
+              </a>
+            </p>
+            <ScrollArea className="h-[280px] pr-4">
               {messages.map((message, index) => (
                 <div
                   key={index}
