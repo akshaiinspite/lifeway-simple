@@ -17,19 +17,18 @@ interface Message {
   content: string;
 }
 
-const DEFAULT_API_KEY = "AIzaSyAv3YkRfiVlCrtYsXwzR_Wvt-82B8wZhEg";
+const API_KEY = "AIzaSyAv3YkRfiVlCrtYsXwzR_Wvt-82B8wZhEg";
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hello! How can I help you today?",
+      content: "Hello! I'm here to help you with booking appointments, learning about our services, or answering any other questions you might have. How can I assist you today?",
     },
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [apiKey, setApiKey] = useState(DEFAULT_API_KEY);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -46,12 +45,17 @@ const ChatBot = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-goog-api-key': apiKey,
+          'x-goog-api-key': API_KEY,
         },
         body: JSON.stringify({
           contents: [{
             parts: [{
-              text: `You are a helpful assistant at Lifeway Healthcare, focusing on providing information about healthcare services, therapy, and medical assistance. Be professional, empathetic, and concise. User message: ${input}`
+              text: `You are a helpful assistant at Lifeway Healthcare, focusing on:
+              1. Helping users book appointments with our healthcare professionals
+              2. Providing detailed information about our services including occupational therapy, physiotherapy, speech therapy, special education, clinical psychology, and home services
+              3. Answering general queries about our healthcare facility and treatments
+              4. Guiding users to the right department or specialist based on their needs
+              Be professional, friendly, and provide clear, concise information. User message: ${input}`
             }]
           }],
           generationConfig: {
@@ -75,7 +79,7 @@ const ChatBot = () => {
     } catch (error) {
       toast({
         title: "Error",
-        description: "Failed to get response from AI service. Please try again.",
+        description: "Failed to get response. Please try again.",
         variant: "destructive",
       });
       console.error('Error:', error);
@@ -99,30 +103,7 @@ const ChatBot = () => {
             </Button>
           </CardHeader>
           <CardContent className="flex-1 p-4">
-            {apiKey === DEFAULT_API_KEY && (
-              <p className="text-xs text-gray-500 mb-4">
-                Using default API key. You can provide your own key below for enhanced access.
-              </p>
-            )}
-            <Input
-              type="password"
-              placeholder="Enter your Google API key (optional)"
-              value={apiKey}
-              onChange={(e) => setApiKey(e.target.value || DEFAULT_API_KEY)}
-              className="mb-2"
-            />
-            <p className="text-xs text-gray-500 mb-4">
-              You can get your own API key at{" "}
-              <a
-                href="https://makersuite.google.com/app/apikey"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-lifeway-red hover:underline"
-              >
-                Google AI Studio
-              </a>
-            </p>
-            <ScrollArea className="h-[280px] pr-4">
+            <ScrollArea className="h-[380px] pr-4">
               {messages.map((message, index) => (
                 <div
                   key={index}
@@ -175,3 +156,4 @@ const ChatBot = () => {
 };
 
 export default ChatBot;
+
