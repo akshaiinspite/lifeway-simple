@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useToast } from "@/components/ui/use-toast";
 
 interface Message {
   role: "user" | "assistant";
@@ -26,25 +27,70 @@ const ChatBot = () => {
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [apiKey, setApiKey] = useState("");
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim()) return;
+
+    if (!apiKey) {
+      toast({
+        title: "API Key Required",
+        description: "Please enter your Perplexity API key to use the chatbot.",
+        variant: "destructive",
+      });
+      return;
+    }
 
     const userMessage = { role: "user", content: input } as Message;
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
     setIsLoading(true);
 
-    // Simulate AI response (replace with actual API call)
-    setTimeout(() => {
-      const aiResponse = {
+    try {
+      const response = await fetch('https://api.perplexity.ai/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'llama-3.1-sonar-small-128k-online',
+          messages: [
+            {
+              role: 'system',
+              content: 'You are a helpful assistant at Lifeway Healthcare, focusing on providing information about healthcare services, therapy, and medical assistance. Be professional, empathetic, and concise.'
+            },
+            ...messages,
+            userMessage
+          ],
+          temperature: 0.7,
+          max_tokens: 500,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to get response');
+      }
+
+      const data = await response.json();
+      const aiMessage = {
         role: "assistant",
-        content: "I'm a demo chatbot. This is a placeholder response. In a real implementation, this would be connected to an AI service.",
+        content: data.choices[0].message.content,
       } as Message;
-      setMessages((prev) => [...prev, aiResponse]);
+      
+      setMessages((prev) => [...prev, aiMessage]);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to get response from AI service. Please try again.",
+        variant: "destructive",
+      });
+      console.error('Error:', error);
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -62,6 +108,28 @@ const ChatBot = () => {
             </Button>
           </CardHeader>
           <CardContent className="flex-1 p-4">
+            {!apiKey && (
+              <div className="mb-4">
+                <Input
+                  type="password"
+                  placeholder="Enter your Perplexity API key"
+                  value={apiKey}
+                  onChange={(e) => setApiKey(e.target.value)}
+                  className="mb-2"
+                />
+                <p className="text-xs text-gray-500">
+                  Enter your Perplexity API key to enable the chatbot. Get one at{" "}
+                  <a
+                    href="https://www.perplexity.ai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lifeway-red hover:underline"
+                  >
+                    perplexity.ai
+                  </a>
+                </p>
+              </div>
+            )}
             <ScrollArea className="h-[350px] pr-4">
               {messages.map((message, index) => (
                 <div
