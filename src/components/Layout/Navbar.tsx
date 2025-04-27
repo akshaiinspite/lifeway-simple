@@ -1,7 +1,13 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, GalleryHorizontal } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +38,14 @@ const Navbar = () => {
     { name: "Services", path: "/services" },
     { name: "Our Team", path: "/team" },
     { name: "Careers", path: "/careers" },
-    { name: "Events", path: "/events" },
+    {
+      name: "Events",
+      path: "/events",
+      subItems: [
+        { name: "Upcoming Events", path: "/events" },
+        { name: "Events Gallery", path: "/events-gallery" },
+      ],
+    },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -66,23 +79,53 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className={`font-medium hover:text-lifeway-red transition-colors ${
-                location.pathname === link.path
-                  ? "text-lifeway-red"
-                  : "text-lifeway-black"
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
-          <Link
-            to="/contact"
-            className="btn-primary font-medium"
-          >
+          {navLinks.map((link) =>
+            link.subItems ? (
+              <NavigationMenu key={link.name}>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger
+                      className={`font-medium hover:text-lifeway-red transition-colors ${
+                        location.pathname === link.path
+                          ? "text-lifeway-red"
+                          : "text-lifeway-black"
+                      }`}
+                    >
+                      {link.name}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="grid w-[200px] gap-3 p-4">
+                        {link.subItems.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            to={subItem.path}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">
+                              {subItem.name}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            ) : (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`font-medium hover:text-lifeway-red transition-colors ${
+                  location.pathname === link.path
+                    ? "text-lifeway-red"
+                    : "text-lifeway-black"
+                }`}
+              >
+                {link.name}
+              </Link>
+            )
+          )}
+          <Link to="/contact" className="btn-primary font-medium">
             Book Appointment
           </Link>
         </nav>
@@ -101,20 +144,38 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-white z-40 pt-20 px-4">
           <nav className="flex flex-col space-y-6 items-center">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`text-xl font-medium hover:text-lifeway-red transition-colors ${
-                  location.pathname === link.path
-                    ? "text-lifeway-red"
-                    : "text-lifeway-black"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.subItems ? (
+                <div key={link.name} className="space-y-4">
+                  <div className="text-xl font-medium text-lifeway-black">
+                    {link.name}
+                  </div>
+                  {link.subItems.map((subItem) => (
+                    <Link
+                      key={subItem.name}
+                      to={subItem.path}
+                      className="block text-lg text-gray-600 hover:text-lifeway-red pl-4"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {subItem.name}
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`text-xl font-medium hover:text-lifeway-red transition-colors ${
+                    location.pathname === link.path
+                      ? "text-lifeway-red"
+                      : "text-lifeway-black"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
+            )}
             <Link
               to="/contact"
               className="btn-primary w-full text-center"
