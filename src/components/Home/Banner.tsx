@@ -9,12 +9,24 @@ const Banner = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1504439468489-c8920d796a29?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2669&auto=format&fit=crop')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          filter: 'brightness(0.65)'
+          filter: 'brightness(0.75)'
         }}
       />
+      
+      {/* Pattern Overlay */}
+      <div className="absolute inset-0 z-0">
+        <div
+          className="w-full h-full opacity-5"
+          style={{
+            backgroundImage: "url('/lovable-uploads/9ebce2f5-dee9-4600-8d85-b52c34d4a8aa.png')",
+            backgroundRepeat: "repeat",
+            backgroundSize: "300px",
+          }}
+        />
+      </div>
       
       {/* Content */}
       <div className="container-custom relative z-10 py-16 md:py-24">
