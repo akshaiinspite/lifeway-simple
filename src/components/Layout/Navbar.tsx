@@ -1,6 +1,7 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, GalleryHorizontal } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -81,36 +82,40 @@ const Navbar = () => {
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) =>
             link.subItems ? (
-              <NavigationMenu key={link.name}>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger
-                      className={`font-medium hover:text-lifeway-red transition-colors ${
-                        location.pathname === link.path
-                          ? "text-lifeway-red"
-                          : "text-lifeway-black"
-                      }`}
-                    >
-                      {link.name}
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="grid w-[200px] gap-3 p-4">
-                        {link.subItems.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.path}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">
-                              {subItem.name}
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
+              <div key={link.name} className="relative inline-block">
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger 
+                        className={`font-medium hover:text-lifeway-red transition-colors ${
+                          location.pathname === link.path || 
+                          (link.subItems && link.subItems.some(subItem => location.pathname === subItem.path))
+                            ? "text-lifeway-red"
+                            : "text-lifeway-black"
+                        } bg-transparent hover:bg-transparent focus:bg-transparent p-0 h-auto`}
+                      >
+                        {link.name}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <div className="w-[200px] bg-white p-2 rounded-md shadow-md">
+                          {link.subItems.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.path}
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-lifeway-red focus:bg-accent focus:text-accent-foreground"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              <div className="text-sm font-medium leading-none">
+                                {subItem.name}
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+              </div>
             ) : (
               <Link
                 key={link.name}
@@ -146,20 +151,22 @@ const Navbar = () => {
           <nav className="flex flex-col space-y-6 items-center">
             {navLinks.map((link) =>
               link.subItems ? (
-                <div key={link.name} className="space-y-4">
-                  <div className="text-xl font-medium text-lifeway-black">
+                <div key={link.name} className="space-y-4 w-full">
+                  <div className="text-xl font-medium text-lifeway-black text-center">
                     {link.name}
                   </div>
-                  {link.subItems.map((subItem) => (
-                    <Link
-                      key={subItem.name}
-                      to={subItem.path}
-                      className="block text-lg text-gray-600 hover:text-lifeway-red pl-4"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {subItem.name}
-                    </Link>
-                  ))}
+                  <div className="flex flex-col space-y-2">
+                    {link.subItems.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        to={subItem.path}
+                        className="block text-center text-lg text-gray-600 hover:text-lifeway-red"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               ) : (
                 <Link
