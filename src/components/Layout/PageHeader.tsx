@@ -7,13 +7,21 @@ interface PageHeaderProps {
 }
 
 const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
+  // Generate random position for the background pattern
+  const randomPosition = {
+    x: Math.floor(Math.random() * 50),
+    y: Math.floor(Math.random() * 50),
+  };
+
   return (
     <div className="relative overflow-hidden bg-lifeway-grey py-16 md:py-24">
+      {/* Background pattern */}
       <div
         className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: "url('/lovable-uploads/af6dca26-4f7c-4559-a3bd-7a401a03ea95.png')",
+          backgroundImage: "url('/lovable-uploads/c30ad7e8-bd41-4958-b47d-681914e5e353.png')",
           backgroundRepeat: "repeat",
+          backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
           backgroundSize: "300px",
         }}
       />
