@@ -1,8 +1,8 @@
-
 import { useState, useMemo } from "react";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import TeamMemberCard, { TeamMemberProps } from "@/components/Team/TeamMemberCard";
+import PageHeader from "@/components/Layout/PageHeader";
 
 const teamMembers: TeamMemberProps[] = [
   {
@@ -109,23 +109,13 @@ const Team = () => {
   return (
     <>
       <Navbar />
-      <div className="pt-20 pb-16">
-        {/* Hero Section */}
-        <div className="bg-lifeway-red py-16">
-          <div className="container-custom">
-            <div className="max-w-3xl">
-              <h1 className="heading-xl text-white mb-6">
-                Meet Our Expert Team
-              </h1>
-              <p className="text-white/90 text-lg">
-                Our multidisciplinary team of professionals is dedicated to providing the highest quality care for your child's development and rehabilitation needs.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Team Content */}
-        <div className="container-custom py-16">
+      <PageHeader
+        title="Meet Our Expert Team"
+        description="Our multidisciplinary team of professionals is dedicated to providing the highest quality care for your child's development and rehabilitation needs."
+      />
+      <div className="py-16">
+        {/* Filter and Search Controls */}
+        <div className="container-custom">
           {/* Filter and Search Controls */}
           <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center mb-10">
             <div className="w-full md:w-auto">

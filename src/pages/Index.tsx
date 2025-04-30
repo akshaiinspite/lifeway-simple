@@ -21,9 +21,9 @@ const Index = () => {
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute inset-0 bg-white/90" />
         <div
-          className="w-full h-full opacity-10"
+          className="w-full h-full"
           style={{
-            backgroundImage: "url('/lovable-uploads/c30ad7e8-bd41-4958-b47d-681914e5e353.png')",
+            backgroundImage: "url('/lovable-uploads/8a526ab9-0df1-4d57-b0f7-61f38055cdf5.png')",
             backgroundRepeat: "repeat",
             backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
             backgroundSize: "300px",

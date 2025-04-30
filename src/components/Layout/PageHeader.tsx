@@ -17,9 +17,9 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
     <div className="relative overflow-hidden bg-lifeway-grey py-16 md:py-24">
       {/* Background pattern */}
       <div
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0"
         style={{
-          backgroundImage: "url('/lovable-uploads/c30ad7e8-bd41-4958-b47d-681914e5e353.png')",
+          backgroundImage: "url('/lovable-uploads/8a526ab9-0df1-4d57-b0f7-61f38055cdf5.png')",
           backgroundRepeat: "repeat",
           backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
           backgroundSize: "300px",
