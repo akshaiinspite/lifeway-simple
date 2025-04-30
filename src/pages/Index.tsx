@@ -23,7 +23,7 @@ const Index = () => {
         <div
           className="w-full h-full"
           style={{
-            backgroundImage: "url('/lovable-uploads/8a526ab9-0df1-4d57-b0f7-61f38055cdf5.png')",
+            backgroundImage: "url('/lovable-uploads/4002ac48-bd37-4753-bb37-09539ee5794a.png')",
             backgroundRepeat: "repeat",
             backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
             backgroundSize: "300px",
