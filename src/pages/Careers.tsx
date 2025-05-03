@@ -1,22 +1,24 @@
 
-import { useState } from "react";
+import React from "react";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
-import HeroSection from "@/components/Careers/HeroSection";
 import BenefitsSection from "@/components/Careers/BenefitsSection";
 import JobListingsSection from "@/components/Careers/JobListingsSection";
 import ApplicationSection from "@/components/Careers/ApplicationSection";
-import { JobCardProps } from "@/components/Careers/JobCard";
+import PageHeader from "@/components/Layout/PageHeader";
 
-// Job data moved from inline to imported
+// Job data imported from data file
 import jobListingsData from "@/data/jobListings";
 
 const Careers = () => {
   return (
     <>
       <Navbar />
-      <div className="pt-20 pb-16">
-        <HeroSection />
+      <PageHeader 
+        title="Join Our Dedicated Team"
+        description="At Lifeway, we're seeking passionate individuals committed to making a difference in children's lives through rehabilitation and developmental support."
+      />
+      <div className="pb-16">
         <BenefitsSection />
         <JobListingsSection jobListings={jobListingsData} />
         <ApplicationSection />
