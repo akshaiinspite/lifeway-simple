@@ -1,4 +1,3 @@
-
 import { useState, useMemo } from "react";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
@@ -127,7 +126,7 @@ const Team = () => {
             backgroundRepeat: "repeat",
             backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
             backgroundSize: "200px",
-            opacity: 0.2,
+            opacity: 0.75,
           }}
         />
       </div>

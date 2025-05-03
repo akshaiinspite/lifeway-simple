@@ -27,7 +27,7 @@ const Events = () => {
             backgroundRepeat: "repeat",
             backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
             backgroundSize: "200px",
-            opacity: 0.2,
+            opacity: 0.75,
           }}
         />
       </div>
