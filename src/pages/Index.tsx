@@ -27,11 +27,24 @@ const Index = () => {
             backgroundRepeat: "repeat",
             backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
             backgroundSize: "300px",
-            opacity: 1,
+            opacity: 0.1,
           }}
         />
       </div>
       <Navbar />
+      {/* Pattern below header */}
+      <div className="w-full h-12 bg-gradient-to-r from-lifeway-red/10 to-gray-100 relative">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/lovable-uploads/8fc5e78f-d1a8-4414-9a39-e87a2e476fb9.png')",
+            backgroundRepeat: "repeat",
+            backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
+            backgroundSize: "200px",
+            opacity: 0.2,
+          }}
+        />
+      </div>
       <main className="flex-grow relative z-10">
         <Banner />
         <Introduction />

@@ -1,3 +1,4 @@
+
 import { useState, useMemo } from "react";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
@@ -85,6 +86,10 @@ const departments = [
 const Team = () => {
   const [selectedDepartment, setSelectedDepartment] = useState("All Departments");
   const [searchQuery, setSearchQuery] = useState("");
+  const randomPosition = {
+    x: Math.floor(Math.random() * 50),
+    y: Math.floor(Math.random() * 50),
+  };
 
   const filteredTeamMembers = useMemo(() => {
     let filtered = [...teamMembers];
@@ -113,6 +118,19 @@ const Team = () => {
         title="Meet Our Expert Team"
         description="Our multidisciplinary team of professionals is dedicated to providing the highest quality care for your child's development and rehabilitation needs."
       />
+      {/* Pattern below header */}
+      <div className="w-full h-12 bg-gradient-to-r from-blue-50 to-gray-100 relative">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/lovable-uploads/8fc5e78f-d1a8-4414-9a39-e87a2e476fb9.png')",
+            backgroundRepeat: "repeat",
+            backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
+            backgroundSize: "200px",
+            opacity: 0.2,
+          }}
+        />
+      </div>
       <div className="py-16">
         {/* Filter and Search Controls */}
         <div className="container-custom">

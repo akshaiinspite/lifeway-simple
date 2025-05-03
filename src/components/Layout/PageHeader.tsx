@@ -23,7 +23,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
           backgroundRepeat: "repeat",
           backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
           backgroundSize: "300px",
-          opacity: 1,
+          opacity: 0.1,
         }}
       />
       <div className="container-custom relative z-10">
