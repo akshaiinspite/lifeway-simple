@@ -24,7 +24,7 @@ const Contact = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/lovable-uploads/8fc5e78f-d1a8-4414-9a39-e87a2e476fb9.png')",
+            backgroundImage: "url('/lovable-uploads/99a2e717-bbef-4f7d-9716-a7487aa92565.png')",
             backgroundRepeat: "repeat",
             backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
             backgroundSize: "200px",
