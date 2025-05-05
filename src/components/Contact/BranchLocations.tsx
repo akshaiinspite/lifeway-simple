@@ -1,6 +1,6 @@
 
 import React from "react";
-import { MapPin, Phone, Clock, Whatsapp } from "lucide-react";
+import { MapPin, Phone, Clock, MessageSquareText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const branches = [
@@ -67,7 +67,7 @@ const BranchLocations = () => {
                 </a>
               </div>
               <div className="flex items-start">
-                <Whatsapp className="h-5 w-5 text-lifeway-red shrink-0 mr-2 mt-0.5" />
+                <MessageSquareText className="h-5 w-5 text-lifeway-red shrink-0 mr-2 mt-0.5" />
                 <a 
                   href={`https://wa.me/${branch.whatsapp.replace(/\D/g, '')}`}
                   target="_blank"

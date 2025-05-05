@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Whatsapp } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, MessageSquareText } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -54,7 +54,7 @@ const Footer = () => {
                 className="text-lifeway-grey hover:text-lifeway-red transition-colors"
                 aria-label="WhatsApp"
               >
-                <Whatsapp size={20} />
+                <MessageSquareText size={20} />
               </a>
             </div>
           </div>
@@ -154,7 +154,7 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-center">
-                <Whatsapp className="mr-3 text-lifeway-red flex-shrink-0" size={18} />
+                <MessageSquareText className="mr-3 text-lifeway-red flex-shrink-0" size={18} />
                 <a 
                   href="https://wa.me/919645500080" 
                   target="_blank"
