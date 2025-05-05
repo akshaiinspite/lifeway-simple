@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
@@ -7,11 +6,6 @@ import FAQSection from "@/components/FAQ/FAQSection";
 import ChatBot from "@/components/Chat/ChatBot";
 
 const Services = () => {
-  const randomPosition = {
-    x: Math.floor(Math.random() * 50),
-    y: Math.floor(Math.random() * 50),
-  };
-  
   return (
     <>
       <Navbar />
@@ -19,19 +13,6 @@ const Services = () => {
         title="Our Services"
         description="Comprehensive therapy and support services for children and families"
       />
-      {/* Pattern below header */}
-      <div className="w-full h-12 bg-gradient-to-r from-lifeway-red/10 to-gray-100 relative">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url('/lovable-uploads/99a2e717-bbef-4f7d-9716-a7487aa92565.png')",
-            backgroundRepeat: "repeat",
-            backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
-            backgroundSize: "200px",
-            opacity: 0.75,
-          }}
-        />
-      </div>
       <div className="py-12 md:py-16 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -40,7 +21,6 @@ const Services = () => {
               Explore our range of therapeutic services designed to support your child's development and well-being.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Occupational Therapy */}
             <div className="bg-white rounded-lg shadow-md p-6">

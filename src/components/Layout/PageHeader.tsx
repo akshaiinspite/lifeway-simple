@@ -19,11 +19,10 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "url('/lovable-uploads/99a2e717-bbef-4f7d-9716-a7487aa92565.png')",
+          backgroundImage: "url('/lovable-uploads/4002ac48-bd37-4753-bb37-09539ee5794a.png')",
           backgroundRepeat: "repeat",
           backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
           backgroundSize: "300px",
-          opacity: 0.1,
         }}
       />
       <div className="container-custom relative z-10">

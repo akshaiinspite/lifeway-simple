@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
@@ -39,11 +38,6 @@ const EventsGallery = () => {
     },
   ];
 
-  const randomPosition = {
-    x: Math.floor(Math.random() * 50),
-    y: Math.floor(Math.random() * 50),
-  };
-
   return (
     <>
       <Navbar />
@@ -51,19 +45,6 @@ const EventsGallery = () => {
         title="Events Gallery"
         description="Browse through our collection of memorable event moments"
       />
-      {/* Pattern below header */}
-      <div className="w-full h-12 bg-gradient-to-r from-orange-50 to-gray-100 relative">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url('/lovable-uploads/99a2e717-bbef-4f7d-9716-a7487aa92565.png')",
-            backgroundRepeat: "repeat",
-            backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
-            backgroundSize: "200px",
-            opacity: 0.75,
-          }}
-        />
-      </div>
       <div className="container-custom py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.map((image, index) => (

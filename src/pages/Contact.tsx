@@ -7,11 +7,6 @@ import ContactForm from "@/components/Contact/ContactForm";
 import PageHeader from "@/components/Layout/PageHeader";
 
 const Contact = () => {
-  const randomPosition = {
-    x: Math.floor(Math.random() * 50),
-    y: Math.floor(Math.random() * 50),
-  };
-
   return (
     <>
       <Navbar />
@@ -19,19 +14,6 @@ const Contact = () => {
         title="Contact Us"
         description="Get in touch with our team for inquiries, appointments, or any information you need about our services."
       />
-      {/* Pattern below header */}
-      <div className="w-full h-12 bg-gradient-to-r from-yellow-50 to-gray-100 relative">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url('/lovable-uploads/99a2e717-bbef-4f7d-9716-a7487aa92565.png')",
-            backgroundRepeat: "repeat",
-            backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
-            backgroundSize: "200px",
-            opacity: 0.75,
-          }}
-        />
-      </div>
       <div className="py-12 md:py-16 bg-gray-50">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

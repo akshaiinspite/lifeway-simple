@@ -4,7 +4,7 @@ import ApplicationForm from "@/components/Careers/ApplicationForm";
 
 const ApplicationSection = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">

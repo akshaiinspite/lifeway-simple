@@ -23,28 +23,14 @@ const Index = () => {
         <div
           className="w-full h-full"
           style={{
-            backgroundImage: "url('/lovable-uploads/99a2e717-bbef-4f7d-9716-a7487aa92565.png')",
+            backgroundImage: "url('/lovable-uploads/4002ac48-bd37-4753-bb37-09539ee5794a.png')",
             backgroundRepeat: "repeat",
             backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
             backgroundSize: "300px",
-            opacity: 0.1,
           }}
         />
       </div>
       <Navbar />
-      {/* Pattern below header */}
-      <div className="w-full h-12 bg-gradient-to-r from-lifeway-red/10 to-gray-100 relative">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url('/lovable-uploads/99a2e717-bbef-4f7d-9716-a7487aa92565.png')",
-            backgroundRepeat: "repeat",
-            backgroundPosition: `${randomPosition.x}% ${randomPosition.y}%`,
-            backgroundSize: "200px",
-            opacity: 0.75,
-          }}
-        />
-      </div>
       <main className="flex-grow relative z-10">
         <Banner />
         <Introduction />
