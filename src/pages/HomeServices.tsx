@@ -5,6 +5,7 @@ import Footer from "@/components/Layout/Footer";
 import HomeServicesContent from "@/components/HomeServices/HomeServicesContent";
 import PageHeader from "@/components/Layout/PageHeader";
 import WhatsAppButton from "@/components/Common/WhatsAppButton";
+import SocialFollowSection from "@/components/Common/SocialFollowSection";
 
 const HomeServices = () => {
   return (
@@ -19,6 +20,7 @@ const HomeServices = () => {
           <HomeServicesContent />
         </div>
       </div>
+      <SocialFollowSection />
       <WhatsAppButton />
       <Footer />
     </>

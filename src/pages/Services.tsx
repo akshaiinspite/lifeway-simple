@@ -1,9 +1,11 @@
+
 import React from "react";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import PageHeader from "@/components/Layout/PageHeader";
 import FAQSection from "@/components/FAQ/FAQSection";
 import ChatBot from "@/components/Chat/ChatBot";
+import SocialFollowSection from "@/components/Common/SocialFollowSection";
 
 const Services = () => {
   return (
@@ -97,6 +99,7 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <SocialFollowSection />
       <FAQSection />
       <ChatBot />
       <Footer />

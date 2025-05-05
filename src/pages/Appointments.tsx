@@ -4,6 +4,7 @@ import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import AppointmentForm from "@/components/Appointments/AppointmentForm";
 import PageHeader from "@/components/Layout/PageHeader";
+import SocialFollowSection from "@/components/Common/SocialFollowSection";
 
 const Appointments = () => {
   return (
@@ -20,6 +21,7 @@ const Appointments = () => {
           </div>
         </div>
       </div>
+      <SocialFollowSection />
       <Footer />
     </>
   );

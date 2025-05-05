@@ -6,6 +6,7 @@ import BranchLocations from "@/components/Contact/BranchLocations";
 import ContactForm from "@/components/Contact/ContactForm";
 import PageHeader from "@/components/Layout/PageHeader";
 import WhatsAppButton from "@/components/Common/WhatsAppButton";
+import SocialFollowSection from "@/components/Common/SocialFollowSection";
 
 const Contact = () => {
   return (
@@ -29,6 +30,7 @@ const Contact = () => {
         </div>
       </div>
       
+      <SocialFollowSection />
       <WhatsAppButton />
       <Footer />
     </>

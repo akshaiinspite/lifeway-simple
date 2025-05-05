@@ -1,8 +1,10 @@
+
 import React from "react";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import PageHeader from "@/components/Layout/PageHeader";
 import { Card, CardContent } from "@/components/ui/card";
+import SocialFollowSection from "@/components/Common/SocialFollowSection";
 
 const EventsGallery = () => {
   const galleryImages = [
@@ -66,6 +68,7 @@ const EventsGallery = () => {
           ))}
         </div>
       </div>
+      <SocialFollowSection />
       <Footer />
     </>
   );

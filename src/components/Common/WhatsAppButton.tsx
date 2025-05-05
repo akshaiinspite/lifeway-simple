@@ -1,6 +1,6 @@
 
 import React from "react";
-import { MessageSquareText } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WhatsAppButton = () => {
@@ -16,7 +16,7 @@ const WhatsAppButton = () => {
           rel="noreferrer"
           aria-label="Contact us on WhatsApp"
         >
-          <MessageSquareText className="h-6 w-6" />
+          <MessageSquare className="h-6 w-6" />
         </a>
       </Button>
     </div>

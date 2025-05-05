@@ -10,6 +10,7 @@ import Footer from "@/components/Layout/Footer";
 import ChatBot from "@/components/Chat/ChatBot";
 import FAQSection from "@/components/FAQ/FAQSection";
 import WhatsAppButton from "@/components/Common/WhatsAppButton";
+import SocialFollowSection from "@/components/Common/SocialFollowSection";
 
 const Index = () => {
   const randomPosition = {
@@ -40,6 +41,7 @@ const Index = () => {
         <HomecareServices />
         <FAQSection />
         <Testimonials />
+        <SocialFollowSection />
       </main>
       
       <WhatsAppButton />

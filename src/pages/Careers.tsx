@@ -6,8 +6,7 @@ import HeroSection from "@/components/Careers/HeroSection";
 import BenefitsSection from "@/components/Careers/BenefitsSection";
 import JobListingsSection from "@/components/Careers/JobListingsSection";
 import ApplicationSection from "@/components/Careers/ApplicationSection";
-import { JobCardProps } from "@/components/Careers/JobCard";
-
+import SocialFollowSection from "@/components/Common/SocialFollowSection";
 // Job data moved from inline to imported
 import jobListingsData from "@/data/jobListings";
 
@@ -21,6 +20,7 @@ const Careers = () => {
         <JobListingsSection jobListings={jobListingsData} />
         <ApplicationSection />
       </div>
+      <SocialFollowSection />
       <Footer />
     </>
   );

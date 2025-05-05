@@ -3,6 +3,7 @@ import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import TeamMemberCard, { TeamMemberProps } from "@/components/Team/TeamMemberCard";
 import PageHeader from "@/components/Layout/PageHeader";
+import SocialFollowSection from "@/components/Common/SocialFollowSection";
 
 const teamMembers: TeamMemberProps[] = [
   {
@@ -178,6 +179,7 @@ const Team = () => {
           )}
         </div>
       </div>
+      <SocialFollowSection />
       <Footer />
     </>
   );

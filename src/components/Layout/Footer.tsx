@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, MessageSquareText } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, MessageSquare } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -54,7 +53,7 @@ const Footer = () => {
                 className="text-lifeway-grey hover:text-lifeway-red transition-colors"
                 aria-label="WhatsApp"
               >
-                <MessageSquareText size={20} />
+                <MessageSquare size={20} />
               </a>
             </div>
           </div>
@@ -154,7 +153,7 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-center">
-                <MessageSquareText className="mr-3 text-lifeway-red flex-shrink-0" size={18} />
+                <MessageSquare className="mr-3 text-lifeway-red flex-shrink-0" size={18} />
                 <a 
                   href="https://wa.me/919645500080" 
                   target="_blank"
@@ -197,6 +196,53 @@ const Footer = () => {
             <Link to="/terms-of-service" className="text-sm text-lifeway-grey hover:text-lifeway-red transition-colors">
               Terms of Service
             </Link>
+          </div>
+        </div>
+      </div>
+      
+      {/* Add "Follow Us" section with social media icons */}
+      <div className="container-custom mt-8 pt-8 border-t border-gray-800">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <p className="text-lifeway-grey text-base mb-4 md:mb-0">
+            Follow us on social media:
+          </p>
+          <div className="flex space-x-6">
+            <a 
+              href="https://www.facebook.com/share/12JeDRhBoTi/" 
+              target="_blank" 
+              rel="noreferrer"
+              className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors"
+            >
+              <Facebook size={20} />
+              <span>Facebook</span>
+            </a>
+            <a 
+              href="https://x.com/Lifewayrehab?t=VNK38ivpS13siAGIddeAqw&s=08" 
+              target="_blank" 
+              rel="noreferrer"
+              className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors"
+            >
+              <Twitter size={20} />
+              <span>X</span>
+            </a>
+            <a 
+              href="https://www.instagram.com/lifewayrehab?igsh=NWFrbWJxNXk1OWRo" 
+              target="_blank" 
+              rel="noreferrer"
+              className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors"
+            >
+              <Instagram size={20} />
+              <span>Instagram</span>
+            </a>
+            <a 
+              href="https://wa.me/919645500080" 
+              target="_blank" 
+              rel="noreferrer"
+              className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors"
+            >
+              <MessageSquare size={20} />
+              <span>WhatsApp</span>
+            </a>
           </div>
         </div>
       </div>
