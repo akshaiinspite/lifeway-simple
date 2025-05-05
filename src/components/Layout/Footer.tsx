@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Whatsapp } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/share/12JeDRhBoTi/" 
                 target="_blank" 
                 rel="noreferrer"
                 className="text-lifeway-grey hover:text-lifeway-red transition-colors"
@@ -30,7 +30,7 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://x.com/Lifewayrehab?t=VNK38ivpS13siAGIddeAqw&s=08" 
                 target="_blank" 
                 rel="noreferrer"
                 className="text-lifeway-grey hover:text-lifeway-red transition-colors"
@@ -39,13 +39,22 @@ const Footer = () => {
                 <Twitter size={20} />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/lifewayrehab?igsh=NWFrbWJxNXk1OWRo" 
                 target="_blank" 
                 rel="noreferrer"
                 className="text-lifeway-grey hover:text-lifeway-red transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
+              </a>
+              <a 
+                href="https://wa.me/919645500080" 
+                target="_blank" 
+                rel="noreferrer"
+                className="text-lifeway-grey hover:text-lifeway-red transition-colors"
+                aria-label="WhatsApp"
+              >
+                <Whatsapp size={20} />
               </a>
             </div>
           </div>
@@ -120,22 +129,45 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="mr-3 text-lifeway-red flex-shrink-0 mt-1" size={18} />
-                <span className="text-lifeway-grey">
-                  123 Healing Way, Medical District
+                <a 
+                  href="https://maps.google.com/?q=LifeWay+Rehabilitation+and+Child+Development+Centre,+Alangaden+Arcade,+Calicut+road,+Perinthalmanna+-+679322"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-lifeway-grey hover:text-lifeway-red transition-colors"
+                >
+                  LifeWay Rehabilitation and Child Development Centre,
                   <br />
-                  New York, NY 10001
-                </span>
+                  Alangaden Arcade, Calicut road,
+                  <br />
+                  Perinthalmanna - 679322
+                </a>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-3 text-lifeway-red flex-shrink-0" size={18} />
-                <a href="tel:+12345678900" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
-                  (123) 456-7890
+                <div className="flex flex-col">
+                  <a href="tel:+919645500081" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                    +91 9645500081
+                  </a>
+                  <a href="tel:+919645500082" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                    +91 9645500082
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-center">
+                <Whatsapp className="mr-3 text-lifeway-red flex-shrink-0" size={18} />
+                <a 
+                  href="https://wa.me/919645500080" 
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-lifeway-grey hover:text-lifeway-red transition-colors"
+                >
+                  +91 9645500080
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-3 text-lifeway-red flex-shrink-0" size={18} />
-                <a href="mailto:info@lifeway-hospital.com" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
-                  info@lifeway-hospital.com
+                <a href="mailto:lifewaypmna@gmail.com" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                  lifewaypmna@gmail.com
                 </a>
               </li>
               <li className="flex items-start">

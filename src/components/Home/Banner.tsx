@@ -78,8 +78,19 @@ const Banner = () => {
           </div>
           
           <div className="mt-8 text-sm text-gray-300 animate-fade-in" style={{animationDelay: '0.7s'}}>
-            <p>📍 LifeWay Rehabilitation and Child Development Centre, Alangaden Arcade, Calicut Road, Near nursing home, Perinthalmanna, Kerala 679322</p>
-            <p>📞 [Your Contact Info] 🌐 [Website]</p>
+            <a 
+              href="https://maps.google.com/?q=LifeWay+Rehabilitation+and+Child+Development+Centre,+Alangaden+Arcade,+Calicut+road,+Perinthalmanna+-+679322"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-lifeway-red transition-colors"
+            >
+              <p>📍 LifeWay Rehabilitation and Child Development Centre, Alangaden Arcade, Calicut Road, Perinthalmanna, Kerala 679322</p>
+            </a>
+            <p>
+              📞 <a href="tel:+919645500081" className="hover:text-lifeway-red transition-colors">+91 9645500081</a>, 
+              <a href="tel:+919645500082" className="hover:text-lifeway-red transition-colors ml-1">+91 9645500082</a> 
+              🌐 <a href="mailto:lifewaypmna@gmail.com" className="hover:text-lifeway-red transition-colors">lifewaypmna@gmail.com</a>
+            </p>
           </div>
         </div>
       </div>

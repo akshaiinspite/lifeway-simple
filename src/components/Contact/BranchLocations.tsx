@@ -1,33 +1,27 @@
 
 import React from "react";
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, Whatsapp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const branches = [
   {
     id: 1,
     name: "Lifeway Main Center",
-    address: "123 Healthcare Avenue, Medical District, City",
-    phone: "+1 (234) 567-8900",
+    address: "LifeWay Rehabilitation and Child Development Centre, Alangaden Arcade, Calicut road, Perinthalmanna - 679322",
+    phone: "+91 9645500081",
+    whatsapp: "+91 9645500080",
     hours: "Monday - Friday: 8AM - 6PM, Saturday: 9AM - 2PM",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00639682427755!3d40.7101282739538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a197c06b7cb%3A0x40a06c78f79e5de6!2s123%20William%20St%2C%20New%20York%2C%20NY%2010038%2C%20USA!5e0!3m2!1sen!2sin!4v1712513234478!5m2!1sen!2sin",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15662.259521515545!2d76.2199255!3d10.9856455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7cd85fce5f2bb%3A0xee6d1a7d3b2850ef!2sLifeway%20Rehabilitation%20and%20Child%20Development%20Centre!5e0!3m2!1sen!2sin!4v1717773642258!5m2!1sen!2sin",
   },
   {
     id: 2,
     name: "Lifeway South Branch",
-    address: "456 Wellness Road, South District, City",
-    phone: "+1 (234) 567-8901",
+    address: "LifeWay Rehabilitation and Child Development Centre, Alangaden Arcade, Calicut road, Perinthalmanna - 679322",
+    phone: "+91 9645500082",
+    whatsapp: "+91 9645500080",
     hours: "Monday - Friday: 9AM - 5PM, Saturday: 10AM - 1PM",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00639682427755!3d40.7101282739538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a197c06b7cb%3A0x40a06c78f79e5de6!2s123%20William%20St%2C%20New%20York%2C%20NY%2010038%2C%20USA!5e0!3m2!1sen!2sin!4v1712513234478!5m2!1sen!2sin",
-  },
-  {
-    id: 3,
-    name: "Lifeway East Center",
-    address: "789 Care Street, East Neighborhood, City",
-    phone: "+1 (234) 567-8902",
-    hours: "Monday - Friday: 8AM - 7PM, Saturday: 9AM - 3PM",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00639682427755!3d40.7101282739538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a197c06b7cb%3A0x40a06c78f79e5de6!2s123%20William%20St%2C%20New%20York%2C%20NY%2010038%2C%20USA!5e0!3m2!1sen!2sin!4v1712513234478!5m2!1sen!2sin",
-  },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15662.259521515545!2d76.2199255!3d10.9856455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7cd85fce5f2bb%3A0xee6d1a7d3b2850ef!2sLifeway%20Rehabilitation%20and%20Child%20Development%20Centre!5e0!3m2!1sen!2sin!4v1717773642258!5m2!1sen!2sin",
+  }
 ];
 
 const BranchLocations = () => {
@@ -57,11 +51,31 @@ const BranchLocations = () => {
             <div className="space-y-3 mb-4">
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-lifeway-red shrink-0 mr-2 mt-0.5" />
-                <span>{branch.address}</span>
+                <a
+                  href={`https://maps.google.com/?q=${encodeURIComponent(branch.address)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-lifeway-red transition-colors"
+                >
+                  {branch.address}
+                </a>
               </div>
               <div className="flex items-start">
                 <Phone className="h-5 w-5 text-lifeway-red shrink-0 mr-2 mt-0.5" />
-                <span>{branch.phone}</span>
+                <a href={`tel:${branch.phone.replace(/\D/g, '')}`} className="hover:text-lifeway-red transition-colors">
+                  {branch.phone}
+                </a>
+              </div>
+              <div className="flex items-start">
+                <Whatsapp className="h-5 w-5 text-lifeway-red shrink-0 mr-2 mt-0.5" />
+                <a 
+                  href={`https://wa.me/${branch.whatsapp.replace(/\D/g, '')}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-lifeway-red transition-colors"
+                >
+                  {branch.whatsapp} (WhatsApp)
+                </a>
               </div>
               <div className="flex items-start">
                 <Clock className="h-5 w-5 text-lifeway-red shrink-0 mr-2 mt-0.5" />
@@ -77,7 +91,7 @@ const BranchLocations = () => {
               </Button>
               <Button variant="outline" asChild>
                 <a 
-                  href={`https://wa.me/${branch.phone.replace(/\D/g, '')}`} 
+                  href={`https://wa.me/${branch.whatsapp.replace(/\D/g, '')}`} 
                   target="_blank"
                   rel="noopener noreferrer"
                 >
