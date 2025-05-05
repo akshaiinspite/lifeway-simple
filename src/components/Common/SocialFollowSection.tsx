@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Facebook, Twitter, Instagram, MessageSquare } from "lucide-react";
+import { Facebook, Twitter, Instagram, WhatsApp } from "lucide-react";
 
 const SocialFollowSection = () => {
   return (
@@ -44,7 +44,7 @@ const SocialFollowSection = () => {
               rel="noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm hover:bg-green-50 transition-colors"
             >
-              <MessageSquare className="text-green-600" size={24} />
+              <WhatsApp className="text-green-600" size={24} />
               <span>WhatsApp</span>
             </a>
           </div>
