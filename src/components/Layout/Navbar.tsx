@@ -48,6 +48,15 @@ const Navbar = () => {
       ],
     },
     { name: "Contact", path: "/contact" },
+    {
+      name: "About Us",
+      path: "/about-us",
+      subItems: [
+        { name: "About Our Center", path: "/about-us" },
+        { name: "Director Junaidh's Message", path: "/about-us/director-junaidh" },
+        { name: "Director Shiny's Message", path: "/about-us/director-shiny" },
+      ],
+    },
   ];
 
   useEffect(() => {
