@@ -9,11 +9,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1: Logo and Description */}
           <div>
-            <div className="text-3xl font-serif font-bold text-white mb-4">
-              Lifeway
-              <span className="block text-sm text-lifeway-grey mt-1">
-                The reason for your smile!
-              </span>
+            <div className="flex items-center mb-4">
+              <img 
+                src="/lovable-uploads/57fb37d3-75f4-440e-8dfc-f4ca09a7275e.png" 
+                alt="Lifeway Logo" 
+                className="h-12 mr-3" 
+              />
+              <div className="text-3xl font-serif font-bold text-white">
+                Lifeway
+                <span className="block text-sm text-lifeway-grey mt-1">
+                  A way to new life
+                </span>
+              </div>
             </div>
             <p className="text-lifeway-grey mb-6">
               Lifeway is dedicated to providing exceptional rehabilitation and 

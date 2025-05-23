@@ -79,11 +79,18 @@ const Navbar = () => {
     >
       <div className="container-custom flex items-center justify-between">
         <Link to="/" className="flex items-center">
-          <div className="text-3xl font-serif font-bold text-lifeway-red">
-            Lifeway
-            <span className="block text-sm font-sans text-lifeway-black">
-              The reason for your smile!
-            </span>
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/57fb37d3-75f4-440e-8dfc-f4ca09a7275e.png" 
+              alt="Lifeway Logo" 
+              className="h-12 mr-3" 
+            />
+            <div className="text-3xl font-serif font-bold text-lifeway-red">
+              Lifeway
+              <span className="block text-sm font-sans text-lifeway-black">
+                A way to new life
+              </span>
+            </div>
           </div>
         </Link>
 
