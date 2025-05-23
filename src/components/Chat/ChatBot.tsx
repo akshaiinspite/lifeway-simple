@@ -49,6 +49,18 @@ const faqs = [
   }
 ];
 
+// System prompt that describes the chatbot's role and behavior
+const SYSTEM_PROMPT = `You are a helpful assistant at Lifeway Healthcare, focusing on:
+1. Helping users book appointments with our healthcare professionals
+2. Providing detailed information about our services including occupational therapy, physiotherapy, speech therapy, special education, clinical psychology, and home services
+3. Answering general queries about our healthcare facility and treatments
+4. Guiding users to the right department or specialist based on their needs
+
+Here are our Frequently Asked Questions, use them to provide accurate answers:
+${faqs.map(faq => `Q: ${faq.question}\nA: ${faq.answer}`).join('\n\n')}
+
+Be professional, friendly, and provide clear, concise information. If the user's question matches or is similar to one of our FAQs, use that information in your response, but keep your tone natural and conversational.`;
+
 const API_KEY = "AIzaSyAv3YkRfiVlCrtYsXwzR_Wvt-82B8wZhEg";
 
 const ChatBot = () => {
@@ -62,6 +74,14 @@ const ChatBot = () => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  
+  // Store conversation history for the AI to maintain context
+  const [conversationHistory, setConversationHistory] = useState<Array<{role: string, parts: Array<{text: string}>}>>([
+    {
+      role: "model",
+      parts: [{text: "Hello! I'm here to help you with booking appointments, learning about our services, or answering any other questions you might have. How can I assist you today?"}]
+    }
+  ]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -73,8 +93,16 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      const faqsString = faqs.map(faq => `Q: ${faq.question}\nA: ${faq.answer}`).join('\n\n');
+      // Add the user message to conversation history
+      const updatedHistory = [
+        ...conversationHistory,
+        {
+          role: "user",
+          parts: [{ text: input }]
+        }
+      ];
       
+      // Make API request with the entire conversation history
       const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent', {
         method: 'POST',
         headers: {
@@ -82,22 +110,12 @@ const ChatBot = () => {
           'x-goog-api-key': API_KEY,
         },
         body: JSON.stringify({
-          contents: [{
-            parts: [{
-              text: `You are a helpful assistant at Lifeway Healthcare, focusing on:
-              1. Helping users book appointments with our healthcare professionals
-              2. Providing detailed information about our services including occupational therapy, physiotherapy, speech therapy, special education, clinical psychology, and home services
-              3. Answering general queries about our healthcare facility and treatments
-              4. Guiding users to the right department or specialist based on their needs
-              
-              Here are our Frequently Asked Questions, use them to provide accurate answers:
-              ${faqsString}
-              
-              Be professional, friendly, and provide clear, concise information. If the user's question matches or is similar to one of our FAQs, use that information in your response, but keep your tone natural and conversational.
-              
-              User message: ${input}`
-            }]
-          }],
+          contents: [
+            {
+              parts: [{ text: SYSTEM_PROMPT }]
+            },
+            ...updatedHistory
+          ],
           generationConfig: {
             temperature: 0.7,
             maxOutputTokens: 500,
@@ -110,9 +128,27 @@ const ChatBot = () => {
       }
 
       const data = await response.json();
+      
+      if (!data.candidates || !data.candidates[0]?.content?.parts?.[0]?.text) {
+        throw new Error('Unexpected response format');
+      }
+      
+      const aiResponse = data.candidates[0].content.parts[0].text;
+      
+      // Add AI response to the conversation history
+      const newHistory = [
+        ...updatedHistory,
+        {
+          role: "model",
+          parts: [{ text: aiResponse }]
+        }
+      ];
+      
+      setConversationHistory(newHistory);
+      
       const aiMessage = {
         role: "assistant",
-        content: data.candidates[0].content.parts[0].text,
+        content: aiResponse,
       } as Message;
       
       setMessages((prev) => [...prev, aiMessage]);
