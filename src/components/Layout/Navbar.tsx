@@ -96,7 +96,7 @@ const Navbar = () => {
                   <NavigationMenuList>
                     <NavigationMenuItem>
                       <NavigationMenuTrigger 
-                        className={`font-medium hover:text-lifeway-red transition-colors ${
+                        className={`text-sm font-medium hover:text-lifeway-red transition-colors ${
                           location.pathname === link.path || 
                           (link.subItems && link.subItems.some(subItem => location.pathname === subItem.path))
                             ? "text-lifeway-red"
@@ -111,7 +111,7 @@ const Navbar = () => {
                             <Link
                               key={subItem.name}
                               to={subItem.path}
-                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-lifeway-red focus:bg-accent focus:text-accent-foreground"
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-lifeway-red focus:bg-accent focus:text-accent-foreground text-xs"
                               onClick={() => setIsMenuOpen(false)}
                             >
                               <div className="text-sm font-medium leading-none">
@@ -129,7 +129,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`font-medium hover:text-lifeway-red transition-colors ${
+                className={`text-sm font-medium hover:text-lifeway-red transition-colors ${
                   location.pathname === link.path
                     ? "text-lifeway-red"
                     : "text-lifeway-black"
@@ -139,7 +139,7 @@ const Navbar = () => {
               </Link>
             )
           )}
-          <Link to="/contact" className="btn-primary font-medium">
+          <Link to="/contact" className="btn-primary text-sm font-medium">
             Book Appointment
           </Link>
         </nav>
@@ -161,7 +161,7 @@ const Navbar = () => {
             {navLinks.map((link) =>
               link.subItems ? (
                 <div key={link.name} className="space-y-4 w-full">
-                  <div className="text-xl font-medium text-lifeway-black text-center">
+                  <div className="text-lg font-medium text-lifeway-black text-center">
                     {link.name}
                   </div>
                   <div className="flex flex-col space-y-2">
@@ -169,7 +169,7 @@ const Navbar = () => {
                       <Link
                         key={subItem.name}
                         to={subItem.path}
-                        className="block text-center text-lg text-gray-600 hover:text-lifeway-red"
+                        className="block text-center text-base text-gray-600 hover:text-lifeway-red"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {subItem.name}
@@ -181,7 +181,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-xl font-medium hover:text-lifeway-red transition-colors ${
+                  className={`text-lg font-medium hover:text-lifeway-red transition-colors ${
                     location.pathname === link.path
                       ? "text-lifeway-red"
                       : "text-lifeway-black"
@@ -194,7 +194,7 @@ const Navbar = () => {
             )}
             <Link
               to="/contact"
-              className="btn-primary w-full text-center"
+              className="btn-primary w-full text-center text-base"
               onClick={() => setIsMenuOpen(false)}
             >
               Book Appointment
