@@ -17,6 +17,38 @@ interface Message {
   content: string;
 }
 
+// FAQs data to help the chatbot provide accurate answers
+const faqs = [
+  {
+    question: "What services does Lifeway provide?",
+    answer: "Lifeway offers a comprehensive range of services including occupational therapy, physiotherapy, speech therapy, special education, clinical psychology, and home services for children with developmental needs.",
+  },
+  {
+    question: "How do I schedule an appointment?",
+    answer: "You can schedule an appointment through our website's appointment booking system, by calling our office at +91 9645500081 or +91 9645500082, or by visiting us in person. Our team will guide you through the process and find the best time slot for you.",
+  },
+  {
+    question: "Do you offer home services?",
+    answer: "Yes, we provide home therapy services for families who prefer or require treatment in their home environment. Our therapists can travel to your location within our service area.",
+  },
+  {
+    question: "What age groups do you work with?",
+    answer: "We work with children of all ages, from infants to teenagers. Our programs are tailored to meet the specific developmental needs of each age group.",
+  },
+  {
+    question: "Is parent involvement required?",
+    answer: "Yes, we strongly encourage parent involvement in the therapy process. We believe that family participation is crucial for the child's progress and provide guidance on how parents can support their child's development at home.",
+  },
+  {
+    question: "What are your working hours?",
+    answer: "We are open Monday to Friday from 8:00 AM to 7:00 PM, Saturday from 8:00 AM to 2:00 PM, and we're closed on Sundays.",
+  },
+  {
+    question: "Where are you located?",
+    answer: "We are located at Lifeway Rehabilitation and Child Development Centre, Alangaden Arcade, Calicut road, Perinthalmanna - 679322.",
+  }
+];
+
 const API_KEY = "AIzaSyAv3YkRfiVlCrtYsXwzR_Wvt-82B8wZhEg";
 
 const ChatBot = () => {
@@ -41,6 +73,8 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
+      const faqsString = faqs.map(faq => `Q: ${faq.question}\nA: ${faq.answer}`).join('\n\n');
+      
       const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent', {
         method: 'POST',
         headers: {
@@ -55,7 +89,13 @@ const ChatBot = () => {
               2. Providing detailed information about our services including occupational therapy, physiotherapy, speech therapy, special education, clinical psychology, and home services
               3. Answering general queries about our healthcare facility and treatments
               4. Guiding users to the right department or specialist based on their needs
-              Be professional, friendly, and provide clear, concise information. User message: ${input}`
+              
+              Here are our Frequently Asked Questions, use them to provide accurate answers:
+              ${faqsString}
+              
+              Be professional, friendly, and provide clear, concise information. If the user's question matches or is similar to one of our FAQs, use that information in your response, but keep your tone natural and conversational.
+              
+              User message: ${input}`
             }]
           }],
           generationConfig: {
