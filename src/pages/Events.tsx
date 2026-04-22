@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import PageHeader from "@/components/Layout/PageHeader";
-import ChatBot from "@/components/Chat/ChatBot";
+
 import SocialFollowSection from "@/components/Common/SocialFollowSection";
 
 const Events = () => {
@@ -45,7 +45,6 @@ const Events = () => {
         </div>
       </div>
       <SocialFollowSection />
-      <ChatBot />
       <Footer />
     </>
   );
