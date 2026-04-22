@@ -7,7 +7,7 @@ import HomeCareServiceTeaser from "@/components/Home/HomeCareServiceTeaser";
 import Testimonials from "@/components/Home/Testimonials";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
-import ChatBot from "@/components/Chat/ChatBot";
+
 import FAQSection from "@/components/FAQ/FAQSection";
 import WhatsAppButton from "@/components/Common/WhatsAppButton";
 import SocialFollowSection from "@/components/Common/SocialFollowSection";
@@ -45,8 +45,9 @@ const Index = () => {
       </main>
       
       <WhatsAppButton />
-      <ChatBot />
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </div>
   );
 };
