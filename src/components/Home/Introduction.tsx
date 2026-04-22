@@ -56,7 +56,7 @@ const Introduction = () => {
                 </p>
               </div>
             </div>
-            <Link to="/departments" className="btn-primary">
+            <Link to="/about-us" className="btn-primary">
               Learn More About Us
             </Link>
           </div>

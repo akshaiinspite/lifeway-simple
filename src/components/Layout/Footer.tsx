@@ -76,8 +76,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/departments" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
-                  Departments
+                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                  Services
                 </Link>
               </li>
               <li>
@@ -91,6 +91,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/about-us" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
                   Contact Us
                 </Link>
@@ -98,33 +103,38 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Departments */}
+          {/* Column 3: Services */}
           <div>
-            <h4 className="text-xl font-bold mb-6">Departments</h4>
+            <h4 className="text-xl font-bold mb-6">Services</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/departments" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
                   Occupational Therapy
                 </Link>
               </li>
               <li>
-                <Link to="/departments" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
                   Physiotherapy
                 </Link>
               </li>
               <li>
-                <Link to="/departments" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
                   Speech Therapy
                 </Link>
               </li>
               <li>
-                <Link to="/departments" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
                   Special Education
                 </Link>
               </li>
               <li>
-                <Link to="/departments" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
                   Clinical Psychology
+                </Link>
+              </li>
+              <li>
+                <Link to="/home-services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                  Home Services
                 </Link>
               </li>
             </ul>
@@ -195,16 +205,8 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-lifeway-grey text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Lifeway Hospital. All rights reserved.
+            &copy; {new Date().getFullYear()} Lifeway Rehabilitation and Child Development Centre. All rights reserved.
           </p>
-          <div className="flex space-x-6">
-            <Link to="/privacy-policy" className="text-sm text-lifeway-grey hover:text-lifeway-red transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms-of-service" className="text-sm text-lifeway-grey hover:text-lifeway-red transition-colors">
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
       

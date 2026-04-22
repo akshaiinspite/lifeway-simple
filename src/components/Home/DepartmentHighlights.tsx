@@ -65,7 +65,7 @@ const DepartmentHighlights = () => {
 
   // Auto-scroll functionality
   useEffect(() => {
-    let autoScrollInterval: NodeJS.Timeout;
+    let autoScrollInterval: ReturnType<typeof setInterval>;
     
     const startAutoScroll = () => {
       if (!autoScrollPaused && sliderRef.current) {
@@ -165,7 +165,7 @@ const DepartmentHighlights = () => {
                   <h3 className="text-xl font-bold mb-2 text-center">{dept.name}</h3>
                   <p className="text-gray-700 mb-4 flex-grow text-center">{dept.description}</p>
                   <Link 
-                    to={`/departments#${dept.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    to={`/services#${dept.name.toLowerCase().replace(/\s+/g, '-')}`}
                     className="text-lifeway-red font-medium hover:underline flex items-center justify-center"
                   >
                     Learn More
@@ -180,8 +180,8 @@ const DepartmentHighlights = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Link to="/departments" className="btn-primary inline-block">
-            View All Departments
+          <Link to="/services" className="btn-primary inline-block">
+            View All Services
           </Link>
         </div>
       </div>
