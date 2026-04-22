@@ -69,10 +69,10 @@ const Banner = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: '0.6s'}}>
-            <Link to="/departments" className="btn-primary">
+            <Link to="/services" className="btn-primary">
               Explore Our Services
             </Link>
-            <Link to="/contact" className="btn-secondary text-lifeway-black">
+            <Link to="/appointments" className="btn-secondary text-lifeway-black">
               Book Appointment
             </Link>
           </div>
