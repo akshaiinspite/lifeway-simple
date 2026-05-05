@@ -136,8 +136,8 @@ const DepartmentHighlights = () => {
             <span className="text-2xl font-normal">Empowering Every Step of the Journey</span>
           </h2>
           <p className="text-gray-700">
-            Our multidisciplinary approach ensures that every individual receives the specific care and support
-            they need to develop, heal, and thrive in all areas of their life.
+            Meet the key departments that form our multidisciplinary approach to provide personalized,
+            holistic care for every individual.
           </p>
         </div>
 
