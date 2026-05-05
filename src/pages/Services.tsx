@@ -20,44 +20,55 @@ const Services = () => {
           <div className="text-center mb-12">
             <h1 className="heading-lg mb-4">Our Specialized Services</h1>
             <p className="text-gray-700 max-w-2xl mx-auto">
-              Explore our range of therapeutic services designed to support your child's development and well-being.
+              Meet the key departments that form our multidisciplinary approach to provide personalized,
+              holistic care for every individual.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Occupational Therapy */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-xl font-semibold mb-4">Occupational Therapy</h2>
+              <p className="text-gray-600 mb-2 font-medium">
+                Restoring abilities, strengthening confidence, and supporting growth.
+              </p>
               <p className="text-gray-600 mb-4">
-                Enhance your child's fine motor skills, sensory processing, and daily living activities through our personalized occupational therapy programs.
+                Making everyday life easier with Occupational Therapy.
               </p>
               <ul className="list-disc pl-5 text-gray-600">
-                <li>Handwriting improvement</li>
+                <li>ADL training</li>
+                <li>Hand function training</li>
                 <li>Sensory integration</li>
-                <li>Adaptive equipment training</li>
+                <li>Vocational training</li>
               </ul>
             </div>
             {/* Physiotherapy */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-xl font-semibold mb-4">Physiotherapy</h2>
+              <p className="text-gray-600 mb-2 font-medium">
+                Relieving pain, restoring movement, and rebuilding strength for everyday life.
+              </p>
               <p className="text-gray-600 mb-4">
-                Improve your child's gross motor skills, balance, and coordination with our specialized physiotherapy interventions.
+                Expert care tailored to you through Physiotherapy.
               </p>
               <ul className="list-disc pl-5 text-gray-600">
-                <li>Gait training</li>
-                <li>Strength and conditioning</li>
-                <li>Postural correction</li>
+                <li>Pain management</li>
+                <li>Gait and balance training</li>
+                <li>Sports injury recovery</li>
+                <li>Strengthening and conditioning</li>
               </ul>
             </div>
             {/* Speech Therapy */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-xl font-semibold mb-4">Speech Therapy</h2>
               <p className="text-gray-600 mb-4">
-                Enhance your child's communication skills, language development, and speech clarity through our comprehensive speech therapy sessions.
+                Comprehensive care for paediatric and neurological conditions, focusing on communication,
+                speech delay or clarity, and swallowing rehabilitation with advanced therapy techniques.
               </p>
               <ul className="list-disc pl-5 text-gray-600">
                 <li>Articulation therapy</li>
                 <li>Language intervention</li>
-                <li>Fluency management</li>
+                <li>Swallow therapy (dysphagia)</li>
+                <li>Cognitive-communication rehab</li>
               </ul>
             </div>
             {/* Special Education */}
@@ -69,31 +80,35 @@ const Services = () => {
               <ul className="list-disc pl-5 text-gray-600">
                 <li>Individualized education plans (IEPs)</li>
                 <li>Learning strategies</li>
-                <li>Behavioral support</li>
+                <li>School readiness programmes</li>
               </ul>
             </div>
             {/* Clinical Psychology */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-xl font-semibold mb-4">Clinical Psychology</h2>
               <p className="text-gray-600 mb-4">
-                Address your child's emotional and behavioral challenges with our compassionate clinical psychology services and therapeutic interventions.
+                Comprehensive psychological care for children with behavioural and attention difficulties,
+                along with parent support and neuropsychiatric rehabilitation for all age groups.
               </p>
               <ul className="list-disc pl-5 text-gray-600">
-                <li>Counseling and therapy</li>
-                <li>Behavior management</li>
+                <li>Behaviour & attention management</li>
+                <li>Counselling and therapy</li>
                 <li>Emotional regulation</li>
+                <li>Parent guidance</li>
+                <li>Neuropsychological care</li>
               </ul>
             </div>
-            {/* Home Services */}
+            {/* Convenient Care Options */}
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-semibold mb-4">Home Services</h2>
+              <h2 className="text-xl font-semibold mb-4">Convenient Care Options</h2>
               <p className="text-gray-600 mb-4">
-                Receive therapy services in the comfort of your own home with our convenient and personalized home-based therapy programs.
+                Flexible care designed to fit your lifestyle—wherever and however you need it.
               </p>
               <ul className="list-disc pl-5 text-gray-600">
-                <li>In-home assessments</li>
-                <li>Family-centered therapy</li>
-                <li>Flexible scheduling</li>
+                <li>Home-based rehabilitation services</li>
+                <li>In-clinic rehabilitation programs</li>
+                <li>Pickup and drop facility</li>
+                <li>Online therapy sessions</li>
               </ul>
             </div>
           </div>

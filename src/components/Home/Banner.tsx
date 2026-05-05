@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Brain, Baby, Heart, MessageSquare, Users } from "lucide-react";
+import { Activity, Hand, MessageSquare, Brain, GraduationCap } from "lucide-react";
 
 const Banner = () => {
   return (
@@ -38,26 +38,26 @@ const Banner = () => {
             Healing. Growing. Thriving.
           </h2>
           <p className="text-lg mb-6 animate-fade-in" style={{animationDelay: '0.2s'}}>
-            At Lifeway, we believe in whole-person care that transforms lives. Our expert team provides 
-            compassionate, evidence-based rehabilitation and developmental support for both adults and children. 
-            Whether it's recovering from injury or empowering a child's growth, we're with you every step of the way.
+            Lifeway, we believe in whole-person care that transforms lives. Our expert team provides
+            compassionate, evidence-based rehabilitation and developmental support for both adults and children.
+            To supporting recovery, development and overall well-being at every stages of life.
           </p>
-          
+
           <div className="flex flex-wrap gap-4 mb-6 animate-fade-in" style={{animationDelay: '0.3s'}}>
             <div className="flex items-center gap-1">
-              <Brain size={18} className="text-lifeway-red" /> <span>Physical</span>
+              <Activity size={18} className="text-lifeway-red" /> <span>Physical Therapy</span>
             </div>
             <div className="flex items-center gap-1">
-              <Baby size={18} className="text-lifeway-red" /> <span>Pediatric</span>
+              <Hand size={18} className="text-lifeway-red" /> <span>Occupational Therapy</span>
             </div>
             <div className="flex items-center gap-1">
-              <Users size={18} className="text-lifeway-red" /> <span>Occupational</span>
+              <MessageSquare size={18} className="text-lifeway-red" /> <span>Speech Language Pathology</span>
             </div>
             <div className="flex items-center gap-1">
-              <MessageSquare size={18} className="text-lifeway-red" /> <span>Speech & Language</span>
+              <Brain size={18} className="text-lifeway-red" /> <span>Clinical Psychology</span>
             </div>
             <div className="flex items-center gap-1">
-              <Heart size={18} className="text-lifeway-red" /> <span>Emotional Wellness</span>
+              <GraduationCap size={18} className="text-lifeway-red" /> <span>Special Education</span>
             </div>
           </div>
           
