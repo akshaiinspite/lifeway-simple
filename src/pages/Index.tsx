@@ -2,6 +2,7 @@
 import Banner from "@/components/Home/Banner";
 import Introduction from "@/components/Home/Introduction";
 import DepartmentHighlights from "@/components/Home/DepartmentHighlights";
+import RehabSpecialties from "@/components/Home/RehabSpecialties";
 import HomecareServices from "@/components/Home/HomecareServices";
 import HomeCareServiceTeaser from "@/components/Home/HomeCareServiceTeaser";
 import Testimonials from "@/components/Home/Testimonials";
@@ -37,6 +38,7 @@ const Index = () => {
         <Banner />
         <Introduction />
         <DepartmentHighlights />
+        <RehabSpecialties />
         <HomeCareServiceTeaser />
         <HomecareServices />
         <FAQSection />
