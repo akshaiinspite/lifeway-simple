@@ -1,20 +1,48 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
-import PageHeader from "@/components/Layout/PageHeader";
 import FAQSection from "@/components/FAQ/FAQSection";
-
 import SocialFollowSection from "@/components/Common/SocialFollowSection";
+
+interface ServiceCardProps {
+  to?: string;
+  title: string;
+  tagline?: string;
+  description: string;
+  bullets: string[];
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ to, title, tagline, description, bullets }) => {
+  const inner = (
+    <div className="bg-white rounded-lg shadow-md p-6 h-full transition-shadow hover:shadow-xl">
+      <h2 className="text-xl font-semibold mb-4 text-gray-900">{title}</h2>
+      {tagline && <p className="text-gray-600 mb-2 font-medium">{tagline}</p>}
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="list-disc pl-5 text-gray-600 space-y-1">
+        {bullets.map((b, i) => (
+          <li key={i}>{b}</li>
+        ))}
+      </ul>
+      {to && (
+        <p className="mt-4 text-lifeway-red font-medium">Learn more →</p>
+      )}
+    </div>
+  );
+  return to ? (
+    <Link to={to} className="block h-full">
+      {inner}
+    </Link>
+  ) : (
+    inner
+  );
+};
 
 const Services = () => {
   return (
     <>
       <Navbar />
-      <PageHeader
-        title="Our Services"
-        description="Comprehensive therapy and support services for children and families"
-      />
       <div className="py-12 md:py-16 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -25,92 +53,81 @@ const Services = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Occupational Therapy */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-semibold mb-4">Occupational Therapy</h2>
-              <p className="text-gray-600 mb-2 font-medium">
-                Restoring abilities, strengthening confidence, and supporting growth.
-              </p>
-              <p className="text-gray-600 mb-4">
-                Making everyday life easier with Occupational Therapy.
-              </p>
-              <ul className="list-disc pl-5 text-gray-600">
-                <li>ADL training</li>
-                <li>Hand function training</li>
-                <li>Sensory integration</li>
-                <li>Vocational training</li>
-              </ul>
-            </div>
-            {/* Physiotherapy */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-semibold mb-4">Physiotherapy</h2>
-              <p className="text-gray-600 mb-2 font-medium">
-                Relieving pain, restoring movement, and rebuilding strength for everyday life.
-              </p>
-              <p className="text-gray-600 mb-4">
-                Expert care tailored to you through Physiotherapy.
-              </p>
-              <ul className="list-disc pl-5 text-gray-600">
-                <li>Pain management</li>
-                <li>Gait and balance training</li>
-                <li>Sports injury recovery</li>
-                <li>Strengthening and conditioning</li>
-              </ul>
-            </div>
-            {/* Speech Therapy */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-semibold mb-4">Speech Therapy</h2>
-              <p className="text-gray-600 mb-4">
-                Comprehensive care for paediatric and neurological conditions, focusing on communication,
-                speech delay or clarity, and swallowing rehabilitation with advanced therapy techniques.
-              </p>
-              <ul className="list-disc pl-5 text-gray-600">
-                <li>Articulation therapy</li>
-                <li>Language intervention</li>
-                <li>Swallow therapy (dysphagia)</li>
-                <li>Cognitive-communication rehab</li>
-              </ul>
-            </div>
-            {/* Special Education */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-semibold mb-4">Special Education</h2>
-              <p className="text-gray-600 mb-4">
-                Support your child's academic growth and learning potential with our tailored special education programs and strategies.
-              </p>
-              <ul className="list-disc pl-5 text-gray-600">
-                <li>Individualized education plans (IEPs)</li>
-                <li>Learning strategies</li>
-                <li>School readiness programmes</li>
-              </ul>
-            </div>
-            {/* Clinical Psychology */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-semibold mb-4">Clinical Psychology</h2>
-              <p className="text-gray-600 mb-4">
-                Comprehensive psychological care for children with behavioural and attention difficulties,
-                along with parent support and neuropsychiatric rehabilitation for all age groups.
-              </p>
-              <ul className="list-disc pl-5 text-gray-600">
-                <li>Behaviour & attention management</li>
-                <li>Counselling and therapy</li>
-                <li>Emotional regulation</li>
-                <li>Parent guidance</li>
-                <li>Neuropsychological care</li>
-              </ul>
-            </div>
-            {/* Convenient Care Options */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-semibold mb-4">Convenient Care Options</h2>
-              <p className="text-gray-600 mb-4">
-                Flexible care designed to fit your lifestyle—wherever and however you need it.
-              </p>
-              <ul className="list-disc pl-5 text-gray-600">
-                <li>Home-based rehabilitation services</li>
-                <li>In-clinic rehabilitation programs</li>
-                <li>Pickup and drop facility</li>
-                <li>Online therapy sessions</li>
-              </ul>
-            </div>
+            <ServiceCard
+              to="/services/occupational-therapy"
+              title="Occupational Therapy"
+              tagline="Restoring abilities, strengthening confidence, and supporting growth."
+              description="Making everyday life easier with Occupational Therapy."
+              bullets={["ADL training", "Hand function training", "Sensory integration", "Vocational training"]}
+            />
+            <ServiceCard
+              to="/services/physiotherapy"
+              title="Physiotherapy"
+              tagline="Relieving pain, restoring movement, and rebuilding strength for everyday life."
+              description="Expert care tailored to you through Physiotherapy."
+              bullets={["Pain management", "Gait and balance training", "Sports injury recovery", "Strengthening and conditioning"]}
+            />
+            <ServiceCard
+              to="/services/speech-therapy"
+              title="Speech Therapy"
+              description="Comprehensive care for paediatric and neurological conditions, focusing on communication, speech delay or clarity, and swallowing rehabilitation with advanced therapy techniques."
+              bullets={["Articulation therapy", "Language intervention", "Swallow therapy (dysphagia)", "Cognitive-communication rehab"]}
+            />
+            <ServiceCard
+              to="/services/special-education"
+              title="Special Education"
+              description="Support your child's academic growth and learning potential with our tailored special education programs and strategies."
+              bullets={["Individualized education plans (IEPs)", "Learning strategies", "Behavioural support"]}
+            />
+            <ServiceCard
+              to="/services/clinical-psychology"
+              title="Clinical Psychology"
+              description="Comprehensive psychological care for children with behavioural and attention difficulties, along with parent support and neuropsychiatric rehabilitation for all age groups."
+              bullets={["Behaviour & attention management", "Counselling and therapy", "Emotional regulation", "Parent guidance", "Neuropsychological care"]}
+            />
+            <ServiceCard
+              to="/services/convenient-care"
+              title="Convenient Care Options"
+              description="Flexible care designed to fit your lifestyle—wherever and however you need it."
+              bullets={["Home-based rehabilitation services", "In-clinic rehabilitation programs", "Pickup and drop facility", "Online therapy sessions"]}
+            />
+            <ServiceCard
+              to="/services/convenient-care"
+              title="In-Patient Rehabilitation Facility"
+              tagline="Comprehensive care, continuous support."
+              description="Structured, intensive rehabilitation care for individuals requiring close monitoring and dedicated therapy in a supportive environment."
+              bullets={[
+                "24/7 monitored rehabilitation care",
+                "Intensive, goal-oriented therapy programs",
+                "Multidisciplinary care (Physio, OT, Speech, Psychology)",
+                "Post-surgical and neurological recovery support",
+                "Comfortable, fully equipped rooms",
+              ]}
+            />
+            <ServiceCard
+              to="/services/convenient-care"
+              title="Pickup & Drop Service"
+              tagline="Safe, reliable transportation for your care."
+              description="Convenient pickup and drop services to ensure easy access to your therapy sessions."
+              bullets={[
+                "Safe and assisted transportation",
+                "Door-to-door pickup and drop",
+                "Suitable for all age groups",
+                "Reliable and timely service",
+              ]}
+            />
+            <ServiceCard
+              to="/services/convenient-care"
+              title="Online Therapy Services"
+              tagline="Expert care, wherever you are."
+              description="Access professional rehabilitation and therapy services from the comfort of your home."
+              bullets={[
+                "Live one-on-one therapy sessions",
+                "Flexible scheduling",
+                "Multidisciplinary care",
+                "Guidance, follow-ups, and home programs",
+              ]}
+            />
           </div>
         </div>
       </div>

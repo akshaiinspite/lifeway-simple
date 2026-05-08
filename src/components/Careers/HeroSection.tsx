@@ -10,7 +10,7 @@ const HeroSection = () => {
             Join Our Dedicated Team
           </h1>
           <p className="text-white/90 text-lg">
-            At Lifeway, we're seeking passionate individuals committed to making a difference in children's lives through rehabilitation and developmental support.
+            We welcome driven individuals who are passionate about transforming lives through compassionate, evidence-based rehabilitation. Join a collaborative team delivering integrated care for diverse needs.
           </p>
         </div>
       </div>

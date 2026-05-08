@@ -112,7 +112,7 @@ const Team = () => {
       <Navbar />
       <PageHeader
         title="Meet Our Expert Team"
-        description="Our multidisciplinary team of professionals is dedicated to providing the highest quality care for your child's development and rehabilitation needs."
+        description="At Lifeway, our team of experienced professionals brings together diverse expertise in rehabilitation and healthcare. We provide integrated care across all age groups, focusing on restoring function, enhancing independence, and improving quality of life through a collaborative, multidisciplinary approach."
       />
       <div className="py-16">
         {/* Filter and Search Controls */}

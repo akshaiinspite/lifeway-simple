@@ -12,7 +12,7 @@ const Appointments = () => {
       <Navbar />
       <PageHeader
         title="Book Your Appointment"
-        description="Schedule a consultation with our specialists to help your child achieve their full potential."
+        description="Schedule a consultation with our experts and begin your journey toward reaching your fullest potential."
       />
       <div className="py-12 md:py-16 bg-gray-50">
         <div className="container-custom">
