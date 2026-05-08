@@ -25,23 +25,23 @@ const HomeCareServiceTeaser = () => {
               </span>
             </div>
             <h2 className="heading-lg mb-4 md:mb-6">
-              🏡 Lifeway Home Care Services
+              🏡 Lifeway Home Rehabilitation Services
             </h2>
             <p className="mb-4 md:mb-6 text-gray-700 italic text-lg font-serif">
-              "The reason for your smile" – now right at home.
+              Compassionate care—now at your doorstep.
             </p>
             <p className="mb-4 md:mb-6 text-gray-700">
-              At Lifeway, we understand that healing is personal—and often, it begins at home. 
-              That's why our expert therapists bring compassionate, personalized care directly to your door.
+              At Lifeway, we understand that recovery is personal—and often best supported in the comfort of your home. Our multidisciplinary team provides expert, personalized rehabilitation services for individuals of all ages, addressing neurological, orthopaedic, paediatric, and functional needs.
             </p>
 
             <div className="mb-6 md:mb-8">
               <Carousel className="w-full">
                 <CarouselContent className="-ml-2 md:-ml-4">
                   {[
-                    { icon: <SmilePlus className="h-5 w-5 md:h-6 md:w-6 text-lifeway-red" />, text: "Pediatric therapy in a familiar environment" },
-                    { icon: <Heart className="h-5 w-5 md:h-6 md:w-6 text-lifeway-red" />, text: "Post-surgical rehabilitation at home" },
-                    { icon: <Star className="h-5 w-5 md:h-6 md:w-6 text-lifeway-red" />, text: "Ongoing developmental support" }
+                    { icon: <Heart className="h-5 w-5 md:h-6 md:w-6 text-lifeway-red" />, text: "Rehabilitation in the comfort of your home" },
+                    { icon: <SmilePlus className="h-5 w-5 md:h-6 md:w-6 text-lifeway-red" />, text: "Post-surgical and injury recovery care" },
+                    { icon: <Star className="h-5 w-5 md:h-6 md:w-6 text-lifeway-red" />, text: "Neuro, ortho, and paediatric home-based therapy" },
+                    { icon: <Home className="h-5 w-5 md:h-6 md:w-6 text-lifeway-red" />, text: "Speech, occupational, and psychological support at home" }
                   ].map((item, index) => (
                     <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2">
                       <div className="p-3 md:p-4 border border-gray-100 rounded-lg bg-white flex items-center shadow-sm">
@@ -59,8 +59,8 @@ const HomeCareServiceTeaser = () => {
             </div>
             
             <p className="mb-6 md:mb-8 text-gray-700">
-              Our Home Care Services are designed to fit seamlessly into your life—ensuring comfort, consistency, and results.
-              <span className="block mt-3 md:mt-4 font-medium">Let us be the reason for your smile, wherever you are.</span>
+              Our home care services are designed to integrate seamlessly into your daily life—ensuring comfort, continuity, and effective outcomes.
+              <span className="block mt-3 md:mt-4 font-medium">Let us bring quality rehabilitation care to you, wherever you are.</span>
             </p>
             
             <div className="flex flex-col md:flex-row gap-4">
