@@ -11,10 +11,6 @@ const Services = () => {
   return (
     <>
       <Navbar />
-      <PageHeader
-        title="Our Services"
-        description="Comprehensive therapy and support services for children and families"
-      />
       <div className="py-12 md:py-16 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -80,7 +76,7 @@ const Services = () => {
               <ul className="list-disc pl-5 text-gray-600">
                 <li>Individualized education plans (IEPs)</li>
                 <li>Learning strategies</li>
-                <li>School readiness programmes</li>
+                <li>Behavioural support</li>
               </ul>
             </div>
             {/* Clinical Psychology */}
