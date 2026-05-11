@@ -38,7 +38,7 @@ const Banner = () => {
             Healing. Growing. Thriving.
           </h2>
           <p className="text-lg mb-6 animate-fade-in" style={{animationDelay: '0.2s'}}>
-            Lifeway, we believe in whole-person care that transforms lives. Our expert team provides
+            At Lifeway, we believe in whole-person care that transforms lives. Our expert team provides
             compassionate, evidence-based rehabilitation and developmental support for both adults and children.
             To supporting recovery, development and overall well-being at every stages of life.
           </p>

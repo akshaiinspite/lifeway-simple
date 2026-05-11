@@ -77,7 +77,7 @@ const Services = () => {
               to="/services/special-education"
               title="Special Education"
               description="Support your child's academic growth and learning potential with our tailored special education programs and strategies."
-              bullets={["Individualized education plans (IEPs)", "Learning strategies", "Behavioural support"]}
+              bullets={["Individualized education plans (IEPs)", "Learning strategies"]}
             />
             <ServiceCard
               to="/services/clinical-psychology"

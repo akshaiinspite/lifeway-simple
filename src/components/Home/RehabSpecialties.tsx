@@ -161,6 +161,12 @@ const RehabSpecialties = () => {
             </article>
           ))}
         </div>
+
+        <div className="text-center mt-12">
+          <a href="/services" className="btn-primary inline-block">
+            View All Services
+          </a>
+        </div>
       </div>
     </section>
   );
