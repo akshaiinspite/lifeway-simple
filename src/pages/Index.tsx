@@ -1,7 +1,6 @@
 
 import Banner from "@/components/Home/Banner";
 import Introduction from "@/components/Home/Introduction";
-import DepartmentHighlights from "@/components/Home/DepartmentHighlights";
 import RehabSpecialties from "@/components/Home/RehabSpecialties";
 import HomecareServices from "@/components/Home/HomecareServices";
 import HomeCareServiceTeaser from "@/components/Home/HomeCareServiceTeaser";
@@ -37,7 +36,6 @@ const Index = () => {
       <main className="flex-grow relative z-10">
         <Banner />
         <Introduction />
-        <DepartmentHighlights />
         <RehabSpecialties />
         <HomeCareServiceTeaser />
         <HomecareServices />
