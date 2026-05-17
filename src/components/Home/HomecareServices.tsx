@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const HomecareServices = () => {
   return (
@@ -79,9 +80,9 @@ const HomecareServices = () => {
                 Explore Home Services
               </Link>
               
-              <Link to="/appointments" className="btn-secondary">
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="btn-secondary">
                 Request Home Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -1,10 +1,11 @@
 import React from "react";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const WhatsAppButton = () => {
   return (
     <div className="fixed bottom-20 right-4 z-50">
       <a
-        href="https://wa.me/919645500080"
+        href={WHATSAPP_URL}
         target="_blank"
         rel="noreferrer"
         aria-label="Contact us on WhatsApp"

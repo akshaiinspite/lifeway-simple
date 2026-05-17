@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import { Activity, Hand, MessageSquare, Brain, GraduationCap } from "lucide-react";
 import bannerImg from "@/assets/front-web.jpg";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const Banner = () => {
   return (
@@ -33,7 +34,7 @@ const Banner = () => {
       <div className="container-custom relative z-10 py-16 md:py-24">
         <div className="max-w-2xl text-white">
           <h1 className="heading-xl mb-2 animate-fade-in">
-            <span className="text-lifeway-red">🌿</span> Lifeway Rehabilitation and Child Development
+            Lifeway Rehabilitation and Child Development Centre
           </h1>
           <h2 className="text-2xl mb-6 font-serif animate-fade-in" style={{animationDelay: '0.1s'}}>
             Healing. Growing. Thriving.
@@ -73,9 +74,14 @@ const Banner = () => {
             <Link to="/services" className="btn-primary">
               Explore Our Services
             </Link>
-            <Link to="/appointments" className="btn-secondary text-lifeway-black">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-secondary text-lifeway-black"
+            >
               Book Appointment
-            </Link>
+            </a>
           </div>
           
           <div className="mt-8 text-sm text-gray-300 animate-fade-in" style={{animationDelay: '0.7s'}}>

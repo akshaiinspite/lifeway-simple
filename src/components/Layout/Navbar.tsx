@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { WHATSAPP_URL } from "@/lib/constants";
 import { Menu, X } from "lucide-react";
 import {
   NavigationMenu,
@@ -36,7 +37,6 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
-    { name: "Gallery", path: "/gallery" },
     { name: "Careers", path: "/careers" },
     {
       name: "Events",
@@ -138,9 +138,14 @@ const Navbar = () => {
               </Link>
             )
           )}
-          <Link to="/contact" className="btn-primary text-sm font-medium">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-primary text-sm font-medium"
+          >
             Book Appointment
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -191,13 +196,15 @@ const Navbar = () => {
                 </Link>
               )
             )}
-            <Link
-              to="/contact"
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               className="btn-primary w-full text-center text-base"
               onClick={() => setIsMenuOpen(false)}
             >
               Book Appointment
-            </Link>
+            </a>
           </nav>
         </div>
       )}

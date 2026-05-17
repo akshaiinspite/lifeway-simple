@@ -3,6 +3,7 @@ import Banner from "@/components/Home/Banner";
 import Introduction from "@/components/Home/Introduction";
 import RehabSpecialties from "@/components/Home/RehabSpecialties";
 import HomeCareServiceTeaser from "@/components/Home/HomeCareServiceTeaser";
+import ConvenientCareOptions from "@/components/Home/ConvenientCareOptions";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import WhatsAppButton from "@/components/Common/WhatsAppButton";
@@ -34,6 +35,7 @@ const Index = () => {
         <Introduction />
         <RehabSpecialties />
         <HomeCareServiceTeaser />
+        <ConvenientCareOptions />
         <SocialFollowSection />
       </main>
       

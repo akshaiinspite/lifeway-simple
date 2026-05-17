@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
+import PageHeader from "@/components/Layout/PageHeader";
 import SocialFollowSection from "@/components/Common/SocialFollowSection";
 
 interface ServiceCardProps {
@@ -42,15 +43,12 @@ const Services = () => {
   return (
     <>
       <Navbar />
+      <PageHeader
+        title="Our Specialized Services"
+        description="Meet the key departments that form our multidisciplinary approach to provide personalized, holistic care for every individual."
+      />
       <div className="py-12 md:py-16 bg-gray-50">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h1 className="heading-lg mb-4">Our Specialized Services</h1>
-            <p className="text-gray-700 max-w-2xl mx-auto">
-              Meet the key departments that form our multidisciplinary approach to provide personalized,
-              holistic care for every individual.
-            </p>
-          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ServiceCard
               to="/services/occupational-therapy"
