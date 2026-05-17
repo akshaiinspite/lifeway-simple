@@ -1,31 +1,32 @@
 
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import SocialFollowSection from "@/components/Common/SocialFollowSection";
+import { Link, useLocation } from "react-router-dom";
+import Navbar from "@/components/Layout/Navbar";
+import Footer from "@/components/Layout/Footer";
 
 const NotFound = () => {
   const location = useLocation();
 
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="flex-grow flex items-center justify-center bg-gray-100">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">404</h1>
-          <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-          <a href="/" className="text-blue-500 hover:text-blue-700 underline">
+    <>
+      <Navbar />
+      <main
+        id="main-content"
+        className="min-h-[60vh] flex items-center justify-center bg-gray-50 px-4 pt-24 pb-16"
+        tabIndex={-1}
+      >
+        <div className="text-center max-w-md">
+          <h1 className="heading-lg mb-4">Page Not Found</h1>
+          <p className="text-gray-600 mb-6">
+            We couldn&apos;t find <span className="font-mono text-sm break-all">{location.pathname}</span>.
+            It may have moved or no longer exists.
+          </p>
+          <Link to="/" className="btn-primary inline-block">
             Return to Home
-          </a>
+          </Link>
         </div>
-      </div>
-      <SocialFollowSection />
-    </div>
+      </main>
+      <Footer />
+    </>
   );
 };
 

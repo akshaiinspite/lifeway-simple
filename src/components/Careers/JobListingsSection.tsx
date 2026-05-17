@@ -29,10 +29,10 @@ const JobListingsSection: React.FC<JobListingsSectionProps> = ({ jobListings }) 
         </div>
 
         {/* Filters */}
-        <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center mb-10">
-          <div className="space-x-2">
+        <div className="flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center mb-10">
+          <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 md:flex-wrap md:overflow-visible md:pb-0 md:mx-0 md:px-0">
             <button
-              className={`px-4 py-2 rounded-md transition-colors ${
+              className={`shrink-0 px-4 py-2.5 min-h-[44px] rounded-md transition-colors text-sm sm:text-base ${
                 categoryFilter === "all"
                   ? "bg-lifeway-red text-white"
                   : "bg-white text-gray-700 hover:bg-gray-100"
@@ -42,7 +42,7 @@ const JobListingsSection: React.FC<JobListingsSectionProps> = ({ jobListings }) 
               All Positions
             </button>
             <button
-              className={`px-4 py-2 rounded-md transition-colors ${
+              className={`shrink-0 px-4 py-2.5 min-h-[44px] rounded-md transition-colors text-sm sm:text-base ${
                 categoryFilter === "professional"
                   ? "bg-lifeway-red text-white"
                   : "bg-white text-gray-700 hover:bg-gray-100"
@@ -52,7 +52,7 @@ const JobListingsSection: React.FC<JobListingsSectionProps> = ({ jobListings }) 
               Professional
             </button>
             <button
-              className={`px-4 py-2 rounded-md transition-colors ${
+              className={`shrink-0 px-4 py-2.5 min-h-[44px] rounded-md transition-colors text-sm sm:text-base ${
                 categoryFilter === "non-professional"
                   ? "bg-lifeway-red text-white"
                   : "bg-white text-gray-700 hover:bg-gray-100"
@@ -62,7 +62,7 @@ const JobListingsSection: React.FC<JobListingsSectionProps> = ({ jobListings }) 
               Support Staff
             </button>
             <button
-              className={`px-4 py-2 rounded-md transition-colors ${
+              className={`shrink-0 px-4 py-2.5 min-h-[44px] rounded-md transition-colors text-sm sm:text-base ${
                 categoryFilter === "internship"
                   ? "bg-lifeway-red text-white"
                   : "bg-white text-gray-700 hover:bg-gray-100"

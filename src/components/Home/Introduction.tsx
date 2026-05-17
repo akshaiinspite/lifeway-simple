@@ -47,8 +47,12 @@ const Introduction = () => {
             <div className="relative z-10">
               <img
                 src={lifewayCentreImg}
-                alt="Lifeway Rehabilitation and Child Development Centre reception"
+                alt="Lifeway Rehabilitation and Child Development Centre reception area"
                 className="w-full h-auto rounded-lg shadow-xl"
+                loading="lazy"
+                decoding="async"
+                width={800}
+                height={600}
               />
             </div>
             <div className="absolute inset-0 -z-10 translate-x-6 translate-y-6 bg-lifeway-red rounded-lg hidden md:block" />

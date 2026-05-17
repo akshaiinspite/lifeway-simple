@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="bg-lifeway-red py-16">
+    <header className="bg-lifeway-red py-12 sm:py-16 px-4">
       <div className="container-custom">
         <div className="max-w-3xl">
           <h1 className="heading-xl text-white mb-6">
@@ -14,7 +14,7 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

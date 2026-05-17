@@ -152,7 +152,8 @@ const RehabSpecialties = () => {
 
         <div
           ref={sliderRef}
-          className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory hide-scrollbar select-none"
+          className="flex overflow-x-auto gap-4 sm:gap-6 pb-8 snap-x snap-mandatory hide-scrollbar scroll-touch select-none -mx-4 px-4 sm:mx-0 sm:px-0"
+          aria-label="Rehabilitation specialties carousel"
           onMouseDown={handleMouseDown}
           onMouseUp={stopDragging}
           onMouseLeave={stopDragging}
@@ -165,7 +166,7 @@ const RehabSpecialties = () => {
             <Link
               key={s.id}
               to={`/services/${s.slug}`}
-              className="min-w-[280px] w-[280px] sm:min-w-[320px] sm:w-[320px] bg-lifeway-grey/10 rounded-lg shadow-lg p-6 snap-start shrink-0 transition-transform hover:translate-y-[-5px] flex flex-col"
+              className="min-w-[85vw] max-w-[320px] sm:min-w-[320px] sm:w-[320px] bg-lifeway-grey/10 rounded-lg shadow-lg p-5 sm:p-6 snap-start shrink-0 transition-transform hover:translate-y-[-5px] flex flex-col"
             >
               <div className="flex justify-center mb-4">{s.icon}</div>
               <h3 className="text-xl font-bold mb-2 text-center">{s.name}</h3>
@@ -175,9 +176,9 @@ const RehabSpecialties = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a href="/services" className="btn-primary inline-block">
+          <Link to="/services" className="btn-primary inline-block">
             View All Services
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -12,11 +12,11 @@ const Careers = () => {
   return (
     <>
       <Navbar />
-      <div className="pt-20 pb-16">
+      <main id="main-content" className="pt-20 pb-16" tabIndex={-1}>
         <HeroSection />
         <BenefitsSection />
         <JobListingsSection jobListings={jobListingsData} />
-      </div>
+      </main>
       <SocialFollowSection />
       <Footer />
     </>

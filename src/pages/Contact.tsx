@@ -15,11 +15,11 @@ const Contact = () => {
         title="Contact Us"
         description="Get in touch with our team for inquiries, appointments, or any information you need about our services."
       />
-      <div className="py-12 md:py-16 bg-gray-50">
+      <main id="main-content" className="py-12 md:py-16 bg-gray-50" tabIndex={-1}>
         <div className="container-custom">
           <BranchLocations />
         </div>
-      </div>
+      </main>
 
       <SocialFollowSection />
       <WhatsAppButton />

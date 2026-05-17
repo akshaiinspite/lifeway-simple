@@ -30,7 +30,7 @@ const Index = () => {
         />
       </div>
       <Navbar />
-      <main className="flex-grow relative z-10">
+      <main id="main-content" className="flex-grow relative z-10" tabIndex={-1}>
         <Banner />
         <Introduction />
         <RehabSpecialties />

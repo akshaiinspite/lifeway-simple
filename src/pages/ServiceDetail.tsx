@@ -4,8 +4,6 @@ import Footer from "@/components/Layout/Footer";
 import PageHeader from "@/components/Layout/PageHeader";
 import SocialFollowSection from "@/components/Common/SocialFollowSection";
 import { serviceDetails } from "@/data/serviceDetails";
-import { useEffect } from "react";
-
 const Section = ({ title, items }: { title: string; items?: string[] }) => {
   if (!items || items.length === 0) return null;
   return (
@@ -24,19 +22,13 @@ const ServiceDetail = () => {
   const { slug } = useParams();
   const service = slug ? serviceDetails[slug] : undefined;
 
-  useEffect(() => {
-    if (service) {
-      document.title = `${service.title} | Lifeway Rehabilitation`;
-    }
-  }, [service]);
-
   if (!service) return <Navigate to="/services" replace />;
 
   return (
     <>
       <Navbar />
       <PageHeader title={service.title} description={service.description} />
-      <main className="py-12 md:py-16 bg-gray-50">
+      <main id="main-content" className="py-12 md:py-16 bg-gray-50" tabIndex={-1}>
         <div className="container-custom">
           <div className="mb-8">
             <Link to="/services" className="text-lifeway-red font-medium hover:underline">

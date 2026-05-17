@@ -9,7 +9,7 @@ interface PageHeaderProps {
 
 const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
   return (
-    <div className="relative overflow-hidden bg-lifeway-grey py-16 md:py-24 mt-16 md:mt-20">
+    <header className="relative overflow-hidden bg-lifeway-grey py-12 sm:py-16 md:py-24 mt-16 md:mt-20">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${pageHeaderBg})` }}
@@ -23,7 +23,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
           )}
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

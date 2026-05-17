@@ -216,7 +216,7 @@ const Footer = () => {
           <p className="text-lifeway-grey text-base mb-4 md:mb-0">
             Follow us on social media:
           </p>
-          <div className="flex space-x-6">
+          <div className="flex flex-wrap gap-4 justify-center md:justify-end">
             <a 
               href="https://www.facebook.com/share/12JeDRhBoTi/" 
               target="_blank" 

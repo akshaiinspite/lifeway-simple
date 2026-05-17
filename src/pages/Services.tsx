@@ -47,7 +47,7 @@ const Services = () => {
         title="Our Specialized Services"
         description="Meet the key departments that form our multidisciplinary approach to provide personalized, holistic care for every individual."
       />
-      <div className="py-12 md:py-16 bg-gray-50">
+      <main id="main-content" className="py-12 md:py-16 bg-gray-50" tabIndex={-1}>
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ServiceCard
@@ -127,7 +127,7 @@ const Services = () => {
             />
           </div>
         </div>
-      </div>
+      </main>
       <SocialFollowSection />
       <Footer />
     </>

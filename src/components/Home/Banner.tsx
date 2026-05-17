@@ -4,21 +4,29 @@ import { Activity, Hand, MessageSquare, Brain, GraduationCap } from "lucide-reac
 import bannerImg from "@/assets/front-web.jpg";
 import { WHATSAPP_URL } from "@/lib/constants";
 
+const specialties = [
+  { icon: Activity, label: "Physical Therapy" },
+  { icon: Hand, label: "Occupational Therapy" },
+  { icon: MessageSquare, label: "Speech Language Pathology" },
+  { icon: Brain, label: "Clinical Psychology" },
+  { icon: GraduationCap, label: "Special Education" },
+];
+
 const Banner = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div 
+    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden">
+      <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(${bannerImg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          filter: 'brightness(0.75)'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "brightness(0.75)",
         }}
+        role="img"
+        aria-label="Lifeway rehabilitation centre exterior"
       />
-      
-      {/* Pattern Overlay */}
+
       <div className="absolute inset-0 z-0">
         <div
           className="w-full h-full opacity-5"
@@ -29,76 +37,78 @@ const Banner = () => {
           }}
         />
       </div>
-      
-      {/* Content */}
-      <div className="container-custom relative z-10 py-16 md:py-24">
+
+      <div className="container-custom relative z-10 py-20 sm:py-24 md:py-28">
         <div className="max-w-2xl text-white">
-          <h1 className="heading-xl mb-2 animate-fade-in">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-2 animate-fade-in leading-tight">
             Lifeway Rehabilitation and Child Development Centre
           </h1>
-          <h2 className="text-2xl mb-6 font-serif animate-fade-in" style={{animationDelay: '0.1s'}}>
+          <p className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 font-serif animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Healing. Growing. Thriving.
-          </h2>
-          <p className="text-lg mb-6 animate-fade-in" style={{animationDelay: '0.2s'}}>
+          </p>
+          <p className="text-sm sm:text-base md:text-lg mb-6 animate-fade-in leading-relaxed" style={{ animationDelay: "0.2s" }}>
             At Lifeway, we believe in whole-person care that transforms lives. Our expert team provides
-            compassionate, evidence-based rehabilitation and developmental support for both adults and children.
-            To supporting recovery, development and overall well-being at every stages of life.
+            compassionate, evidence-based rehabilitation and developmental support for both adults and children,
+            supporting recovery, development and overall well-being at every stage of life.
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-6 animate-fade-in" style={{animationDelay: '0.3s'}}>
-            <div className="flex items-center gap-1">
-              <Activity size={18} className="text-lifeway-red" /> <span>Physical Therapy</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Hand size={18} className="text-lifeway-red" /> <span>Occupational Therapy</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <MessageSquare size={18} className="text-lifeway-red" /> <span>Speech Language Pathology</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Brain size={18} className="text-lifeway-red" /> <span>Clinical Psychology</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <GraduationCap size={18} className="text-lifeway-red" /> <span>Special Education</span>
-            </div>
-          </div>
-          
-          <p className="text-lg mb-2 animate-fade-in" style={{animationDelay: '0.4s'}}>
-            Experience care that's as unique as you are.
+          <ul className="flex flex-wrap gap-2 sm:gap-3 mb-6 animate-fade-in list-none p-0" style={{ animationDelay: "0.3s" }}>
+            {specialties.map(({ icon: Icon, label }) => (
+              <li
+                key={label}
+                className="flex items-center gap-1.5 text-xs sm:text-sm bg-black/25 backdrop-blur-sm rounded-full px-2.5 py-1.5 sm:px-3 sm:py-2"
+              >
+                <Icon size={16} className="text-lifeway-red shrink-0" aria-hidden />
+                <span>{label}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p className="text-sm sm:text-base md:text-lg mb-2 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            Experience care that&apos;s as unique as you are.
           </p>
-          <p className="text-lg mb-8 animate-fade-in italic" style={{animationDelay: '0.5s'}}>
-            Let's walk the Lifeway—together.
+          <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 animate-fade-in italic" style={{ animationDelay: "0.5s" }}>
+            Let&apos;s walk the Lifeway—together.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: '0.6s'}}>
-            <Link to="/services" className="btn-primary">
+
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+            <Link to="/services" className="btn-primary w-full sm:w-auto">
               Explore Our Services
             </Link>
             <a
               href={WHATSAPP_URL}
               target="_blank"
-              rel="noreferrer"
-              className="btn-secondary text-lifeway-black"
+              rel="noopener noreferrer"
+              className="btn-secondary text-lifeway-black w-full sm:w-auto"
             >
               Book Appointment
             </a>
           </div>
-          
-          <div className="mt-8 text-sm text-gray-300 animate-fade-in" style={{animationDelay: '0.7s'}}>
-            <a 
+
+          <address className="mt-6 sm:mt-8 text-xs sm:text-sm text-gray-200 not-italic animate-fade-in leading-relaxed" style={{ animationDelay: "0.7s" }}>
+            <a
               href="https://maps.google.com/?q=LifeWay+Rehabilitation+and+Child+Development+Centre,+Alangaden+Arcade,+Calicut+road,+Perinthalmanna+-+679322"
               target="_blank"
-              rel="noreferrer"
-              className="hover:text-lifeway-red transition-colors"
+              rel="noopener noreferrer"
+              className="hover:text-lifeway-red transition-colors block mb-2"
             >
-              <p>📍 LifeWay Rehabilitation and Child Development Centre, Alangaden Arcade, Calicut Road, Perinthalmanna, Kerala 679322</p>
+              LifeWay Rehabilitation and Child Development Centre, Alangaden Arcade, Calicut Road, Perinthalmanna, Kerala 679322
             </a>
             <p>
-              📞 <a href="tel:+919645500081" className="hover:text-lifeway-red transition-colors">+91 9645500081</a>, 
-              <a href="tel:+919645500082" className="hover:text-lifeway-red transition-colors ml-1">+91 9645500082</a> 
-              🌐 <a href="mailto:lifewaypmna@gmail.com" className="hover:text-lifeway-red transition-colors">lifewaypmna@gmail.com</a>
+              <a href="tel:+919645500081" className="hover:text-lifeway-red transition-colors">
+                +91 9645500081
+              </a>
+              ,{" "}
+              <a href="tel:+919645500082" className="hover:text-lifeway-red transition-colors">
+                +91 9645500082
+              </a>
+              <span className="hidden sm:inline"> · </span>
+              <br className="sm:hidden" />
+              <a href="mailto:lifewaypmna@gmail.com" className="hover:text-lifeway-red transition-colors break-all">
+                lifewaypmna@gmail.com
+              </a>
             </p>
-          </div>
+          </address>
         </div>
       </div>
     </section>
