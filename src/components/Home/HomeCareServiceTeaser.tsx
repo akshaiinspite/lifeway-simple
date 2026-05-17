@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Home, Calendar, Phone, SmilePlus, Heart, Star } from "lucide-react";
+import { Home, Calendar, SmilePlus, Heart, Star } from "lucide-react";
 import { 
   Carousel, 
   CarouselContent, 
@@ -9,6 +9,7 @@ import {
   CarouselPrevious 
 } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
+import homeCareImg from "@/assets/home-care.png";
 
 const HomeCareServiceTeaser = () => {
   const isMobile = useIsMobile();
@@ -64,14 +65,6 @@ const HomeCareServiceTeaser = () => {
             </p>
             
             <div className="flex flex-col md:flex-row gap-4">
-              <div className="bg-white p-3 md:p-4 rounded-lg shadow-sm border border-gray-100 flex-grow">
-                <p className="text-center font-medium mb-2">Experience expert care without leaving home.</p>
-                <div className="flex items-center justify-center">
-                  <Phone className="h-4 w-4 md:h-5 md:w-5 text-lifeway-red mr-2" />
-                  <span className="font-bold text-sm md:text-base">Schedule your home visit today!</span>
-                </div>
-              </div>
-              
               <Link to="/home-services" className="btn-primary flex items-center justify-center">
                 <Calendar className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Book Home Care Visit
@@ -82,7 +75,7 @@ const HomeCareServiceTeaser = () => {
           <div className="order-1 lg:order-2 relative">
             <div className="relative z-10">
               <img
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80"
+                src={homeCareImg}
                 alt="Home care services at Lifeway"
                 className="w-full h-auto rounded-lg shadow-xl"
               />

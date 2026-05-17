@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Activity, Hand, MessageSquare, Brain, GraduationCap } from "lucide-react";
+import bannerImg from "@/assets/front-web.jpg";
 
 const Banner = () => {
   return (
@@ -9,7 +10,7 @@ const Banner = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=2669&auto=format&fit=crop')`,
+          backgroundImage: `url(${bannerImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'brightness(0.75)'

@@ -2,13 +2,9 @@
 import Banner from "@/components/Home/Banner";
 import Introduction from "@/components/Home/Introduction";
 import RehabSpecialties from "@/components/Home/RehabSpecialties";
-import HomecareServices from "@/components/Home/HomecareServices";
 import HomeCareServiceTeaser from "@/components/Home/HomeCareServiceTeaser";
-import Testimonials from "@/components/Home/Testimonials";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
-
-import FAQSection from "@/components/FAQ/FAQSection";
 import WhatsAppButton from "@/components/Common/WhatsAppButton";
 import SocialFollowSection from "@/components/Common/SocialFollowSection";
 
@@ -38,9 +34,6 @@ const Index = () => {
         <Introduction />
         <RehabSpecialties />
         <HomeCareServiceTeaser />
-        <HomecareServices />
-        <FAQSection />
-        <Testimonials />
         <SocialFollowSection />
       </main>
       

@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
-import FAQSection from "@/components/FAQ/FAQSection";
 import SocialFollowSection from "@/components/Common/SocialFollowSection";
 
 interface ServiceCardProps {
@@ -77,7 +76,7 @@ const Services = () => {
               to="/services/special-education"
               title="Special Education"
               description="Support your child's academic growth and learning potential with our tailored special education programs and strategies."
-              bullets={["Individualized education plans (IEPs)", "Learning strategies"]}
+              bullets={["Individualized education plans (IEPs)", "Learning strategies", "School readiness and functional learning"]}
             />
             <ServiceCard
               to="/services/clinical-psychology"
@@ -92,7 +91,7 @@ const Services = () => {
               bullets={["Home-based rehabilitation services", "In-clinic rehabilitation programs", "Pickup and drop facility", "Online therapy sessions"]}
             />
             <ServiceCard
-              to="/services/convenient-care"
+              to="/services/in-patient-rehabilitation"
               title="In-Patient Rehabilitation Facility"
               tagline="Comprehensive care, continuous support."
               description="Structured, intensive rehabilitation care for individuals requiring close monitoring and dedicated therapy in a supportive environment."
@@ -105,7 +104,7 @@ const Services = () => {
               ]}
             />
             <ServiceCard
-              to="/services/convenient-care"
+              to="/services/pickup-drop"
               title="Pickup & Drop Service"
               tagline="Safe, reliable transportation for your care."
               description="Convenient pickup and drop services to ensure easy access to your therapy sessions."
@@ -117,7 +116,7 @@ const Services = () => {
               ]}
             />
             <ServiceCard
-              to="/services/convenient-care"
+              to="/services/online-therapy"
               title="Online Therapy Services"
               tagline="Expert care, wherever you are."
               description="Access professional rehabilitation and therapy services from the comfort of your home."
@@ -132,7 +131,6 @@ const Services = () => {
         </div>
       </div>
       <SocialFollowSection />
-      <FAQSection />
       <Footer />
     </>
   );

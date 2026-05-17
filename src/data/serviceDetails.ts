@@ -1,3 +1,7 @@
+import inpatientImg from "@/assets/inpatient-rehab.png";
+import onlineImg from "@/assets/online-therapy.png";
+import pickupImg from "@/assets/pickup-drop.png";
+
 export interface ServiceItem {
   title: string;
   intro?: string;
@@ -7,6 +11,7 @@ export interface ServiceItem {
   benefits?: string[];
   focus?: string[];
   approach?: string[];
+  image?: string;
 }
 
 export interface ServiceDetail {
@@ -663,6 +668,61 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       {
         title: "Online Therapy Services",
         intro: "Expert care, wherever you are. Access professional rehabilitation and therapy services from the comfort of your home, with personalized online sessions for individuals of all ages.",
+        benefits: [
+          "Live one-on-one therapy sessions",
+          "Flexible scheduling",
+          "Multidisciplinary care",
+          "Guidance, follow-ups, and home programs",
+        ],
+      },
+    ],
+  },
+  "in-patient-rehabilitation": {
+    slug: "in-patient-rehabilitation",
+    title: "In-Patient Rehabilitation Facility",
+    description: "Comprehensive care, continuous support — structured, intensive rehabilitation in a healing environment.",
+    items: [
+      {
+        title: "In-Patient Rehabilitation Facility",
+        intro: "Lifeway In-Patient Rehabilitation Care provides structured, intensive care for individuals requiring close monitoring and dedicated therapy in a supportive, healing environment.",
+        image: inpatientImg,
+        benefits: [
+          "24/7 monitored rehabilitation care",
+          "Intensive, goal-oriented therapy programs",
+          "Multidisciplinary care (Physio, OT, Speech, Psychology)",
+          "Post-surgical and neurological recovery support",
+          "Comfortable, fully equipped rooms for safe and supportive recovery",
+        ],
+      },
+    ],
+  },
+  "pickup-drop": {
+    slug: "pickup-drop",
+    title: "Pickup & Drop Service",
+    description: "Safe, reliable transportation for your therapy and care.",
+    items: [
+      {
+        title: "Pickup & Drop Service",
+        intro: "We provide convenient pickup and drop services to ensure easy access to your therapy sessions for individuals of all ages.",
+        image: pickupImg,
+        benefits: [
+          "Safe and assisted transportation",
+          "Door-to-door pickup and drop",
+          "Suitable for all age groups",
+          "Reliable and timely service",
+        ],
+      },
+    ],
+  },
+  "online-therapy": {
+    slug: "online-therapy",
+    title: "Online Therapy Services",
+    description: "Expert rehabilitation and therapy services, accessible from the comfort of your home.",
+    items: [
+      {
+        title: "Online Therapy Services",
+        intro: "Access professional rehabilitation and therapy services from the comfort of your home, with personalized online sessions for individuals of all ages.",
+        image: onlineImg,
         benefits: [
           "Live one-on-one therapy sessions",
           "Flexible scheduling",

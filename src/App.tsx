@@ -14,8 +14,8 @@ import Appointments from "./pages/Appointments";
 import HomeServices from "./pages/HomeServices";
 import Contact from "./pages/Contact";
 import AboutUs from "./pages/AboutUs";
-import DirectorJunaidh from "./pages/DirectorJunaidh";
-import DirectorShiny from "./pages/DirectorShiny";
+import DirectorsMessage from "./pages/DirectorsMessage";
+import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 import EventsGallery from "./pages/EventsGallery";
 
@@ -39,8 +39,8 @@ const App = () => (
           <Route path="/home-services" element={<HomeServices />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/about-us/director-junaidh" element={<DirectorJunaidh />} />
-          <Route path="/about-us/director-shiny" element={<DirectorShiny />} />
+          <Route path="/about-us/directors-message" element={<DirectorsMessage />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
