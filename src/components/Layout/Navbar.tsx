@@ -36,7 +36,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
-    { name: "Our Team", path: "/team" },
+    { name: "Gallery", path: "/gallery" },
     { name: "Careers", path: "/careers" },
     {
       name: "Events",
@@ -52,8 +52,7 @@ const Navbar = () => {
       path: "/about-us",
       subItems: [
         { name: "About Our Center", path: "/about-us" },
-        { name: "Director Junaidh's Message", path: "/about-us/director-junaidh" },
-        { name: "Director Shiny's Message", path: "/about-us/director-shiny" },
+        { name: "Directors' Message", path: "/about-us/directors-message" },
       ],
     },
   ];
