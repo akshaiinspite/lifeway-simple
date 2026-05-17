@@ -40,22 +40,6 @@ const Introduction = () => {
             <p className="mb-8 text-gray-700">
               At Lifeway, we don't just treat conditions—we nurture potential, restore hope, and enhance lives.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-              <div>
-                <h4 className="font-bold mb-3 text-xl">Our Mission</h4>
-                <p className="text-gray-700">
-                  To provide compassionate, comprehensive rehabilitation services that empower 
-                  individuals and support families on their journey to independence.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-bold mb-3 text-xl">Our Vision</h4>
-                <p className="text-gray-700">
-                  To be the leading rehabilitation center, recognized for excellence in 
-                  patient-centered care and innovative treatments.
-                </p>
-              </div>
-            </div>
             <Link to="/about-us" className="btn-primary">
               Learn More About Us
             </Link>
