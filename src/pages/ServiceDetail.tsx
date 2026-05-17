@@ -47,6 +47,14 @@ const ServiceDetail = () => {
             {service.items.map((item, idx) => (
               <article key={idx} className="bg-white rounded-lg shadow-md p-6 md:p-8">
                 <h2 className="text-2xl font-semibold mb-3 text-gray-900">{item.title}</h2>
+                {item.image && (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full max-h-96 object-cover rounded-lg mb-4"
+                    loading="lazy"
+                  />
+                )}
                 {item.intro && <p className="text-gray-700 mb-3">{item.intro}</p>}
                 {item.technology && (
                   <p className="text-gray-700 mb-3">
