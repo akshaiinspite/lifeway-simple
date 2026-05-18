@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { Activity, Hand, MessageSquare, Brain, GraduationCap } from "lucide-react";
 import bannerImg from "@/assets/front-web.jpg";
-import { WHATSAPP_URL } from "@/lib/constants";
+
 
 const specialties = [
   { icon: Activity, label: "Physical Therapy" },
@@ -44,7 +44,7 @@ const Banner = () => {
             Lifeway Rehabilitation and Child Development Centre
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 font-serif animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Healing. Growing. Thriving.
+            Advanced multi speciality rehabilitation for all stages of life
           </p>
           <p className="text-sm sm:text-base md:text-lg mb-6 animate-fade-in leading-relaxed" style={{ animationDelay: "0.2s" }}>
             At Lifeway, we believe in whole-person care that transforms lives. Our expert team provides
@@ -75,14 +75,12 @@ const Banner = () => {
             <Link to="/services" className="btn-primary w-full sm:w-auto">
               Explore Our Services
             </Link>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/appointments"
               className="btn-secondary text-lifeway-black w-full sm:w-auto"
             >
               Book Appointment
-            </a>
+            </Link>
           </div>
 
           <address className="mt-6 sm:mt-8 text-xs sm:text-sm text-gray-200 not-italic animate-fade-in leading-relaxed" style={{ animationDelay: "0.7s" }}>

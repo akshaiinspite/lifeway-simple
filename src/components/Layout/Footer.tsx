@@ -15,9 +15,9 @@ const Footer = () => {
                 alt="Lifeway Logo" 
                 className="h-12 mr-3" 
               />
-              <div className="text-3xl font-serif font-bold text-white">
+              <div className="text-3xl font-serif font-bold text-white leading-none">
                 Lifeway
-                <span className="block text-sm text-lifeway-grey mt-1">
+                <span className="block text-xs font-serif font-normal text-lifeway-grey mt-1 tracking-wide">
                   A way to new life
                 </span>
               </div>
@@ -55,7 +55,7 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a 
-                href="https://wa.me/919645500080" 
+                href="https://wa.me/919645500081" 
                 target="_blank" 
                 rel="noreferrer"
                 className="text-lifeway-grey hover:text-lifeway-red transition-colors"
@@ -173,12 +173,12 @@ const Footer = () => {
               <li className="flex items-center">
                 <MessageSquare className="mr-3 text-lifeway-red flex-shrink-0" size={18} />
                 <a 
-                  href="https://wa.me/919645500080" 
+                  href="https://wa.me/919645500081" 
                   target="_blank"
                   rel="noreferrer"
                   className="text-lifeway-grey hover:text-lifeway-red transition-colors"
                 >
-                  +91 9645500080
+                  +91 9645500081 (WhatsApp)
                 </a>
               </li>
               <li className="flex items-center">
@@ -245,7 +245,7 @@ const Footer = () => {
               <span>Instagram</span>
             </a>
             <a 
-              href="https://wa.me/919645500080" 
+              href="https://wa.me/919645500081" 
               target="_blank" 
               rel="noreferrer"
               className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors"

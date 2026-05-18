@@ -147,14 +147,12 @@ const Navbar = () => {
               </Link>
             )
           )}
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/appointments"
             className="btn-primary text-sm font-medium"
           >
             Book Appointment
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -206,15 +204,13 @@ const Navbar = () => {
                 </Link>
               )
             )}
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              to="/appointments"
               className="btn-primary w-full text-center text-base"
               onClick={() => setIsMenuOpen(false)}
             >
               Book Appointment
-            </a>
+            </Link>
           </nav>
         </div>
       )}

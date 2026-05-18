@@ -39,7 +39,7 @@ const SocialFollowSection = () => {
               <span>Instagram</span>
             </a>
             <a
-              href="https://wa.me/919645500080"
+              href="https://wa.me/919645500081"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm hover:bg-green-50 transition-colors"

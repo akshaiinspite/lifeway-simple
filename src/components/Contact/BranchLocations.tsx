@@ -9,19 +9,11 @@ const branches = [
     name: "Lifeway Main Center",
     address: "LifeWay Rehabilitation and Child Development Centre, Alangaden Arcade, Calicut road, Perinthalmanna - 679322",
     phone: "+91 9645500081",
-    whatsapp: "+91 9645500080",
+    secondaryPhone: "+91 9645500082",
+    whatsapp: "+91 9645500081",
     hours: "Monday - Friday: 8AM - 6PM, Saturday: 9AM - 2PM",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15662.259521515545!2d76.2199255!3d10.9856455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7cd85fce5f2bb%3A0xee6d1a7d3b2850ef!2sLifeway%20Rehabilitation%20and%20Child%20Development%20Centre!5e0!3m2!1sen!2sin!4v1717773642258!5m2!1sen!2sin",
   },
-  {
-    id: 2,
-    name: "Lifeway South Branch",
-    address: "LifeWay Rehabilitation and Child Development Centre, Alangaden Arcade, Calicut road, Perinthalmanna - 679322",
-    phone: "+91 9645500082",
-    whatsapp: "+91 9645500080",
-    hours: "Monday - Friday: 9AM - 5PM, Saturday: 10AM - 1PM",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15662.259521515545!2d76.2199255!3d10.9856455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7cd85fce5f2bb%3A0xee6d1a7d3b2850ef!2sLifeway%20Rehabilitation%20and%20Child%20Development%20Centre!5e0!3m2!1sen!2sin!4v1717773642258!5m2!1sen!2sin",
-  }
 ];
 
 const BranchLocations = () => {
@@ -62,9 +54,16 @@ const BranchLocations = () => {
               </div>
               <div className="flex items-start">
                 <Phone className="h-5 w-5 text-lifeway-red shrink-0 mr-2 mt-0.5" />
-                <a href={`tel:${branch.phone.replace(/\D/g, '')}`} className="hover:text-lifeway-red transition-colors">
-                  {branch.phone}
-                </a>
+                <div className="flex flex-col">
+                  <a href={`tel:${branch.phone.replace(/\D/g, '')}`} className="hover:text-lifeway-red transition-colors">
+                    {branch.phone}
+                  </a>
+                  {branch.secondaryPhone && (
+                    <a href={`tel:${branch.secondaryPhone.replace(/\D/g, '')}`} className="hover:text-lifeway-red transition-colors">
+                      {branch.secondaryPhone}
+                    </a>
+                  )}
+                </div>
               </div>
               <div className="flex items-start">
                 <MessageSquare className="h-5 w-5 text-lifeway-red shrink-0 mr-2 mt-0.5" />
