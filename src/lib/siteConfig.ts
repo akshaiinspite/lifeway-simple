@@ -5,7 +5,7 @@ export const SITE_URL =
 
 export const SITE_NAME = "Lifeway Rehabilitation and Child Development Centre";
 export const SITE_SHORT_NAME = "Lifeway Rehabilitation";
-export const SITE_TAGLINE = "Healing. Growing. Thriving.";
+export const SITE_TAGLINE = "Advanced multi speciality rehabilitation for all stages of life";
 export const SITE_DESCRIPTION =
   "Expert rehabilitation, physiotherapy, occupational therapy, speech therapy, special education and child development services in Perinthalmanna, Kerala.";
 
@@ -26,7 +26,7 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/lovable-uploads/57fb37d3-75f4-440e-
 
 export const CONTACT = {
   phone: ["+919645500081", "+919645500082"],
-  whatsapp: "+919645500080",
+  whatsapp: "+919645500081",
   email: "lifewaypmna@gmail.com",
   address: {
     street: "Alangaden Arcade, Calicut Road",
