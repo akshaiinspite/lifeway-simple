@@ -52,9 +52,9 @@ const HomeCareServiceTeaser = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <div className="hidden md:flex">
-                  <CarouselPrevious className="relative -left-4" />
-                  <CarouselNext className="relative -right-4" />
+                <div className="flex justify-center gap-2 mt-6">
+                  <CarouselPrevious className="static translate-y-0" />
+                  <CarouselNext className="static translate-y-0" />
                 </div>
               </Carousel>
             </div>

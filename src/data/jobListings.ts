@@ -24,7 +24,7 @@ const jobListings: JobCardProps[] = [
     ],
     howToApply: [
       `Drop your resume to: ${APPLY_EMAIL}`,
-      "Contact: +91 9645 500 080",
+      "Contact: +91 9645500081",
     ],
     applyEmail: APPLY_EMAIL,
   },
@@ -50,7 +50,7 @@ const jobListings: JobCardProps[] = [
     ],
     howToApply: [
       `Drop your resume to: ${APPLY_EMAIL}`,
-      "Contact: +91 9645 500 080",
+      "Contact: +91 9645500081",
     ],
     applyEmail: APPLY_EMAIL,
   },
@@ -75,7 +75,7 @@ const jobListings: JobCardProps[] = [
     ],
     howToApply: [
       `Drop your resume to: ${APPLY_EMAIL}`,
-      "Contact: +91 9645 500 080",
+      "Contact: +91 9645500081",
     ],
     applyEmail: APPLY_EMAIL,
   },
@@ -97,7 +97,7 @@ const jobListings: JobCardProps[] = [
     ],
     howToApply: [
       `Drop your resume to: ${APPLY_EMAIL}`,
-      "Contact: +91 9645 500 080",
+      "Contact: +91 9645500081",
     ],
     applyEmail: APPLY_EMAIL,
   },
@@ -119,7 +119,7 @@ const jobListings: JobCardProps[] = [
     ],
     howToApply: [
       `Drop your resume to: ${APPLY_EMAIL}`,
-      "Contact: +91 9645 500 080",
+      "Contact: +91 9645500081",
     ],
     applyEmail: APPLY_EMAIL,
   },
@@ -145,7 +145,7 @@ const jobListings: JobCardProps[] = [
     ],
     howToApply: [
       `Drop your resume to: ${APPLY_EMAIL}`,
-      "Contact: +91 9645 500 080",
+      "Contact: +91 9645500081",
     ],
     applyEmail: APPLY_EMAIL,
   },
