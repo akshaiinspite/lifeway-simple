@@ -59,12 +59,12 @@ const ConvenientCareOptions = () => {
     <section id="convenient-care" className="py-12 md:py-24 bg-white">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
-          <span className="text-lifeway-red font-medium uppercase tracking-widest text-sm">
+          <h2 className="heading-lg text-lifeway-red mb-3">
             Convenient Care Options
-          </span>
-          <h2 className="heading-lg mt-3 mb-4">
-            Flexible Care Designed for Your Lifestyle
           </h2>
+          <h3 className="heading-md mt-0 mb-4">
+            Flexible Care Designed for Your Lifestyle
+          </h3>
           <p className="text-gray-700">
             Whether you need intensive in-facility rehabilitation, reliable transportation, or expert
             therapy from home—we make quality care accessible on your terms.

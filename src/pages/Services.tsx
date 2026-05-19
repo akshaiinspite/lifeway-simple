@@ -27,9 +27,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ to, title, tagline, descripti
           <li key={i}>{b}</li>
         ))}
       </ul>
-      {to && (
-        <p className="mt-4 text-lifeway-red font-medium">Learn more →</p>
-      )}
+      {to && <p className="mt-4 text-lifeway-red font-medium">Learn more →</p>}
     </div>
   );
   return to ? (
@@ -40,6 +38,53 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ to, title, tagline, descripti
     inner
   );
 };
+
+const primaryServices = [
+  {
+    to: "/services/occupational-therapy",
+    title: "Occupational Therapy",
+    tagline: "Restoring abilities, strengthening confidence, and supporting growth.",
+    description: "Making everyday life easier with Occupational Therapy.",
+    bullets: ["ADL training", "Hand function training", "Sensory integration", "Vocational training"],
+  },
+  {
+    to: "/services/physiotherapy",
+    title: "Physiotherapy",
+    tagline: "Relieving pain, restoring movement, and rebuilding strength for everyday life.",
+    description: "Expert care tailored to you through Physiotherapy.",
+    bullets: ["Pain management", "Gait and balance training", "Sports injury recovery", "Strengthening and conditioning"],
+  },
+  {
+    to: "/services/speech-therapy",
+    title: "Speech Therapy",
+    description:
+      "Comprehensive care for paediatric and neurological conditions, focusing on communication, speech delay or clarity, and swallowing rehabilitation with advanced therapy techniques.",
+    bullets: ["Articulation therapy", "Language intervention", "Swallow therapy (dysphagia)", "Cognitive-communication rehab"],
+  },
+];
+
+const centeredServices = [
+  {
+    to: "/services/special-education",
+    title: "Special Education",
+    description:
+      "Support your child's academic growth and learning potential with our tailored special education programs and strategies.",
+    bullets: ["Individualized education plans (IEPs)", "Learning strategies", "School readiness and functional learning"],
+  },
+  {
+    to: "/services/clinical-psychology",
+    title: "Clinical Psychology",
+    description:
+      "Comprehensive psychological care for children with behavioural and attention difficulties, along with parent support and neuropsychiatric rehabilitation for all age groups.",
+    bullets: [
+      "Behaviour & attention management",
+      "Counselling and therapy",
+      "Emotional regulation",
+      "Parent guidance",
+      "Neuropsychological care",
+    ],
+  },
+];
 
 const Services = () => {
   return (
@@ -52,38 +97,19 @@ const Services = () => {
       <main id="main-content" className="py-12 md:py-16 bg-gray-50" tabIndex={-1}>
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ServiceCard
-              to="/services/occupational-therapy"
-              title="Occupational Therapy"
-              tagline="Restoring abilities, strengthening confidence, and supporting growth."
-              description="Making everyday life easier with Occupational Therapy."
-              bullets={["ADL training", "Hand function training", "Sensory integration", "Vocational training"]}
-            />
-            <ServiceCard
-              to="/services/physiotherapy"
-              title="Physiotherapy"
-              tagline="Relieving pain, restoring movement, and rebuilding strength for everyday life."
-              description="Expert care tailored to you through Physiotherapy."
-              bullets={["Pain management", "Gait and balance training", "Sports injury recovery", "Strengthening and conditioning"]}
-            />
-            <ServiceCard
-              to="/services/speech-therapy"
-              title="Speech Therapy"
-              description="Comprehensive care for paediatric and neurological conditions, focusing on communication, speech delay or clarity, and swallowing rehabilitation with advanced therapy techniques."
-              bullets={["Articulation therapy", "Language intervention", "Swallow therapy (dysphagia)", "Cognitive-communication rehab"]}
-            />
-            <ServiceCard
-              to="/services/special-education"
-              title="Special Education"
-              description="Support your child's academic growth and learning potential with our tailored special education programs and strategies."
-              bullets={["Individualized education plans (IEPs)", "Learning strategies", "School readiness and functional learning"]}
-            />
-            <ServiceCard
-              to="/services/clinical-psychology"
-              title="Clinical Psychology"
-              description="Comprehensive psychological care for children with behavioural and attention difficulties, along with parent support and neuropsychiatric rehabilitation for all age groups."
-              bullets={["Behaviour & attention management", "Counselling and therapy", "Emotional regulation", "Parent guidance", "Neuropsychological care"]}
-            />
+            {primaryServices.map((service) => (
+              <ServiceCard key={service.to} {...service} />
+            ))}
+          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-6">
+            {centeredServices.map((service) => (
+              <div
+                key={service.to}
+                className="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] lg:max-w-[400px]"
+              >
+                <ServiceCard {...service} />
+              </div>
+            ))}
           </div>
         </div>
       </main>
