@@ -108,33 +108,33 @@ const Footer = () => {
             <h4 className="text-xl font-bold mb-6">Services</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services/occupational-therapy" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
                   Occupational Therapy
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services/physiotherapy" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
                   Physiotherapy
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services/speech-therapy" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
                   Speech Therapy
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services/special-education" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
                   Special Education
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services/clinical-psychology" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
                   Clinical Psychology
                 </Link>
               </li>
               <li>
-                <Link to="/home-services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
-                  Home Services
+                <Link to="/services#convenient-care" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                  Convenient Care Options
                 </Link>
               </li>
             </ul>

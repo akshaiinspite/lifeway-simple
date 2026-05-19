@@ -56,7 +56,7 @@ const careOptions = [
 
 const ConvenientCareOptions = () => {
   return (
-    <section className="py-12 md:py-24 bg-white">
+    <section id="convenient-care" className="py-12 md:py-24 bg-white">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
           <span className="text-lifeway-red font-medium uppercase tracking-widest text-sm">

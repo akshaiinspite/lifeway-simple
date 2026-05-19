@@ -6,6 +6,7 @@ import Footer from "@/components/Layout/Footer";
 import PageHeader from "@/components/Layout/PageHeader";
 import SocialFollowSection from "@/components/Common/SocialFollowSection";
 import ConvenientCareOptions from "@/components/Home/ConvenientCareOptions";
+import HomeCareServiceTeaser from "@/components/Home/HomeCareServiceTeaser";
 
 interface ServiceCardProps {
   to?: string;
@@ -83,53 +84,11 @@ const Services = () => {
               description="Comprehensive psychological care for children with behavioural and attention difficulties, along with parent support and neuropsychiatric rehabilitation for all age groups."
               bullets={["Behaviour & attention management", "Counselling and therapy", "Emotional regulation", "Parent guidance", "Neuropsychological care"]}
             />
-            <ServiceCard
-              to="/services/convenient-care"
-              title="Convenient Care Options"
-              description="Flexible care designed to fit your lifestyle—wherever and however you need it."
-              bullets={["Home-based rehabilitation services", "In-clinic rehabilitation programs", "Pickup and drop facility", "Online therapy sessions"]}
-            />
-            <ServiceCard
-              to="/services/in-patient-rehabilitation"
-              title="In-Patient Rehabilitation Facility"
-              tagline="Comprehensive care, continuous support."
-              description="Structured, intensive rehabilitation care for individuals requiring close monitoring and dedicated therapy in a supportive environment."
-              bullets={[
-                "24/7 monitored rehabilitation care",
-                "Intensive, goal-oriented therapy programs",
-                "Multidisciplinary care (Physio, OT, Speech, Psychology)",
-                "Post-surgical and neurological recovery support",
-                "Comfortable, fully equipped rooms",
-              ]}
-            />
-            <ServiceCard
-              to="/services/pickup-drop"
-              title="Pickup & Drop Service"
-              tagline="Safe, reliable transportation for your care."
-              description="Convenient pickup and drop services to ensure easy access to your therapy sessions."
-              bullets={[
-                "Safe and assisted transportation",
-                "Door-to-door pickup and drop",
-                "Suitable for all age groups",
-                "Reliable and timely service",
-              ]}
-            />
-            <ServiceCard
-              to="/services/online-therapy"
-              title="Online Therapy Services"
-              tagline="Expert care, wherever you are."
-              description="Access professional rehabilitation and therapy services from the comfort of your home."
-              bullets={[
-                "Live one-on-one therapy sessions",
-                "Flexible scheduling",
-                "Multidisciplinary care",
-                "Guidance, follow-ups, and home programs",
-              ]}
-            />
           </div>
         </div>
       </main>
       <ConvenientCareOptions />
+      <HomeCareServiceTeaser />
       <SocialFollowSection />
       <Footer />
     </>

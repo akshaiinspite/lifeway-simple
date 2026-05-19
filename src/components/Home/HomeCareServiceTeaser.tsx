@@ -1,21 +1,18 @@
 
 import { Link } from "react-router-dom";
 import { Home, Calendar, SmilePlus, Heart, Star } from "lucide-react";
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
-import { useIsMobile } from "@/hooks/use-mobile";
 import homeCareImg from "@/assets/home-care.png";
 
 const HomeCareServiceTeaser = () => {
-  const isMobile = useIsMobile();
-  
   return (
-    <section className="py-12 md:py-24 bg-gray-50">
+    <section id="home-rehabilitation" className="py-12 md:py-24 bg-gray-50">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="order-2 lg:order-1">
@@ -65,22 +62,20 @@ const HomeCareServiceTeaser = () => {
             </p>
             
             <div className="flex flex-col md:flex-row gap-4">
-              <Link to="/home-services" className="btn-primary flex items-center justify-center">
+              <Link to="/appointments" className="btn-primary flex items-center justify-center">
                 <Calendar className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Book Home Care Visit
               </Link>
             </div>
           </div>
           
-          <div className="order-1 lg:order-2 relative">
-            <div className="relative z-10">
-              <img
-                src={homeCareImg}
-                alt="Home care services at Lifeway"
-                className="w-full h-auto rounded-lg shadow-xl"
-              />
-            </div>
-            <div className="absolute inset-0 -z-10 translate-x-4 translate-y-4 md:translate-x-6 md:translate-y-6 bg-lifeway-red rounded-lg hidden sm:block"></div>
+          <div className="order-1 lg:order-2">
+            <img
+              src={homeCareImg}
+              alt="Home care services at Lifeway"
+              className="w-full h-auto rounded-lg shadow-xl"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

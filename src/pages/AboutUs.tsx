@@ -68,14 +68,14 @@ const AboutUs = () => {
                 className="bg-lifeway-grey hover:bg-lifeway-red hover:text-white transition-colors p-6 rounded-lg"
               >
                 <div className="font-bold text-xl mb-2">Mr. Junaidh</div>
-                <p>Director</p>
+                <p>Managing Director &amp; CEO</p>
               </Link>
               <Link 
                 to="/about-us/director-shiny" 
                 className="bg-lifeway-grey hover:bg-lifeway-red hover:text-white transition-colors p-6 rounded-lg"
               >
                 <div className="font-bold text-xl mb-2">Ms. Shiny Alangaden</div>
-                <p>Director</p>
+                <p>Managing Director</p>
               </Link>
             </div>
           </div>
