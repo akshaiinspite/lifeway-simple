@@ -5,6 +5,7 @@ import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import PageHeader from "@/components/Layout/PageHeader";
 import SocialFollowSection from "@/components/Common/SocialFollowSection";
+import ConvenientCareOptions from "@/components/Home/ConvenientCareOptions";
 
 interface ServiceCardProps {
   to?: string;
@@ -128,6 +129,7 @@ const Services = () => {
           </div>
         </div>
       </main>
+      <ConvenientCareOptions />
       <SocialFollowSection />
       <Footer />
     </>

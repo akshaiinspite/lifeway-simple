@@ -55,7 +55,6 @@ const Introduction = () => {
                 height={600}
               />
             </div>
-            <div className="absolute inset-0 -z-10 translate-x-6 translate-y-6 bg-lifeway-red rounded-lg hidden md:block" />
           </div>
         </div>
       </div>

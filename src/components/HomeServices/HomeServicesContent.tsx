@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, BOOKING_PHONE_TEL } from "@/lib/constants";
 import { 
   Home, 
   Stethoscope, 
@@ -107,14 +107,10 @@ const HomeServicesContent = () => {
                 </a>
               </Button>
               
-              <Button className="w-full bg-lifeway-red hover:bg-red-600 flex items-center justify-center gap-2">
-                <MessageCircle className="w-5 h-5" />
-                Talk to Specialist Now
-              </Button>
-              
-              <Button variant="outline" className="w-full" asChild>
-                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-                  Book Appointment via WhatsApp
+              <Button className="w-full bg-lifeway-red hover:bg-red-600 flex items-center justify-center gap-2" asChild>
+                <a href={BOOKING_PHONE_TEL}>
+                  <MessageCircle className="w-5 h-5" />
+                  Talk to Specialist Now
                 </a>
               </Button>
             </div>

@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, MessageSquare } from "lucide-react";
+import lifewayLogoRed from "@/assets/lifeway-logo-red.png";
 
 const Footer = () => {
   return (
@@ -9,15 +10,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1: Logo and Description */}
           <div>
-            <div className="flex items-center mb-4">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4">
               <img 
-                src="/lovable-uploads/57fb37d3-75f4-440e-8dfc-f4ca09a7275e.png" 
-                alt="Lifeway Logo" 
-                className="h-12 mr-3" 
+                src={lifewayLogoRed}
+                alt="Lifeway logo"
+                className="h-14 w-14 sm:h-16 sm:w-16 shrink-0 object-contain"
+                width={64}
+                height={64} 
               />
-              <div className="text-3xl font-serif font-bold text-white leading-none">
-                Lifeway
-                <span className="block text-xs font-serif font-normal text-lifeway-grey mt-1 tracking-wide">
+              <div className="leading-none">
+                <span className="block text-2xl sm:text-3xl font-serif font-bold text-white">
+                  Lifeway
+                </span>
+                <span className="block text-sm sm:text-base font-serif font-normal text-lifeway-grey mt-1 tracking-wide">
                   A way to new life
                 </span>
               </div>
@@ -78,11 +83,6 @@ const Footer = () => {
               <li>
                 <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
                   Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/team" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
-                  Our Team
                 </Link>
               </li>
               <li>

@@ -38,14 +38,6 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
     { name: "Careers", path: "/careers" },
-    {
-      name: "Events",
-      path: "/events",
-      subItems: [
-        { name: "Upcoming Events", path: "/events" },
-        { name: "Events Gallery", path: "/events-gallery" },
-      ],
-    },
     { name: "Contact", path: "/contact" },
     {
       name: "About Us",
@@ -82,13 +74,13 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBg}`}
     >
-      <div className="container-custom flex items-center justify-between">
+      <div className="site-gutter flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <div className="flex items-center">
             <img
               src="/lovable-uploads/57fb37d3-75f4-440e-8dfc-f4ca09a7275e.png"
               alt="Lifeway Rehabilitation and Child Development Centre logo"
-              className="h-10 sm:h-12 w-auto"
+              className="h-11 sm:h-14 w-auto"
               width={120}
               height={48}
             />

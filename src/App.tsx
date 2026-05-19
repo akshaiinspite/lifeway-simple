@@ -14,6 +14,7 @@ import Careers from "./pages/Careers";
 import Events from "./pages/Events";
 import HomeServices from "./pages/HomeServices";
 import Contact from "./pages/Contact";
+import Appointments from "./pages/Appointments";
 import AboutUs from "./pages/AboutUs";
 import DirectorsMessage from "./pages/DirectorsMessage";
 import Gallery from "./pages/Gallery";
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/events-gallery" element={<EventsGallery />} />
           <Route path="/home-services" element={<HomeServices />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/appointments" element={<Appointments />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/about-us/directors-message" element={<DirectorsMessage />} />
           <Route path="/gallery" element={<Gallery />} />

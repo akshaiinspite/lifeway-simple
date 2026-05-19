@@ -1,13 +1,6 @@
 
 import { Link } from "react-router-dom";
 import { Building2, Car, Monitor } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import inpatientImg from "@/assets/inpatient-rehab.png";
 import pickupImg from "@/assets/pickup-drop.png";
 import onlineImg from "@/assets/online-therapy.png";
@@ -78,68 +71,61 @@ const ConvenientCareOptions = () => {
           </p>
         </div>
 
-        <Carousel opts={{ align: "start", loop: true }} className="w-full">
-          <CarouselContent>
-            {careOptions.map((option) => (
-              <CarouselItem key={option.title}>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center px-1">
-                  <div className="order-2 lg:order-1">
-                    <span className="text-lifeway-red font-medium uppercase tracking-widest text-sm flex items-center gap-2 mb-3">
-                      {option.icon}
-                      {option.title}
-                    </span>
-                    <h3 className="text-2xl md:text-3xl font-serif font-bold mb-2 text-gray-900">
-                      {option.tagline}
-                    </h3>
-                    <p className="text-gray-700 mb-6">{option.intro}</p>
+        <div className="space-y-16 md:space-y-24">
+          {careOptions.map((option) => (
+            <div
+              key={option.title}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
+            >
+              <div className="order-2 lg:order-1">
+                <span className="text-lifeway-red font-medium uppercase tracking-widest text-sm flex items-center gap-2 mb-3">
+                  {option.icon}
+                  {option.title}
+                </span>
+                <h3 className="text-2xl md:text-3xl font-serif font-bold mb-2 text-gray-900">
+                  {option.tagline}
+                </h3>
+                <p className="text-gray-700 mb-6">{option.intro}</p>
 
-                    <h4 className="font-bold text-lg mb-3 text-gray-900">Benefits</h4>
-                    <ul className="space-y-2 mb-6">
-                      {option.benefits.map((benefit) => (
-                        <li key={benefit} className="flex text-gray-700">
-                          <svg
-                            className="w-5 h-5 mr-2 text-lifeway-red flex-shrink-0 mt-0.5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
+                <h4 className="font-bold text-lg mb-3 text-gray-900">Benefits</h4>
+                <ul className="space-y-2 mb-6">
+                  {option.benefits.map((benefit) => (
+                    <li key={benefit} className="flex text-gray-700">
+                      <svg
+                        className="w-5 h-5 mr-2 text-lifeway-red flex-shrink-0 mt-0.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
 
-                    <Link to={option.link} className="btn-primary inline-block">
-                      Learn More
-                    </Link>
-                  </div>
+                <Link to={option.link} className="btn-primary inline-block">
+                  Learn More
+                </Link>
+              </div>
 
-                  <div className="order-1 lg:order-2 relative">
-                    <div className="relative z-10">
-                      <img
-                        src={option.image}
-                        alt={option.title}
-                        className="w-full h-auto rounded-lg shadow-xl object-cover max-h-[420px]"
-                      />
-                    </div>
-                    <div className="absolute inset-0 -z-10 translate-x-4 translate-y-4 md:translate-x-6 md:translate-y-6 bg-lifeway-red rounded-lg hidden sm:block" />
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="flex justify-center gap-2 mt-8">
-            <CarouselPrevious className="static translate-y-0" />
-            <CarouselNext className="static translate-y-0" />
-          </div>
-        </Carousel>
+              <div className="order-1 lg:order-2">
+                <img
+                  src={option.image}
+                  alt={option.title}
+                  className="w-full h-auto rounded-lg shadow-xl object-contain"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

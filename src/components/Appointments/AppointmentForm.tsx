@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
+import { CalendarIcon, Phone } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/hooks/use-toast";
-import { WHATSAPP_NUMBER } from "@/lib/constants";
+import { WHATSAPP_NUMBER, BOOKING_PHONE_TEL } from "@/lib/constants";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -38,9 +38,7 @@ const departmentOptions = [
   { value: "Physiotherapy", label: "Physiotherapy" },
   { value: "Speech Therapy", label: "Speech Therapy" },
   { value: "Special Education", label: "Special Education" },
-  { value: "Kinesiology", label: "Kinesiology" },
   { value: "Clinical Psychology", label: "Clinical Psychology" },
-  { value: "Parent Spring (Support & Coaching)", label: "Parent Spring (Support & Coaching)" },
 ];
 
 const formSchema = z.object({
@@ -207,13 +205,21 @@ const AppointmentForm = () => {
           />
 
           <p className="text-sm text-gray-600">
-            Clicking "Book Now" will open WhatsApp with your booking details pre-filled. Press
-            Send in WhatsApp to confirm.
+            Clicking &quot;Book Now&quot; will open WhatsApp with your booking details pre-filled. Press
+            Send in WhatsApp to confirm, or call us directly to book.
           </p>
 
-          <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? "Opening WhatsApp..." : "Book Now"}
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Button type="submit" className="w-full sm:flex-1" disabled={isSubmitting}>
+              {isSubmitting ? "Opening WhatsApp..." : "Book Now"}
+            </Button>
+            <Button type="button" variant="outline" className="w-full sm:flex-1 min-h-[44px]" asChild>
+              <a href={BOOKING_PHONE_TEL}>
+                <Phone className="mr-2 h-4 w-4" />
+                Call Now
+              </a>
+            </Button>
+          </div>
         </form>
       </Form>
     </div>

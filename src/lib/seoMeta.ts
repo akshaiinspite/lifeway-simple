@@ -53,6 +53,12 @@ export const STATIC_PAGE_META: Record<string, PageMeta> = {
       "Contact Lifeway in Perinthalmanna for appointments, inquiries, and directions. Phone, WhatsApp, and email available.",
     path: "/contact",
   },
+  "/appointments": {
+    title: `Book Appointment | ${SITE_NAME}`,
+    description:
+      "Schedule a consultation at Lifeway in Perinthalmanna. Book occupational therapy, physiotherapy, speech therapy, and more via our online form.",
+    path: "/appointments",
+  },
   "/about-us": {
     title: `About Us | ${SITE_NAME}`,
     description:

@@ -1,112 +1,68 @@
 
 import { Link } from "react-router-dom";
-import { Activity, Hand, MessageSquare, Brain, GraduationCap } from "lucide-react";
 import bannerImg from "@/assets/front-web.jpg";
-
-
-const specialties = [
-  { icon: Activity, label: "Physical Therapy" },
-  { icon: Hand, label: "Occupational Therapy" },
-  { icon: MessageSquare, label: "Speech Language Pathology" },
-  { icon: Brain, label: "Clinical Psychology" },
-  { icon: GraduationCap, label: "Special Education" },
-];
 
 const Banner = () => {
   return (
-    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden">
+    <section className="hero-section relative min-h-screen overflow-hidden">
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${bannerImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "brightness(0.75)",
+          filter: "brightness(0.88) saturate(1.05)",
         }}
         role="img"
-        aria-label="Lifeway rehabilitation centre exterior"
+        aria-label="Lifeway rehabilitation centre interior"
       />
 
-      <div className="absolute inset-0 z-0">
-        <div
-          className="w-full h-full opacity-5"
-          style={{
-            backgroundImage: "url('/lovable-uploads/9ebce2f5-dee9-4600-8d85-b52c34d4a8aa.png')",
-            backgroundRepeat: "repeat",
-            backgroundSize: "300px",
-          }}
+      {/* Left gradient for text legibility */}
+      <div
+        className="absolute inset-0 z-[1] bg-gradient-to-r from-black/55 via-black/25 to-transparent"
+        aria-hidden
+      />
+
+      {/* Centered gold watermark */}
+      <div
+        className="pointer-events-none absolute inset-0 z-[2] flex items-center justify-center"
+        aria-hidden
+      >
+        <img
+          src="/lovable-uploads/9ebce2f5-dee9-4600-8d85-b52c34d4a8aa.png"
+          alt=""
+          className="w-[min(75vw,560px)] max-w-none opacity-[0.22] sepia brightness-110 select-none"
         />
       </div>
 
-      <div className="container-custom relative z-10 py-20 sm:py-24 md:py-28">
-        <div className="max-w-2xl text-white">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-2 animate-fade-in leading-tight">
-            Lifeway Rehabilitation and Child Development Centre
+      <div className="hero-section__inner">
+        <div className="hero-content text-white">
+          <h1 className="hero-heading mb-3 md:mb-4">
+            <span className="block">Lifeway</span>
+            <span className="block">Rehabilitation and</span>
+            <span className="block whitespace-nowrap">Child Development Centre</span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 font-serif animate-fade-in" style={{ animationDelay: "0.1s" }}>
+
+          <p className="hero-tagline mb-5 md:mb-6">
             Advanced multi speciality rehabilitation for all stages of life
           </p>
-          <p className="text-sm sm:text-base md:text-lg mb-6 animate-fade-in leading-relaxed" style={{ animationDelay: "0.2s" }}>
+
+          <p className="hero-body mb-6 md:mb-7">
             At Lifeway, we believe in whole-person care that transforms lives. Our expert team provides
-            compassionate, evidence-based rehabilitation and developmental support for both adults and children,
-            supporting recovery, development and overall well-being at every stage of life.
+            compassionate, evidence-based rehabilitation for both adults and children.
           </p>
 
-          <ul className="flex flex-wrap gap-2 sm:gap-3 mb-6 animate-fade-in list-none p-0" style={{ animationDelay: "0.3s" }}>
-            {specialties.map(({ icon: Icon, label }) => (
-              <li
-                key={label}
-                className="flex items-center gap-1.5 text-xs sm:text-sm bg-black/25 backdrop-blur-sm rounded-full px-2.5 py-1.5 sm:px-3 sm:py-2"
-              >
-                <Icon size={16} className="text-lifeway-red shrink-0" aria-hidden />
-                <span>{label}</span>
-              </li>
-            ))}
-          </ul>
-
-          <p className="text-sm sm:text-base md:text-lg mb-2 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            Experience care that&apos;s as unique as you are.
-          </p>
-          <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 animate-fade-in italic" style={{ animationDelay: "0.5s" }}>
+          <p className="hero-quote mb-1.5">Experience care that&apos;s as unique as you are.</p>
+          <p className="hero-quote hero-quote--italic mb-8 md:mb-10">
             Let&apos;s walk the Lifeway—together.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-            <Link to="/services" className="btn-primary w-full sm:w-auto">
+          <div className="hero-actions">
+            <Link to="/services" className="btn-primary hero-btn">
               Explore Our Services
             </Link>
-            <Link
-              to="/appointments"
-              className="btn-secondary text-lifeway-black w-full sm:w-auto"
-            >
+            <Link to="/appointments" className="btn-secondary hero-btn hero-btn--outline">
               Book Appointment
             </Link>
           </div>
-
-          <address className="mt-6 sm:mt-8 text-xs sm:text-sm text-gray-200 not-italic animate-fade-in leading-relaxed" style={{ animationDelay: "0.7s" }}>
-            <a
-              href="https://maps.google.com/?q=LifeWay+Rehabilitation+and+Child+Development+Centre,+Alangaden+Arcade,+Calicut+road,+Perinthalmanna+-+679322"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-lifeway-red transition-colors block mb-2"
-            >
-              LifeWay Rehabilitation and Child Development Centre, Alangaden Arcade, Calicut Road, Perinthalmanna, Kerala 679322
-            </a>
-            <p>
-              <a href="tel:+919645500081" className="hover:text-lifeway-red transition-colors">
-                +91 9645500081
-              </a>
-              ,{" "}
-              <a href="tel:+919645500082" className="hover:text-lifeway-red transition-colors">
-                +91 9645500082
-              </a>
-              <span className="hidden sm:inline"> · </span>
-              <br className="sm:hidden" />
-              <a href="mailto:lifewaypmna@gmail.com" className="hover:text-lifeway-red transition-colors break-all">
-                lifewaypmna@gmail.com
-              </a>
-            </p>
-          </address>
         </div>
       </div>
     </section>
