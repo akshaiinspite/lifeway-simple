@@ -12,7 +12,7 @@ import homeCareImg from "@/assets/home-care.png";
 
 const HomeCareServiceTeaser = () => {
   return (
-    <section id="home-rehabilitation" className="py-12 md:py-24 bg-gray-50">
+    <section id="home-rehabilitation" className="py-12 md:py-24 bg-white">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="order-2 lg:order-1">
@@ -22,9 +22,7 @@ const HomeCareServiceTeaser = () => {
                 Home Care Services
               </span>
             </div>
-            <h2 className="heading-lg mb-4 md:mb-6">
-              🏡 Lifeway Home Rehabilitation Services
-            </h2>
+            <h2 className="heading-lg mb-4 md:mb-6">Lifeway Home Rehabilitation Services</h2>
             <p className="mb-4 md:mb-6 text-gray-700 italic text-lg font-serif">
               Compassionate care—now at your doorstep.
             </p>
