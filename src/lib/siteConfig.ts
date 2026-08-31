@@ -1,8 +1,9 @@
 /** Update VITE_SITE_URL in production to your live domain */
 export const SITE_URL =
   import.meta.env.VITE_SITE_URL?.replace(/\/$/, "") ||
-  "https://lifeway-smile-website.lovable.app";
+  "https://www.lifewayrehab.in";
 
+export const PUBLISHER_NAME = "LIFEWAY";
 export const SITE_NAME = "Lifeway Rehabilitation and Child Development Centre";
 export const SITE_SHORT_NAME = "Lifeway Rehabilitation";
 export const SITE_TAGLINE = "Advanced multi speciality rehabilitation for all stages of life";
@@ -41,6 +42,10 @@ export const ORGANIZATION_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
   name: SITE_NAME,
+  publisher: {
+    "@type": "Organization",
+    name: PUBLISHER_NAME,
+  },
   description: SITE_DESCRIPTION,
   url: SITE_URL,
   image: DEFAULT_OG_IMAGE,

@@ -56,6 +56,11 @@ const EventsGallery = () => {
                   <img
                     src={image.imageUrl}
                     alt={image.title}
+                    title={image.title}
+                    loading="lazy"
+                    decoding="async"
+                    width={600}
+                    height={400}
                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">

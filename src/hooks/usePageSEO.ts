@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import type { PageMeta } from "@/lib/seoMeta";
-import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, ORGANIZATION_JSON_LD } from "@/lib/siteConfig";
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, PUBLISHER_NAME, ORGANIZATION_JSON_LD } from "@/lib/siteConfig";
 
 const META_ATTR = "data-lifeway-seo";
 
@@ -10,7 +10,8 @@ function upsertMeta(
   content: string
 ) {
   if (!content) return;
-  let el = document.querySelector(`meta[${attribute}="${key}"][${META_ATTR}]`);
+  // First check for existing tag in head (dynamic or static)
+  let el = document.querySelector(`meta[${attribute}="${key}"]`);
   if (!el) {
     el = document.createElement("meta");
     el.setAttribute(attribute, key);
@@ -22,7 +23,8 @@ function upsertMeta(
 
 function upsertLink(rel: string, href: string) {
   if (!href) return;
-  let el = document.querySelector(`link[rel="${rel}"][${META_ATTR}]`);
+  // First check for existing canonical / link tag in head
+  let el = document.querySelector(`link[rel="${rel}"]`);
   if (!el) {
     el = document.createElement("link");
     el.setAttribute("rel", rel);
@@ -51,6 +53,7 @@ export function applyPageSEO(meta: PageMeta) {
 
   document.title = title;
 
+  upsertMeta("name", "publisher", PUBLISHER_NAME);
   upsertMeta("name", "description", description);
   upsertMeta("name", "robots", meta.noindex ? "noindex, nofollow" : "index, follow");
   upsertLink("canonical", canonicalUrl);
@@ -78,3 +81,4 @@ export function usePageSEO(meta: PageMeta | undefined) {
     }
   }, [meta?.title, meta?.description, meta?.path, meta?.noindex]);
 }
+

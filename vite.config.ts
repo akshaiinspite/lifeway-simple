@@ -19,4 +19,24 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    target: "es2020",
+    cssMinify: true,
+    minify: "esbuild",
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "react-vendor": ["react", "react-dom", "react-router-dom"],
+          "ui-vendor": [
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-navigation-menu",
+            "@radix-ui/react-slot",
+            "@radix-ui/react-tooltip",
+            "lucide-react",
+          ],
+          "query-vendor": ["@tanstack/react-query"],
+        },
+      },
+    },
+  },
 }));

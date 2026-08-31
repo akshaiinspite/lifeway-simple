@@ -10,8 +10,13 @@ const HomecareServices = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="https://images.unsplash.com/photo-1591348278863-a8fb3887e2aa?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Home care services at Lifeway Hospital"
+                src="https://images.unsplash.com/photo-1591348278863-a8fb3887e2aa?q=80&w=800&auto=format&fit=crop"
+                alt="Home care rehabilitation services at Lifeway"
+                title="Home Care Rehabilitation Services - Lifeway"
+                loading="lazy"
+                decoding="async"
+                width={800}
+                height={500}
                 className="w-full h-auto rounded-lg shadow-xl"
               />
             </div>

@@ -38,7 +38,11 @@ const Gallery = () => {
                 <img
                   src={img.src}
                   alt={img.alt}
+                  title={img.alt}
                   loading="lazy"
+                  decoding="async"
+                  width={600}
+                  height={400}
                   className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
                 />
                 <figcaption className="p-3 text-sm text-gray-700 text-center">{img.alt}</figcaption>

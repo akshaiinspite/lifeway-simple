@@ -43,8 +43,12 @@ const ServiceDetail = () => {
                   <img
                     src={item.image}
                     alt={item.title}
+                    title={item.title}
                     className="w-full max-h-96 object-cover rounded-lg mb-4"
                     loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={450}
                   />
                 )}
                 {item.intro && <p className="text-gray-700 mb-3">{item.intro}</p>}

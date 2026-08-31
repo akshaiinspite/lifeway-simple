@@ -26,6 +26,11 @@ const DepartmentCard: React.FC<DepartmentCardProps> = ({
             <img
               src={image}
               alt={`${name} Department`}
+              title={`${name} Department - Lifeway Rehabilitation`}
+              loading="lazy"
+              decoding="async"
+              width={400}
+              height={300}
               className="w-full h-full object-cover"
               style={{ minHeight: "300px" }}
             />

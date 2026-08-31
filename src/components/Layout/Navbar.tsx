@@ -76,15 +76,15 @@ const Navbar = () => {
     >
       <div className="navbar-gutter flex items-center justify-between">
         <Link to="/" className="flex items-center">
-          <div className="flex items-center">
             <img
               src="/lovable-uploads/57fb37d3-75f4-440e-8dfc-f4ca09a7275e.png"
               alt="Lifeway Rehabilitation and Child Development Centre logo"
-              className="h-11 sm:h-14 w-auto"
-              width={120}
+              title="Lifeway Rehabilitation and Child Development Centre Logo"
+              className="h-11 sm:h-14 w-auto object-contain"
+              width={140}
               height={48}
+              decoding="async"
             />
-          </div>
         </Link>
 
         {/* Desktop Navigation */}

@@ -71,8 +71,12 @@ const HomeCareServiceTeaser = () => {
             <img
               src={homeCareImg}
               alt="Home care services at Lifeway"
+              title="Lifeway Home Rehabilitation Care"
               className="w-full h-auto rounded-lg shadow-xl"
               loading="lazy"
+              decoding="async"
+              width={600}
+              height={450}
             />
           </div>
         </div>

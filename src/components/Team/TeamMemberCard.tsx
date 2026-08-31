@@ -23,6 +23,11 @@ const TeamMemberCard: React.FC<TeamMemberProps> = ({
         <img
           src={image}
           alt={`${name}, ${role}`}
+          title={`${name} - ${role}`}
+          loading="lazy"
+          decoding="async"
+          width={400}
+          height={320}
           className="w-full h-full object-cover object-center"
         />
       </div>

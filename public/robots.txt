@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lifeway-smile-website.lovable.app/sitemap.xml
+Sitemap: https://www.lifewayrehab.in/sitemap.xml

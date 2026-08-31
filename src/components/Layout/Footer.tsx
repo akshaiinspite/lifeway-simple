@@ -13,10 +13,13 @@ const Footer = () => {
             <div className="flex items-center gap-3 sm:gap-4 mb-4">
               <img 
                 src={lifewayLogoRed}
-                alt="Lifeway logo"
+                alt="Lifeway Rehabilitation logo"
+                title="Lifeway Logo - A way to new life"
                 className="h-14 w-14 sm:h-16 sm:w-16 shrink-0 object-contain"
                 width={64}
-                height={64} 
+                height={64}
+                loading="lazy"
+                decoding="async"
               />
               <div className="leading-none">
                 <span className="block text-2xl sm:text-3xl font-serif font-bold text-white">

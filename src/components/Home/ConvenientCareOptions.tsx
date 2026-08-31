@@ -119,8 +119,12 @@ const ConvenientCareOptions = () => {
                 <img
                   src={option.image}
                   alt={option.title}
+                  title={option.title}
                   className="w-full h-auto rounded-lg shadow-xl object-contain"
                   loading="lazy"
+                  decoding="async"
+                  width={600}
+                  height={400}
                 />
               </div>
             </div>

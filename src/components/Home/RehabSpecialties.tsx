@@ -102,10 +102,27 @@ const RehabSpecialties = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const el = sliderRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") {
+      setIsInView(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
-    if (!paused) {
+    if (!paused && isInView) {
       interval = setInterval(() => {
         if (sliderRef.current) {
           const atEnd =
@@ -116,7 +133,7 @@ const RehabSpecialties = () => {
       }, 4000);
     }
     return () => clearInterval(interval);
-  }, [paused]);
+  }, [paused, isInView]);
 
   const handleMouseDown = (e: MouseEvent) => {
     if (!sliderRef.current) return;

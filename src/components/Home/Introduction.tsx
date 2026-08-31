@@ -4,18 +4,6 @@ import lifewayCentreImg from "@/assets/lifeway-centre.png";
 const Introduction = () => {
   return (
     <section className="py-16 md:py-24 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-white/95" />
-        <div
-          className="w-full h-full opacity-10"
-          style={{
-            backgroundImage: "url('/lovable-uploads/9ebce2f5-dee9-4600-8d85-b52c34d4a8aa.png')",
-            backgroundRepeat: "repeat",
-            backgroundSize: "300px",
-          }}
-        />
-      </div>
-
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
@@ -48,6 +36,7 @@ const Introduction = () => {
               <img
                 src={lifewayCentreImg}
                 alt="Lifeway Rehabilitation and Child Development Centre reception area"
+                title="Lifeway Rehabilitation and Child Development Centre Reception Area"
                 className="w-full h-auto rounded-lg shadow-xl"
                 loading="lazy"
                 decoding="async"

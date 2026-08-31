@@ -64,14 +64,14 @@ const AboutUs = () => {
             </p>
             <div className="flex flex-col md:flex-row gap-8 justify-center">
               <Link 
-                to="/about-us/director-junaidh" 
+                to="/about-us/directors-message" 
                 className="bg-lifeway-grey hover:bg-lifeway-red hover:text-white transition-colors p-6 rounded-lg"
               >
                 <div className="font-bold text-xl mb-2">Mr. Junaidh</div>
                 <p>Managing Director &amp; CEO</p>
               </Link>
               <Link 
-                to="/about-us/director-shiny" 
+                to="/about-us/directors-message" 
                 className="bg-lifeway-grey hover:bg-lifeway-red hover:text-white transition-colors p-6 rounded-lg"
               >
                 <div className="font-bold text-xl mb-2">Ms. Shiny Alangaden</div>
