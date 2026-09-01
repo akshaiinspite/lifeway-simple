@@ -23,7 +23,7 @@ export const SITE_KEYWORDS = [
   "Lifeway rehabilitation",
 ].join(", ");
 
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/lovable-uploads/57fb37d3-75f4-440e-8dfc-f4ca09a7275e.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/lovable-uploads/57fb37d3-75f4-440e-8dfc-f4ca09a7275e.webp`;
 
 export const CONTACT = {
   phone: ["+919645500081", "+919645500082"],

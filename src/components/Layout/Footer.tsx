@@ -38,8 +38,8 @@ const Footer = () => {
               <a 
                 href="https://www.facebook.com/share/12JeDRhBoTi/" 
                 target="_blank" 
-                rel="noreferrer"
-                className="text-lifeway-grey hover:text-lifeway-red transition-colors"
+                rel="noopener noreferrer"
+                className="text-lifeway-grey hover:text-lifeway-red transition-colors min-h-[48px] min-w-[48px] inline-flex items-center justify-center p-2 rounded-md hover:bg-white/10"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -47,8 +47,8 @@ const Footer = () => {
               <a 
                 href="https://x.com/Lifewayrehab?t=VNK38ivpS13siAGIddeAqw&s=08" 
                 target="_blank" 
-                rel="noreferrer"
-                className="text-lifeway-grey hover:text-lifeway-red transition-colors"
+                rel="noopener noreferrer"
+                className="text-lifeway-grey hover:text-lifeway-red transition-colors min-h-[48px] min-w-[48px] inline-flex items-center justify-center p-2 rounded-md hover:bg-white/10"
                 aria-label="Twitter"
               >
                 <Twitter size={20} />
@@ -56,8 +56,8 @@ const Footer = () => {
               <a 
                 href="https://www.instagram.com/lifewayrehab?igsh=NWFrbWJxNXk1OWRo" 
                 target="_blank" 
-                rel="noreferrer"
-                className="text-lifeway-grey hover:text-lifeway-red transition-colors"
+                rel="noopener noreferrer"
+                className="text-lifeway-grey hover:text-lifeway-red transition-colors min-h-[48px] min-w-[48px] inline-flex items-center justify-center p-2 rounded-md hover:bg-white/10"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -65,8 +65,8 @@ const Footer = () => {
               <a 
                 href="https://wa.me/919645500081" 
                 target="_blank" 
-                rel="noreferrer"
-                className="text-lifeway-grey hover:text-lifeway-red transition-colors"
+                rel="noopener noreferrer"
+                className="text-lifeway-grey hover:text-lifeway-red transition-colors min-h-[48px] min-w-[48px] inline-flex items-center justify-center p-2 rounded-md hover:bg-white/10"
                 aria-label="WhatsApp"
               >
                 <MessageSquare size={20} />
@@ -77,29 +77,29 @@ const Footer = () => {
           {/* Column 2: Quick Links */}
           <div>
             <h4 className="text-xl font-bold mb-6">Quick Links</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/careers" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link to="/about-us" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/about-us" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/contact" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Contact Us
                 </Link>
               </li>
@@ -109,34 +109,34 @@ const Footer = () => {
           {/* Column 3: Services */}
           <div>
             <h4 className="text-xl font-bold mb-6">Services</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               <li>
-                <Link to="/services/occupational-therapy" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services/occupational-therapy" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Occupational Therapy
                 </Link>
               </li>
               <li>
-                <Link to="/services/physiotherapy" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services/physiotherapy" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Physiotherapy
                 </Link>
               </li>
               <li>
-                <Link to="/services/speech-therapy" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services/speech-therapy" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Speech Therapy
                 </Link>
               </li>
               <li>
-                <Link to="/services/special-education" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services/special-education" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Special Education
                 </Link>
               </li>
               <li>
-                <Link to="/services/clinical-psychology" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services/clinical-psychology" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Clinical Psychology
                 </Link>
               </li>
               <li>
-                <Link to="/services#convenient-care" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <Link to="/services#convenient-care" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Convenient Care Options
                 </Link>
               </li>
@@ -152,8 +152,8 @@ const Footer = () => {
                 <a 
                   href="https://maps.google.com/?q=LifeWay+Rehabilitation+and+Child+Development+Centre,+Alangaden+Arcade,+Calicut+road,+Perinthalmanna+-+679322"
                   target="_blank"
-                  rel="noreferrer"
-                  className="text-lifeway-grey hover:text-lifeway-red transition-colors"
+                  rel="noopener noreferrer"
+                  className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-2 min-h-[48px]"
                 >
                   LifeWay Rehabilitation and Child Development Centre,
                   <br />
@@ -164,11 +164,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="mr-3 text-lifeway-red flex-shrink-0" size={18} />
-                <div className="flex flex-col">
-                  <a href="tel:+919645500081" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <div className="flex flex-col space-y-1">
+                  <a href="tel:+919645500081" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px] flex items-center">
                     +91 9645500081
                   </a>
-                  <a href="tel:+919645500082" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                  <a href="tel:+919645500082" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px] flex items-center">
                     +91 9645500082
                   </a>
                 </div>
@@ -178,15 +178,15 @@ const Footer = () => {
                 <a 
                   href="https://wa.me/919645500081" 
                   target="_blank"
-                  rel="noreferrer"
-                  className="text-lifeway-grey hover:text-lifeway-red transition-colors"
+                  rel="noopener noreferrer"
+                  className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-2 min-h-[44px] flex items-center"
                 >
                   +91 9645500081 (WhatsApp)
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-3 text-lifeway-red flex-shrink-0" size={18} />
-                <a href="mailto:lifewaypmna@gmail.com" className="text-lifeway-grey hover:text-lifeway-red transition-colors">
+                <a href="mailto:lifewaypmna@gmail.com" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-2 min-h-[44px] flex items-center">
                   lifewaypmna@gmail.com
                 </a>
               </li>
@@ -223,8 +223,8 @@ const Footer = () => {
             <a 
               href="https://www.facebook.com/share/12JeDRhBoTi/" 
               target="_blank" 
-              rel="noreferrer"
-              className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors min-h-[48px] px-3 py-2 rounded-md hover:bg-white/10"
             >
               <Facebook size={20} />
               <span>Facebook</span>
@@ -232,8 +232,8 @@ const Footer = () => {
             <a 
               href="https://x.com/Lifewayrehab?t=VNK38ivpS13siAGIddeAqw&s=08" 
               target="_blank" 
-              rel="noreferrer"
-              className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors min-h-[48px] px-3 py-2 rounded-md hover:bg-white/10"
             >
               <Twitter size={20} />
               <span>X</span>
@@ -241,8 +241,8 @@ const Footer = () => {
             <a 
               href="https://www.instagram.com/lifewayrehab?igsh=NWFrbWJxNXk1OWRo" 
               target="_blank" 
-              rel="noreferrer"
-              className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors min-h-[48px] px-3 py-2 rounded-md hover:bg-white/10"
             >
               <Instagram size={20} />
               <span>Instagram</span>
@@ -250,8 +250,8 @@ const Footer = () => {
             <a 
               href="https://wa.me/919645500081" 
               target="_blank" 
-              rel="noreferrer"
-              className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-lifeway-grey hover:text-lifeway-red transition-colors min-h-[48px] px-3 py-2 rounded-md hover:bg-white/10"
             >
               <MessageSquare size={20} />
               <span>WhatsApp</span>

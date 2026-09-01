@@ -1,9 +1,9 @@
 
 import { Link } from "react-router-dom";
 import { Building2, Car, Monitor } from "lucide-react";
-import inpatientImg from "@/assets/inpatient-rehab.png";
-import pickupImg from "@/assets/pickup-drop.png";
-import onlineImg from "@/assets/online-therapy.png";
+import inpatientImg from "@/assets/inpatient-rehab.webp";
+import pickupImg from "@/assets/pickup-drop.webp";
+import onlineImg from "@/assets/online-therapy.webp";
 
 const careOptions = [
   {
@@ -19,6 +19,8 @@ const careOptions = [
       "Comfortable, fully equipped rooms for safe and supportive recovery",
     ],
     image: inpatientImg,
+    imgWidth: 1086,
+    imgHeight: 1448,
     icon: <Building2 className="h-4 w-4" />,
     link: "/services/in-patient-rehabilitation",
   },
@@ -34,6 +36,8 @@ const careOptions = [
       "Reliable and timely service",
     ],
     image: pickupImg,
+    imgWidth: 1322,
+    imgHeight: 1190,
     icon: <Car className="h-4 w-4" />,
     link: "/services/pickup-drop",
   },
@@ -49,6 +53,8 @@ const careOptions = [
       "Guidance, follow-ups, and home programs",
     ],
     image: onlineImg,
+    imgWidth: 1254,
+    imgHeight: 1254,
     icon: <Monitor className="h-4 w-4" />,
     link: "/services/online-therapy",
   },
@@ -123,8 +129,8 @@ const ConvenientCareOptions = () => {
                   className="w-full h-auto rounded-lg shadow-xl object-contain"
                   loading="lazy"
                   decoding="async"
-                  width={600}
-                  height={400}
+                  width={option.imgWidth}
+                  height={option.imgHeight}
                 />
               </div>
             </div>

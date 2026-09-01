@@ -8,7 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import homeCareImg from "@/assets/home-care.png";
+import homeCareImg from "@/assets/home-care.webp";
 
 const HomeCareServiceTeaser = () => {
   return (
@@ -75,8 +75,8 @@ const HomeCareServiceTeaser = () => {
               className="w-full h-auto rounded-lg shadow-xl"
               loading="lazy"
               decoding="async"
-              width={600}
-              height={450}
+              width={1254}
+              height={1254}
             />
           </div>
         </div>

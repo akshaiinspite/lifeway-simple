@@ -4,11 +4,11 @@ import Footer from "@/components/Layout/Footer";
 import PageHeader from "@/components/Layout/PageHeader";
 import WhatsAppButton from "@/components/Common/WhatsAppButton";
 import SocialFollowSection from "@/components/Common/SocialFollowSection";
-import frontWeb from "@/assets/front-web.jpg";
-import homeCare from "@/assets/home-care.png";
-import inpatient from "@/assets/inpatient-rehab.png";
-import online from "@/assets/online-therapy.png";
-import pickup from "@/assets/pickup-drop.png";
+import frontWeb from "@/assets/front-web.webp";
+import homeCare from "@/assets/home-care.webp";
+import inpatient from "@/assets/inpatient-rehab.webp";
+import online from "@/assets/online-therapy.webp";
+import pickup from "@/assets/pickup-drop.webp";
 
 const images = [
   { src: frontWeb, alt: "Lifeway Rehabilitation Centre entrance" },

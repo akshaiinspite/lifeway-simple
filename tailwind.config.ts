@@ -53,7 +53,7 @@ export default {
           foreground: 'hsl(var(--card-foreground))'
         },
         lifeway: {
-          red: '#ED1C24',
+          red: '#C6161E',
           black: '#000000',
           grey: '#E2E2E2',
         }

@@ -75,14 +75,16 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBg}`}
     >
       <div className="navbar-gutter flex items-center justify-between">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center" aria-label="Lifeway Rehabilitation Home">
             <img
-              src="/lovable-uploads/57fb37d3-75f4-440e-8dfc-f4ca09a7275e.png"
+              src="/lovable-uploads/57fb37d3-75f4-440e-8dfc-f4ca09a7275e.webp"
+              srcSet="/lovable-uploads/57fb37d3-75f4-440e-8dfc-f4ca09a7275e-small.webp 250w, /lovable-uploads/57fb37d3-75f4-440e-8dfc-f4ca09a7275e.webp 400w"
+              sizes="(max-width: 640px) 150px, 191px"
               alt="Lifeway Rehabilitation and Child Development Centre logo"
               title="Lifeway Rehabilitation and Child Development Centre Logo"
               className="h-11 sm:h-14 w-auto object-contain"
-              width={140}
-              height={48}
+              width={191}
+              height={63}
               decoding="async"
             />
         </Link>
@@ -173,7 +175,7 @@ const Navbar = () => {
                       <Link
                         key={subItem.name}
                         to={subItem.path}
-                        className="block text-center text-base text-gray-600 hover:text-lifeway-red"
+                        className="block text-center text-base text-gray-700 hover:text-lifeway-red py-2.5 px-4 min-h-[44px] flex items-center justify-center"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {subItem.name}
@@ -185,7 +187,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-lg font-medium hover:text-lifeway-red transition-colors ${
+                  className={`text-lg font-medium hover:text-lifeway-red transition-colors py-2.5 px-4 min-h-[44px] flex items-center justify-center ${
                     location.pathname === link.path
                       ? "text-lifeway-red"
                       : "text-lifeway-black"
@@ -198,7 +200,7 @@ const Navbar = () => {
             )}
             <Link
               to="/appointments"
-              className="btn-primary w-full text-center text-base"
+              className="btn-primary w-full text-center text-base min-h-[48px] flex items-center justify-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Book Appointment

@@ -14,7 +14,7 @@ const SocialFollowSection = () => {
             <a
               href="https://www.facebook.com/share/12JeDRhBoTi/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm hover:bg-blue-50 transition-colors"
             >
               <Facebook className="text-blue-600" size={24} />
@@ -23,7 +23,7 @@ const SocialFollowSection = () => {
             <a
               href="https://x.com/Lifewayrehab?t=VNK38ivpS13siAGIddeAqw&s=08"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm hover:bg-gray-100 transition-colors"
             >
               <Twitter className="text-black" size={24} />
@@ -32,7 +32,7 @@ const SocialFollowSection = () => {
             <a
               href="https://www.instagram.com/lifewayrehab?igsh=NWFrbWJxNXk1OWRo"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm hover:bg-pink-50 transition-colors"
             >
               <Instagram className="text-pink-600" size={24} />
@@ -41,7 +41,7 @@ const SocialFollowSection = () => {
             <a
               href="https://wa.me/919645500081"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm hover:bg-green-50 transition-colors"
             >
               <MessageSquare className="text-green-600" size={24} />

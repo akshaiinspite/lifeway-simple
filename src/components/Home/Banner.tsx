@@ -1,18 +1,18 @@
 
 import { Link } from "react-router-dom";
-import bannerImg from "@/assets/front-web.jpg";
 
 const Banner = () => {
   return (
     <section className="hero-section relative min-h-screen overflow-hidden">
       {/* High-priority Hero Image for optimal LCP detection and rendering */}
       <img
-        src={bannerImg}
+        src="/front-web.webp"
         alt="Lifeway Rehabilitation and Child Development Centre interior"
         title="Lifeway Rehabilitation and Child Development Centre Interior"
-        decoding="async"
-        width={1920}
-        height={1080}
+        loading="eager"
+        decoding="sync"
+        width={1365}
+        height={768}
         className="absolute inset-0 z-0 w-full h-full object-cover object-center"
         style={{
           filter: "brightness(0.88) saturate(1.05)",
@@ -22,7 +22,7 @@ const Banner = () => {
 
       {/* Left gradient for text legibility */}
       <div
-        className="absolute inset-0 z-[1] bg-gradient-to-r from-black/55 via-black/25 to-transparent"
+        className="absolute inset-0 z-[1] bg-gradient-to-r from-black/75 via-black/50 to-black/30"
         aria-hidden="true"
       />
 

@@ -1,6 +1,6 @@
-import inpatientImg from "@/assets/inpatient-rehab.png";
-import onlineImg from "@/assets/online-therapy.png";
-import pickupImg from "@/assets/pickup-drop.png";
+import inpatientImg from "@/assets/inpatient-rehab.webp";
+import onlineImg from "@/assets/online-therapy.webp";
+import pickupImg from "@/assets/pickup-drop.webp";
 
 export interface ServiceItem {
   title: string;
