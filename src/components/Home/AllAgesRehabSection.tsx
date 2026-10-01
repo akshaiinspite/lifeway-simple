@@ -25,7 +25,7 @@ const AllAgesRehabSection: React.FC = () => {
           <div className="lg:col-span-5 relative">
             <div className="relative z-10">
               <img
-                src="/uploads/rehabilitation-all-ages.jpg"
+                src="/lovable-uploads/comprehensive_rehab_uniform.jpg"
                 alt="Rehabilitation for Children and Adults at Lifeway Rehabilitation Centre"
                 title="Rehabilitation for Children and Adults"
                 className="w-full h-[360px] md:h-[440px] object-cover rounded-xl shadow-xl"
