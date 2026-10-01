@@ -30,17 +30,16 @@ const Banner = () => {
         <div className="hero-content text-white">
           <h1 className="sr-only">Rehabilitation Centre in Perintalmanna</h1>
 
-          <h2 className="hero-heading mb-3 md:mb-4">
-            <span className="block">Lifeway</span>
-            <span className="block">Rehabilitation and</span>
-            <span className="block sm:whitespace-nowrap">Child Development Centre</span>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium text-white leading-[1.2] tracking-tight mb-4 md:mb-5 max-w-[620px]">
+            <span className="block">Lifeway Rehabilitation and</span>
+            <span className="block">Child Development Centre</span>
           </h2>
 
-          <p className="hero-tagline mb-4 md:mb-5">
+          <p className="font-serif text-lg sm:text-xl md:text-2xl text-white/95 font-medium leading-snug mb-4 md:mb-5 max-w-[580px]">
             Advanced multispeciality rehabilitation for children and adults
           </p>
 
-          <p className="hero-body mb-6 md:mb-7">
+          <p className="font-sans text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-7 max-w-[580px]">
             Lifeway Rehabilitation and Child Development Centre provides personalized, evidence-based
             care for children and adults, with a focus on improving physical abilities, communication,
             learning, behavior, and daily life skills. As a trusted rehabilitation center in
@@ -48,10 +47,14 @@ const Banner = () => {
             on each person&apos;s needs and goals.
           </p>
 
-          <p className="hero-quote mb-1.5">Care that&apos;s personalized. Progress that matters.</p>
-          <p className="hero-quote hero-quote--italic mb-8 md:mb-10">
-            Let&apos;s walk the Lifeway together.
-          </p>
+          <div className="mb-8 md:mb-10 space-y-1.5 border-l-2 border-lifeway-red pl-4 py-0.5 max-w-[580px]">
+            <p className="font-sans text-white font-medium text-sm sm:text-base md:text-lg">
+              Care that&apos;s personalized. Progress that matters.
+            </p>
+            <p className="font-sans text-white/90 italic text-sm sm:text-base md:text-lg">
+              Let&apos;s walk the Lifeway together.
+            </p>
+          </div>
 
           <div className="hero-actions">
             <Link to="/services" className="btn-primary hero-btn">

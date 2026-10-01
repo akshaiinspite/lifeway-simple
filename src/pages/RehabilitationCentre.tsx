@@ -179,25 +179,19 @@ const RehabilitationCentre: React.FC = () => {
           className="absolute inset-0 z-[1] bg-gradient-to-r from-black/80 via-black/55 to-black/30"
           aria-hidden="true"
         />
-        <div className="relative z-10 flex min-h-[70vh] md:min-h-[80vh] w-full items-center">
-          <div className="site-gutter w-full max-w-[680px] ml-0 mr-auto py-20 md:py-28 text-white">
-            <div className="mb-4">
-              <h1 className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider uppercase text-[#C6161E] bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-md shadow-sm border border-red-50">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C6161E]"></span>
-                Rehabilitation Centre in Perintalmanna
-              </h1>
-            </div>
+        <div className="site-gutter w-full max-w-[680px] ml-0 mr-auto py-20 md:py-28 text-white">
+            <h1 className="sr-only">Rehabilitation Centre in Perintalmanna</h1>
 
-            <h2 className="hero-heading mb-3 md:mb-4">
-              <span className="block">Lifeway</span>
-              <span className="block">Rehabilitation and</span>
-              <span className="block sm:whitespace-nowrap">Child Development Centre</span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium text-white leading-[1.2] tracking-tight mb-4 md:mb-5 max-w-[620px]">
+              <span className="block">Lifeway Rehabilitation and</span>
+              <span className="block">Child Development Centre</span>
             </h2>
 
-            <p className="hero-tagline mb-4 md:mb-5 text-white/90">
+            <p className="font-serif text-lg sm:text-xl md:text-2xl text-white/95 font-medium leading-snug mb-4 md:mb-5 max-w-[580px]">
               Advanced multispeciality rehabilitation for children and adults
             </p>
-            <p className="hero-body mb-5 md:mb-6 text-white/85">
+
+            <p className="font-sans text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-7 max-w-[580px]">
               Lifeway Rehabilitation and Child Development Centre provides
               personalized, evidence-based care for children and adults, with a
               focus on improving physical abilities, communication, learning,
@@ -206,12 +200,16 @@ const RehabilitationCentre: React.FC = () => {
               Malappuram, our multidisciplinary team provides individualized care
               based on each person's needs and goals.
             </p>
-            <p className="hero-quote mb-1.5">
-              Care that's personalized. Progress that matters.
-            </p>
-            <p className="hero-quote hero-quote--italic mb-8 md:mb-10">
-              Let's walk the Lifeway together.
-            </p>
+
+            <div className="mb-8 md:mb-10 space-y-1.5 border-l-2 border-lifeway-red pl-4 py-0.5 max-w-[580px]">
+              <p className="font-sans text-white font-medium text-sm sm:text-base md:text-lg">
+                Care that's personalized. Progress that matters.
+              </p>
+              <p className="font-sans text-white/90 italic text-sm sm:text-base md:text-lg">
+                Let's walk the Lifeway together.
+              </p>
+            </div>
+
             <div className="hero-actions">
               <Link
                 to="/services"
@@ -227,7 +225,6 @@ const RehabilitationCentre: React.FC = () => {
               </Link>
             </div>
           </div>
-        </div>
       </section>
 
       <main id="main-content" tabIndex={-1}>
