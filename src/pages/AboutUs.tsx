@@ -6,6 +6,7 @@ import Footer from "@/components/Layout/Footer";
 import PageHeader from "@/components/Layout/PageHeader";
 import WhatsAppButton from "@/components/Common/WhatsAppButton";
 import { Link } from "react-router-dom";
+import lifewayCentreImg from "@/assets/lifeway-centre.webp";
 
 const AboutUs = () => {
   useEffect(() => {
@@ -45,7 +46,7 @@ const AboutUs = () => {
           <div className="order-1 lg:order-2 relative">
             <div className="relative z-10">
               <img
-                src="/lifeway-centre.webp"
+                src={lifewayCentreImg}
                 alt="Lifeway Rehabilitation Centre in Malappuram"
                 className="w-full h-auto rounded-lg shadow-xl"
                 loading="lazy"
