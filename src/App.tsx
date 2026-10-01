@@ -23,6 +23,7 @@ const Appointments = lazy(() => import("./pages/Appointments"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const DirectorsMessage = lazy(() => import("./pages/DirectorsMessage"));
 const Gallery = lazy(() => import("./pages/Gallery"));
+const RehabilitationCentre = lazy(() => import("./pages/RehabilitationCentre"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -57,6 +58,7 @@ const App = () => (
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/about-us/directors-message" element={<DirectorsMessage />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/rehabilitation-centre-in-perinthalmanna" element={<RehabilitationCentre />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

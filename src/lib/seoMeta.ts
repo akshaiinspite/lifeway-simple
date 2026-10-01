@@ -70,6 +70,12 @@ export const STATIC_PAGE_META: Record<string, PageMeta> = {
     description: "Messages from the directors of Lifeway Rehabilitation and Child Development Centre.",
     path: "/about-us/directors-message",
   },
+  "/rehabilitation-centre-in-perinthalmanna": {
+    title: "Rehabilitation Centre in Perinthalmanna | Child Development | Lifeway",
+    description:
+      "Lifeway is a Rehabilitation Centre in Perinthalmanna offering physiotherapy, occupational therapy, speech therapy, special education and child development.",
+    path: "/rehabilitation-centre-in-perinthalmanna",
+  },
   "/gallery": {
     title: `Gallery | ${SITE_NAME}`,
     description: "View photos of Lifeway facilities, therapy sessions, and rehabilitation services.",
