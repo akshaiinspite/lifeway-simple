@@ -2,6 +2,7 @@
 import Banner from "@/components/Home/Banner";
 import Introduction from "@/components/Home/Introduction";
 import RehabSpecialties from "@/components/Home/RehabSpecialties";
+import FAQSection from "@/components/FAQ/FAQSection";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import WhatsAppButton from "@/components/Common/WhatsAppButton";
@@ -15,6 +16,7 @@ const Index = () => {
         <Banner />
         <Introduction />
         <RehabSpecialties />
+        <FAQSection />
         <SocialFollowSection />
       </main>
       

@@ -103,6 +103,11 @@ const Footer = () => {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link to="/rehabilitation-centre-in-perinthalmanna" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
+                  Rehabilitation Centre
+                </Link>
+              </li>
             </ul>
           </div>
 

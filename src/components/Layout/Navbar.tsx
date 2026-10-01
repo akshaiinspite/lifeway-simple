@@ -46,6 +46,7 @@ const Navbar = () => {
       subItems: [
         { name: "About Our Center", path: "/about-us" },
         { name: "Directors' Message", path: "/about-us/directors-message" },
+        { name: "Rehabilitation Centre", path: "/rehabilitation-centre-in-perinthalmanna" },
       ],
     },
   ];
