@@ -46,7 +46,6 @@ const Navbar = () => {
       subItems: [
         { name: "About Our Center", path: "/best-rehabilitation-centre-malappuram" },
         { name: "Directors' Message", path: "/best-rehabilitation-centre-malappuram/directors-message" },
-        { name: "Rehabilitation Centre", path: "/rehabilitation-centre-in-perinthalmanna" },
       ],
     },
   ];
