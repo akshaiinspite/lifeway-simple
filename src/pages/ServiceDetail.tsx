@@ -1,4 +1,6 @@
 import { useParams, Navigate, Link } from "react-router-dom";
+import { useEffect } from "react";
+import { applyPageSEO } from "@/hooks/usePageSEO";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import PageHeader from "@/components/Layout/PageHeader";
@@ -20,7 +22,23 @@ const Section = ({ title, items }: { title: string; items?: string[] }) => {
 
 const ServiceDetail = () => {
   const { slug } = useParams();
-  const service = slug ? serviceDetails[slug] : undefined;
+  
+  // Find service by checking keys or exact slug match in case they were updated
+  const serviceKey = Object.keys(serviceDetails).find(
+    (key) => serviceDetails[key].slug === slug || key === slug
+  );
+  
+  const service = serviceKey ? serviceDetails[serviceKey] : undefined;
+
+  useEffect(() => {
+    if (service) {
+      applyPageSEO({
+        title: service.metaTitle || `${service.title} | Lifeway`,
+        description: service.metaDescription || service.description,
+        path: service.slug.startsWith('/') ? service.slug : `/services/${service.slug}`,
+      });
+    }
+  }, [service]);
 
   if (!service) return <Navigate to="/services" replace />;
 
@@ -35,6 +53,15 @@ const ServiceDetail = () => {
               ← Back to Services
             </Link>
           </div>
+          
+          {(service.h1 || service.h2 || service.introBody) && (
+            <div className="bg-white rounded-xl shadow-sm p-6 md:p-8 mb-10 border-t-4 border-lifeway-red">
+              {service.h1 && <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{service.h1}</h1>}
+              {service.h2 && <h2 className="text-xl md:text-2xl font-semibold text-lifeway-red mb-4">{service.h2}</h2>}
+              {service.introBody && <div className="text-gray-700 space-y-4 text-lg" dangerouslySetInnerHTML={{ __html: service.introBody }}></div>}
+            </div>
+          )}
+
           <div className="grid gap-6 md:gap-8">
             {service.items.map((item, idx) => (
               <article key={idx} className="bg-white rounded-lg shadow-md p-6 md:p-8">

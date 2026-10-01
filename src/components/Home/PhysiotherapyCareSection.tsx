@@ -49,7 +49,7 @@ const PhysiotherapyCareSection: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link to="/services/physiotherapy" className="btn-primary">
+              <Link to="/services/physiotherapy-centre-perinthalmanna" className="btn-primary">
                 Explore Physiotherapy
               </Link>
               <Link to="/appointments" className="btn-secondary">
