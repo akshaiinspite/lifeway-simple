@@ -39,7 +39,7 @@ const AutismSupportSection: React.FC = () => {
           <div className="order-1 lg:order-2 relative">
             <div className="relative z-10">
               <img
-                src="/uploads/child-development-autism.jpg"
+                src="/lovable-uploads/Kids.png"
                 alt="Personalized Autism Support and Developmental Care for children at Lifeway"
                 title="Personalized Autism Support & Developmental Care"
                 className="w-full h-[400px] md:h-[500px] object-cover rounded-xl shadow-xl"

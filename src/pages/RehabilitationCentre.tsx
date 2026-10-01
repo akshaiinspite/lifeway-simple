@@ -293,7 +293,7 @@ const RehabilitationCentre: React.FC = () => {
               <div className="relative">
                 <div className="relative z-10">
                   <img
-                    src="/front-web.webp"
+                    src="/lovable-uploads/physiotherapy-care-v3.jpg"
                     alt="Expert physiotherapy and rehabilitation care in Perintalmanna at Lifeway rehabilitation centre"
                     title="Rehabilitation and Physiotherapy in Perintalmanna"
                     className="w-full h-auto rounded-lg shadow-xl"
@@ -398,7 +398,7 @@ const RehabilitationCentre: React.FC = () => {
               <div className="order-1 lg:order-2 relative">
                 <div className="relative z-10">
                   <img
-                    src="/front-web.webp"
+                    src="/lovable-uploads/Kids.png"
                     alt="Autism support and child development therapy at Lifeway autism centre in Malappuram"
                     title="Autism Centre - Child Development Centre in Malappuram"
                     className="w-full h-auto rounded-lg shadow-xl"
