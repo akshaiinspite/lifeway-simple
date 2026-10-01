@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { WHATSAPP_URL } from "@/lib/constants";
+import lifewayLogoRed from "@/assets/lifeway-logo-red.png";
 import { Menu, X } from "lucide-react";
 import {
   NavigationMenu,
@@ -86,6 +87,12 @@ const Navbar = () => {
               width={191}
               height={63}
               decoding="async"
+              onError={(e) => {
+                const target = e.currentTarget;
+                target.onerror = null;
+                target.srcset = "";
+                target.src = lifewayLogoRed;
+              }}
             />
         </Link>
 
