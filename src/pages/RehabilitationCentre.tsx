@@ -181,12 +181,19 @@ const RehabilitationCentre: React.FC = () => {
         />
         <div className="relative z-10 flex min-h-[70vh] md:min-h-[80vh] w-full items-center">
           <div className="site-gutter w-full max-w-[680px] ml-0 mr-auto py-20 md:py-28 text-white">
-            <h1 className="hero-heading mb-4 md:mb-6">
-              Rehabilitation Centre in Perintalmanna
-            </h1>
-            <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-medium mb-4 text-white/95">
-              Lifeway Rehabilitation and Child Development Centre
+            <div className="mb-4">
+              <h1 className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider uppercase text-[#C6161E] bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-md shadow-sm border border-red-50">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C6161E]"></span>
+                Rehabilitation Centre in Perintalmanna
+              </h1>
+            </div>
+
+            <h2 className="hero-heading mb-3 md:mb-4">
+              <span className="block">Lifeway</span>
+              <span className="block">Rehabilitation and</span>
+              <span className="block sm:whitespace-nowrap">Child Development Centre</span>
             </h2>
+
             <p className="hero-tagline mb-4 md:mb-5 text-white/90">
               Advanced multispeciality rehabilitation for children and adults
             </p>
