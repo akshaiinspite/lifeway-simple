@@ -29,23 +29,28 @@ const Banner = () => {
       <div className="hero-section__inner">
         <div className="hero-content text-white">
           <h1 className="hero-heading mb-3 md:mb-4">
-            <span className="block">Lifeway</span>
-            <span className="block">Rehabilitation and</span>
-            <span className="block whitespace-nowrap">Child Development Centre</span>
+            Rehabilitation Centre in Perintalmanna
           </h1>
 
+          <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-medium mb-4 md:mb-5 text-white/95">
+            Lifeway Rehabilitation and Child Development Centre
+          </h2>
+
           <p className="hero-tagline mb-5 md:mb-6">
-            Advanced multi speciality rehabilitation for all stages of life
+            Advanced multispeciality rehabilitation for children and adults
           </p>
 
           <p className="hero-body mb-6 md:mb-7">
-            At Lifeway, we believe in whole-person care that transforms lives. Our expert team provides
-            compassionate, evidence-based rehabilitation for both adults and children.
+            Lifeway Rehabilitation and Child Development Centre provides personalized, evidence-based
+            care for children and adults, with a focus on improving physical abilities, communication,
+            learning, behavior, and daily life skills. As a trusted rehabilitation center in
+            Perintalmanna, Malappuram, our multidisciplinary team provides individualized care based
+            on each person&apos;s needs and goals.
           </p>
 
-          <p className="hero-quote mb-1.5">Experience care that&apos;s as unique as you are.</p>
+          <p className="hero-quote mb-1.5">Care that&apos;s personalized. Progress that matters.</p>
           <p className="hero-quote hero-quote--italic mb-8 md:mb-10">
-            Let&apos;s walk the Lifeway—together.
+            Let&apos;s walk the Lifeway together.
           </p>
 
           <div className="hero-actions">
