@@ -1,7 +1,9 @@
-
 import Banner from "@/components/Home/Banner";
 import Introduction from "@/components/Home/Introduction";
 import RehabSpecialties from "@/components/Home/RehabSpecialties";
+import PhysiotherapyCareSection from "@/components/Home/PhysiotherapyCareSection";
+import AutismSupportSection from "@/components/Home/AutismSupportSection";
+import AllAgesRehabSection from "@/components/Home/AllAgesRehabSection";
 import FAQSection from "@/components/FAQ/FAQSection";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
@@ -16,6 +18,9 @@ const Index = () => {
         <Banner />
         <Introduction />
         <RehabSpecialties />
+        <PhysiotherapyCareSection />
+        <AutismSupportSection />
+        <AllAgesRehabSection />
         <FAQSection />
         <SocialFollowSection />
       </main>
