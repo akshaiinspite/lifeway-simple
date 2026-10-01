@@ -9,7 +9,7 @@ const PhysiotherapyCareSection: React.FC = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="/uploads/physiotherapy-care.jpg"
+                src="/uploads/physiotherapy-care-branded.jpg"
                 alt="Expert rehabilitation and physiotherapy care in Perintalmanna at Lifeway"
                 title="Expert Rehabilitation & Physiotherapy Care"
                 className="w-full h-[400px] md:h-[480px] object-cover rounded-xl shadow-xl"
