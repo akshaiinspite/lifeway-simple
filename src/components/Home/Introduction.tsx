@@ -12,7 +12,7 @@ const Introduction = () => {
               <span className="text-[#C6161E] font-semibold uppercase tracking-widest text-sm">About Us</span>
             </div>
             <h2 className="heading-lg mb-6 text-gray-900">
-              Comprehensive Rehabilitation and Developmental Care
+              Welcome to Lifeway Rehabilitation and Child Development Centre
             </h2>
             <p className="mb-6 text-gray-800">
               At Lifeway, we are dedicated to providing holistic, patient-centered rehabilitation
@@ -20,14 +20,13 @@ const Introduction = () => {
               on their journey to recovery, growth, and improved well-being.
             </p>
             <div className="mb-8 border-l-4 border-lifeway-red pl-4 italic text-gray-700 font-medium">
-              With a compassionate, multidisciplinary team of specialists, Lifeway provides tailored
-              rehabilitation using evidence-based therapies and modern treatment approaches. Each
-              treatment plan is designed around the individual's functional needs, abilities, and goals.
+              With a compassionate, multidisciplinary team of specialists, we offer tailored care that
+              integrates the latest therapeutic technologies and evidence-based practices. Whether
+              supporting a child's developmental milestones or guiding an adult through physical or
+              neurological rehabilitation, we focus on the whole person—mind, body, and spirit.
             </div>
             <p className="mb-8 text-gray-700">
-              We support children with developmental milestones and provide services such as stroke
-              rehabilitation and pain management for adults. At Lifeway, we don't just focus on
-              conditions—we support functional improvement, independence, confidence, and quality of life.
+              At Lifeway, we don't just treat conditions—we nurture potential, restore hope, and enhance lives.
             </p>
             <Link to="/about-us" className="btn-primary">
               Learn More About Us

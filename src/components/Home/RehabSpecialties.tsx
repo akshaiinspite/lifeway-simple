@@ -156,15 +156,27 @@ const RehabSpecialties = () => {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-lifeway-red font-medium uppercase tracking-widest text-sm">
-            Our Rehabilitation Specialties
+        <div className="text-center max-w-4xl mx-auto mb-12">
+          <span className="text-[#C6161E] font-semibold uppercase tracking-widest text-sm mb-3 block">
+            About Us
           </span>
-          <h2 className="heading-lg mt-3 mb-6">Comprehensive Care Across Every Specialty</h2>
-          <p className="text-gray-700">
-            Explore our full range of rehabilitation programs—designed to support recovery, growth and
-            well-being at every stage of life.
+          <h2 className="heading-lg mb-6 text-gray-900">
+            Comprehensive Rehabilitation and Developmental Care
+          </h2>
+          <p className="text-gray-800 text-base md:text-lg mb-5 leading-relaxed">
+            At Lifeway, we are dedicated to providing holistic, patient-centered rehabilitation services for individuals of all ages. Our mission is to empower both adults and children on their journey to recovery, growth, and improved well-being.
           </p>
+          <p className="text-gray-700 text-base md:text-lg mb-5 leading-relaxed">
+            With a compassionate, multidisciplinary team of specialists, Lifeway provides tailored rehabilitation using evidence-based therapies and modern treatment approaches. Each treatment plan is designed around the individual&apos;s functional needs, abilities, and goals.
+          </p>
+          <p className="text-gray-700 text-base md:text-lg mb-6 leading-relaxed">
+            We support children with developmental milestones and provide services such as stroke rehabilitation and pain management for adults. At Lifeway, we don&apos;t just focus on conditions—we support functional improvement, independence, confidence, and quality of life.
+          </p>
+          <div className="mb-4">
+            <Link to="/about-us" className="btn-primary">
+              Learn More About Us
+            </Link>
+          </div>
         </div>
 
         <div
