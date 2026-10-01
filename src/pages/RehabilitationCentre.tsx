@@ -260,7 +260,7 @@ const RehabilitationCentre: React.FC = () => {
                   don't just focus on conditions—we support functional
                   improvement, independence, confidence, and quality of life.
                 </p>
-                <Link to="/about-us" className="btn-primary">
+                <Link to="/best-rehabilitation-centre-malappuram" className="btn-primary">
                   Learn More About Us
                 </Link>
               </div>

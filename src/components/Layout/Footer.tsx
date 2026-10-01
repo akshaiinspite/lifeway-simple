@@ -94,7 +94,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about-us" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
+                <Link to="/best-rehabilitation-centre-malappuram" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   About Us
                 </Link>
               </li>

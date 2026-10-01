@@ -55,8 +55,8 @@ const App = () => (
             <Route path="/home-services" element={<HomeServices />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/appointments" element={<Appointments />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/about-us/directors-message" element={<DirectorsMessage />} />
+            <Route path="/best-rehabilitation-centre-malappuram" element={<AboutUs />} />
+            <Route path="/best-rehabilitation-centre-malappuram/directors-message" element={<DirectorsMessage />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/rehabilitation-centre-in-perinthalmanna" element={<RehabilitationCentre />} />
             <Route path="*" element={<NotFound />} />

@@ -42,10 +42,10 @@ const Navbar = () => {
     { name: "Contact", path: "/contact" },
     {
       name: "About Us",
-      path: "/about-us",
+      path: "/best-rehabilitation-centre-malappuram",
       subItems: [
-        { name: "About Our Center", path: "/about-us" },
-        { name: "Directors' Message", path: "/about-us/directors-message" },
+        { name: "About Our Center", path: "/best-rehabilitation-centre-malappuram" },
+        { name: "Directors' Message", path: "/best-rehabilitation-centre-malappuram/directors-message" },
         { name: "Rehabilitation Centre", path: "/rehabilitation-centre-in-perinthalmanna" },
       ],
     },

@@ -173,7 +173,7 @@ const RehabSpecialties = () => {
             We support children with developmental milestones and provide services such as stroke rehabilitation and pain management for adults. At Lifeway, we don&apos;t just focus on conditions—we support functional improvement, independence, confidence, and quality of life.
           </p>
           <div className="mb-4">
-            <Link to="/about-us" className="btn-primary">
+            <Link to="/best-rehabilitation-centre-malappuram" className="btn-primary">
               Learn More About Us
             </Link>
           </div>

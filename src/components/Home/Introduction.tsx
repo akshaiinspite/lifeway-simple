@@ -28,7 +28,7 @@ const Introduction = () => {
             <p className="mb-8 text-gray-700">
               At Lifeway, we don't just treat conditions—we nurture potential, restore hope, and enhance lives.
             </p>
-            <Link to="/about-us" className="btn-primary">
+            <Link to="/best-rehabilitation-centre-malappuram" className="btn-primary">
               Learn More About Us
             </Link>
           </div>
