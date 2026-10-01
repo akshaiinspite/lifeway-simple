@@ -28,12 +28,7 @@ const Banner = () => {
 
       <div className="hero-section__inner">
         <div className="hero-content text-white">
-          <div className="mb-4">
-            <h1 className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wider uppercase text-[#C6161E] bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-md shadow-sm border border-red-50">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C6161E]"></span>
-              Rehabilitation Centre in Perintalmanna
-            </h1>
-          </div>
+          <h1 className="sr-only">Rehabilitation Centre in Perintalmanna</h1>
 
           <h2 className="hero-heading mb-3 md:mb-4">
             <span className="block">Lifeway</span>
