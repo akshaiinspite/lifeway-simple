@@ -57,6 +57,20 @@
       ]
     }
   ],
+  "redirects": [
+    { "source": "/services/physiotherapy-centre-perinthalmanna/:path*", "destination": "/physiotherapy-centre-perinthalmanna", "permanent": true },
+    { "source": "/services/physiotherapy/:path*", "destination": "/physiotherapy-centre-perinthalmanna", "permanent": true },
+    { "source": "/services/occupational-therapy-in-perinthalmanna/:path*", "destination": "/occupational-therapy-in-perinthalmanna", "permanent": true },
+    { "source": "/services/occupational-therapy/:path*", "destination": "/occupational-therapy-in-perinthalmanna", "permanent": true },
+    { "source": "/services/speech-therapy-perinthalmanna/:path*", "destination": "/speech-therapy-perinthalmanna", "permanent": true },
+    { "source": "/services/speech-therapy/:path*", "destination": "/speech-therapy-perinthalmanna", "permanent": true },
+    { "source": "/services/special-education-classroom/:path*", "destination": "/special-education-classroom", "permanent": true },
+    { "source": "/services/special-education/:path*", "destination": "/special-education-classroom", "permanent": true },
+    { "source": "/services/clinical-psychology-centre-malappuram/:path*", "destination": "/clinical-psychology-centre-malappuram", "permanent": true },
+    { "source": "/services/clinical-psychology/:path*", "destination": "/clinical-psychology-centre-malappuram", "permanent": true },
+    { "source": "/about-us/directors-message", "destination": "/best-rehabilitation-centre-malappuram/directors-message", "permanent": true },
+    { "source": "/about-us", "destination": "/best-rehabilitation-centre-malappuram", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

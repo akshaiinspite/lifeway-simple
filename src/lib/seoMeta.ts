@@ -1,18 +1,30 @@
-import { SITE_NAME, SITE_DESCRIPTION } from "@/lib/siteConfig";
+import {
+  SITE_NAME,
+  HOME_TITLE,
+  HOME_DESCRIPTION,
+  HOME_SLUG,
+  SITE_KEYWORDS,
+} from "@/lib/siteConfig";
 
 export type PageMeta = {
   title: string;
   description: string;
   path: string;
+  keywords?: string;
   noindex?: boolean;
 };
 
+const HOME_META: PageMeta = {
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
+  keywords: SITE_KEYWORDS,
+  path: "/",
+};
+
 export const STATIC_PAGE_META: Record<string, PageMeta> = {
-  "/": {
-    title: `${SITE_NAME} | Perinthalmanna, Kerala`,
-    description: SITE_DESCRIPTION,
-    path: "/",
-  },
+  "/": HOME_META,
+  /* SEO slug renders the home page; canonical stays on "/" to avoid duplicate content */
+  [HOME_SLUG]: HOME_META,
   "/services": {
     title: `Our Services | ${SITE_NAME}`,
     description:
@@ -59,22 +71,31 @@ export const STATIC_PAGE_META: Record<string, PageMeta> = {
       "Schedule a consultation at Lifeway in Perinthalmanna. Book occupational therapy, physiotherapy, speech therapy, and more via our online form.",
     path: "/appointments",
   },
-  "/about-us": {
-    title: `About Us | ${SITE_NAME}`,
+  "/best-rehabilitation-centre-malappuram": {
+    title: "Best Rehabilitation Centre Malappuram | Lifeway",
     description:
-      "Learn about Lifeway's mission, multidisciplinary approach, and commitment to rehabilitation and child development in Kerala.",
-    path: "/about-us",
+      "Lifeway is a trusted rehabilitation centre in Malappuram offering physiotherapy, occupational therapy, speech therapy, special education and rehabilitation services.",
+    keywords: [
+      "Child Therapy Centre Perinthalmanna",
+      "child psychologist Malappuram",
+      "best rehabilitation centre Malappuram",
+      "multidisciplinary team for rehabilitation",
+      "advanced physiotherapy",
+      "robotic therapy",
+      "pickup and drop service",
+      "speech, ot, pt, aba, special education",
+      "neuro rehabilitation",
+      "ortho and sports rehabilitation",
+      "paediatric rehabilitation and child development",
+      "geriatric rehabilitation",
+      "womens health and wellness",
+    ].join(", "),
+    path: "/best-rehabilitation-centre-malappuram",
   },
-  "/about-us/directors-message": {
+  "/best-rehabilitation-centre-malappuram/directors-message": {
     title: `Directors' Message | ${SITE_NAME}`,
     description: "Messages from the directors of Lifeway Rehabilitation and Child Development Centre.",
-    path: "/about-us/directors-message",
-  },
-  "/rehabilitation-centre-in-perinthalmanna": {
-    title: "Rehabilitation Centre in Perinthalmanna | Child Development | Lifeway",
-    description:
-      "Lifeway is a Rehabilitation Centre in Perinthalmanna offering physiotherapy, occupational therapy, speech therapy, special education and child development.",
-    path: "/rehabilitation-centre-in-perinthalmanna",
+    path: "/best-rehabilitation-centre-malappuram/directors-message",
   },
   "/gallery": {
     title: `Gallery | ${SITE_NAME}`,

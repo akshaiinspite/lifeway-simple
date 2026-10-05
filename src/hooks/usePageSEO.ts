@@ -55,6 +55,11 @@ export function applyPageSEO(meta: PageMeta) {
 
   upsertMeta("name", "publisher", PUBLISHER_NAME);
   upsertMeta("name", "description", description);
+  if (meta.keywords) {
+    upsertMeta("name", "keywords", meta.keywords);
+  } else {
+    document.querySelector('meta[name="keywords"]')?.remove();
+  }
   upsertMeta("name", "robots", meta.noindex ? "noindex, nofollow" : "index, follow");
   upsertLink("canonical", canonicalUrl);
 

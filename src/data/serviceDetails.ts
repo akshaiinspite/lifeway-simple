@@ -15,6 +15,7 @@ export interface ServiceItem {
 }
 
 export interface ServiceDetail {
+  /** Leading "/" = root-level SEO URL (e.g. "/speech-therapy-perinthalmanna"); otherwise served at /services/:slug */
   slug: string;
   title: string;
   description: string;
@@ -23,12 +24,13 @@ export interface ServiceDetail {
   introBody?: string;
   metaTitle?: string;
   metaDescription?: string;
+  keywords?: string[];
   items: ServiceItem[];
 }
 
 export const serviceDetails: Record<string, ServiceDetail> = {
   physiotherapy: {
-    slug: "physiotherapy-centre-perinthalmanna",
+    slug: "/physiotherapy-centre-perinthalmanna",
     title: "Physiotherapy",
     description: "Advanced physiotherapy services using cutting-edge technology to relieve pain, restore movement, and rebuild strength.",
     h1: "Physiotherapy Centre Perinthalmanna",
@@ -36,6 +38,18 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     introBody: "<p>Lifeway Rehabilitation and Child Development Centre is a trusted Physiotherapy Centre in Malappuram, providing personalized care for pain relief, mobility, strength, and functional recovery. Our Physiotherapy Centre in Perinthalmanna offers rehabilitation for back and neck pain, joint problems, sports injuries, post-surgical recovery, stroke, cerebral palsy, and neurological conditions. Services include Pain Relief Physiotherapy, spinal decompression therapy, shockwave therapy, Class 4 laser therapy, sports injury rehabilitation, electrotherapy, and advanced gait training. We also provide technology-assisted rehabilitation, including robotic hand therapy and body-weight-supported training, to support progressive recovery.</p><p>Ready to move better and feel stronger? Book your physiotherapy appointment at Lifeway today and take the next step toward recovery.</p>",
     metaTitle: "Physiotherapy Centre Perinthalmanna | Lifeway",
     metaDescription: "Looking for a Physiotherapy Centre Perinthalmanna? Lifeway offers personalized physiotherapy for pain relief, sports injuries, stroke recovery and mobility.",
+    keywords: [
+      "Physiotherapy centre malappuram",
+      "Physiotherapy Centre Perinthalmanna",
+      "Pain Relief Physiotherapy Perinthalmanna",
+      "spinal decompression therapy",
+      "Physiotherapy Near Me",
+      "sports injury rehabilitation",
+      "shockwave therapy",
+      "class 4 laser therapy",
+      "stroke physiotherapy",
+      "cerebral palsy",
+    ],
     items: [
       {
         title: "High-Power Laser Therapy",
@@ -250,13 +264,24 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
   },
   "occupational-therapy": {
-    slug: "occupational-therapy-in-perinthalmanna",
+    slug: "/occupational-therapy-in-perinthalmanna",
     title: "Occupational Therapy",
     description: "Restoring abilities, strengthening confidence, and supporting growth through specialized occupational therapy programs.",
     h1: "Occupational Therapy in Perinthalmanna",
     introBody: "<p>Lifeway Rehabilitation and Child Development Centre offers personalized occupational therapy to help children and adults develop better movement, coordination, sensory processing, hand function, and everyday independence. Our therapists work with individuals experiencing developmental delays, autism, sensory difficulties, neurological conditions, stroke-related challenges, hand weakness, and other functional limitations. Therapy is tailored to each person's abilities and goals, with practical activities that support participation at home, school, work, and in the community.</p><p>Our rehabilitation facilities include advanced robotic hand therapy with the RehabRelive Active Glove, interactive ROPods training, ADL practice, Bobath-based rehabilitation, hand function exercises, shoulder mobility training, and dedicated sensory therapy spaces. These approaches help make rehabilitation more engaging and functional while supporting progress in fine motor skills, coordination, balance, cognitive abilities, and daily activities. Serving families across Perinthalmanna and the wider Malappuram region, Lifeway provides a comprehensive environment for meaningful, goal-focused rehabilitation.</p>",
     metaTitle: "Occupational Therapy In Perinthalmanna | Lifeway",
     metaDescription: "Get personalized Occupational Therapy In Perinthalmanna at Lifeway. Support daily skills, motor development, sensory needs, and independence with expert care.",
+    keywords: [
+      "Occupational Therapy malappuram",
+      "Occupational Therapy Clinic Perinthalmanna",
+      "Best Occupational Therapist in Perinthalmanna",
+      "Pediatric Occupational Therapy",
+      "sensory integration therapy",
+      "neuro hand rehabilitation",
+      "hand robotics",
+      "stroke occupational therapy",
+      "autism",
+    ],
     items: [
       {
         title: "Robotic Hand Rehabilitation (RehabRelive Active Glove)",
@@ -482,13 +507,24 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
   },
   "speech-therapy": {
-    slug: "speech-therapy-perinthalmanna",
+    slug: "/speech-therapy-perinthalmanna",
     title: "Speech Therapy",
     description: "Comprehensive speech, language, and swallowing therapy services using evidence-based techniques and advanced equipment.",
     h1: "Swallow Therapy and Advanced Speech Rehabilitation",
     introBody: "<p>Lifeway Rehabilitation and Child Development Centre provides personalized Speech Therapy in Perinthalmanna for children and adults who need support with speech, language, communication, voice, or swallowing. Our therapy plans are tailored to each person’s needs, whether it involves speech delay, articulation difficulties, autism-related communication challenges, language disorders, fluency problems, or speech difficulties following neurological conditions. As a Speech Therapy Centre in Malappuram, Lifeway combines evidence-based techniques, interactive activities, and individualized therapy to help clients communicate more clearly and confidently in everyday life.</p><p>Our experienced team also provides support for adults with conditions such as stroke-related speech difficulties, dysarthria, and cognitive-communication problems. If you are looking for a speech therapist near you in Perinthalmanna, Lifeway offers structured assessments and goal-focused therapy in a supportive environment. We also provide specialized swallow therapy, including VitalStim® Plus NMES where clinically appropriate, to support individuals experiencing dysphagia and swallowing difficulties.</p>",
     metaTitle: "Speech Therapy Perinthalmanna | Lifeway Rehabilitation Centre",
     metaDescription: "Get professional Speech Therapy in Perinthalmanna at Lifeway Rehabilitation Centre. Support speech, language, communication and swallowing needs with personalized therapy.",
+    keywords: [
+      "Speech Therapy Perinthalmanna",
+      "Speech Therapist malappuram",
+      "Speech Therapy Centre malappuram",
+      "Best Speech Therapist in Perinthalmanna",
+      "Speech Therapy Near Me",
+      "best swallow therapy",
+      "vital stim therapy",
+      "adult speech therapy",
+      "language",
+    ],
     items: [
       {
         title: "Speech & Language Therapy",
@@ -544,13 +580,21 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
   },
   "special-education": {
-    slug: "special-education-classroom",
+    slug: "/special-education-classroom",
     title: "Special Education",
     description: "Tailored special education programs to support children with diverse learning needs.",
     h1: "Supporting Every Child With the Right Learning Environment",
     introBody: "<p>At Lifeway Rehabilitation and Child Development Centre, we believe every child has the ability to learn, grow, communicate, and become more independent when provided with the right support. Our Special Education Classroom in Perinthalmanna provides a structured, supportive, and child-friendly learning environment for children who need additional educational and developmental assistance.</p><p>Our approach focuses on the individual needs, strengths, abilities, and learning pace of every child. Instead of expecting every child to learn in the same way, we adapt learning activities and educational strategies to make learning more meaningful and comfortable.</p><p>Located in Perinthalmanna, Malappuram, Lifeway brings education, therapy, developmental support, and family guidance together under one roof.</p>",
     metaTitle: "Special Education Classroom in Perinthalmanna | Lifeway",
     metaDescription: "Special Education Classroom in Perinthalmanna offering individualized learning support, group therapy, school readiness, and assistance for children with learning difficulties.",
+    keywords: [
+      "Special Education Classroom",
+      "individual special education",
+      "group therapy",
+      "school readiness group",
+      "special classroom",
+      "learning difficulty",
+    ],
     items: [
       {
         title: "Special Education Classroom",
@@ -605,13 +649,21 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
   },
   "clinical-psychology": {
-    slug: "clinical-psychology-centre-malappuram",
+    slug: "/clinical-psychology-centre-malappuram",
     title: "Clinical Psychology",
     description: "Comprehensive psychological care for children and adults, including behavioural support, counselling, and neuropsychological rehabilitation.",
     h1: "Clinical Psychology Centre Malappuram for Personalised Psychological Support",
     introBody: "<p>Lifeway Rehabilitation and Child Development Centre is a Clinical Psychology Centre Malappuram offering personalised psychological assessment, consultation, and therapeutic support for children, adolescents, adults, and families. Our approach focuses on understanding each person’s emotional, behavioural, cognitive, and developmental needs before planning suitable interventions.</p><p>At our Psychology Clinic Perinthalmanna, a qualified clinical psychologist provides professional guidance for concerns such as anxiety, stress, emotional difficulties, behavioural concerns, attention and concentration problems, learning difficulties, and developmental challenges. Through Clinical Psychology Perinthalmanna services, individuals and families receive confidential, supportive, and practical guidance based on their specific needs.</p>",
     metaTitle: "Clinical Psychology Centre Malappuram | Lifeway",
     metaDescription: "Looking for a Clinical Psychology Centre in Malappuram? Lifeway offers professional clinical psychology consultation and behavioural therapy with personalized support.",
+    keywords: [
+      "Clinical Psychology Perinthalmanna",
+      "Clinical Psychology Centre malappuram",
+      "Psychology Clinic Perinthalmanna",
+      "Clinical Psychologist Consultation",
+      "Psychology Clinic",
+      "behavioural therapy",
+    ],
     items: [
       {
         title: "Special Education Classroom",
@@ -759,3 +811,26 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
   },
 };
+
+/** Canonical URL path for a service (root-level SEO slug or /services/:slug) */
+export const getServicePath = (service: ServiceDetail): string =>
+  service.slug.startsWith("/") ? service.slug : `/services/${service.slug}`;
+
+/** Canonical path by data key, e.g. getServicePathByKey("physiotherapy") */
+export const getServicePathByKey = (key: string): string => {
+  const service = serviceDetails[key];
+  return service ? getServicePath(service) : "/services";
+};
+
+/** Find a service by data key, slug (with or without leading "/") or full path */
+export const findService = (value: string | undefined): ServiceDetail | undefined => {
+  if (!value) return undefined;
+  const clean = value.replace(/\/+$/, "").replace(/^\/services\//, "").replace(/^\//, "");
+  if (serviceDetails[clean]) return serviceDetails[clean];
+  return Object.values(serviceDetails).find((s) => s.slug.replace(/^\//, "") === clean);
+};
+
+/** Services that live at root-level SEO URLs */
+export const rootLevelServicePaths: string[] = Object.values(serviceDetails)
+  .filter((s) => s.slug.startsWith("/"))
+  .map((s) => s.slug);

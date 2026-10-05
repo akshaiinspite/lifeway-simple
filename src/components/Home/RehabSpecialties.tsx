@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, MouseEvent } from "react";
 import { Link } from "react-router-dom";
+import { getServicePathByKey } from "@/data/serviceDetails";
 import {
   Brain,
   Baby,
@@ -194,7 +195,7 @@ const RehabSpecialties = () => {
           {specialties.map((s) => (
             <Link
               key={s.id}
-              to={`/services/${s.slug}`}
+              to={getServicePathByKey(s.slug)}
               className="min-w-[85vw] max-w-[320px] sm:min-w-[320px] sm:w-[320px] bg-lifeway-grey/10 rounded-lg shadow-lg p-5 sm:p-6 snap-start shrink-0 transition-transform hover:translate-y-[-5px] flex flex-col"
             >
               <div className="flex justify-center mb-4">{s.icon}</div>

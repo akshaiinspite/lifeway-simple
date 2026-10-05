@@ -9,6 +9,7 @@ import PageSEO from "@/components/SEO/PageSEO";
 import SkipToContent from "@/components/Layout/SkipToContent";
 import ScrollToTop from "@/components/Layout/ScrollToTop";
 import Index from "./pages/Index";
+import { rootLevelServicePaths } from "@/data/serviceDetails";
 
 // Lazy-loaded routes for code splitting and fast initial page load (FCP / TBT / Speed Index)
 const Services = lazy(() => import("./pages/Services"));
@@ -23,7 +24,6 @@ const Appointments = lazy(() => import("./pages/Appointments"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const DirectorsMessage = lazy(() => import("./pages/DirectorsMessage"));
 const Gallery = lazy(() => import("./pages/Gallery"));
-const RehabilitationCentre = lazy(() => import("./pages/RehabilitationCentre"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -48,6 +48,10 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/:slug" element={<ServiceDetail />} />
+            {/* Root-level SEO service URLs, e.g. /occupational-therapy-in-perinthalmanna */}
+            {rootLevelServicePaths.map((path) => (
+              <Route key={path} path={path} element={<ServiceDetail />} />
+            ))}
             <Route path="/team" element={<Team />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/events" element={<Events />} />
@@ -58,7 +62,8 @@ const App = () => (
             <Route path="/best-rehabilitation-centre-malappuram" element={<AboutUs />} />
             <Route path="/best-rehabilitation-centre-malappuram/directors-message" element={<DirectorsMessage />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/rehabilitation-centre-in-perinthalmanna" element={<RehabilitationCentre />} />
+            {/* SEO slug serves the home page (canonical → "/") */}
+            <Route path="/rehabilitation-centre-in-perinthalmanna" element={<Index />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

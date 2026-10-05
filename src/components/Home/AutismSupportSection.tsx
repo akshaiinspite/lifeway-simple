@@ -27,7 +27,7 @@ const AutismSupportSection: React.FC = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Link to="/services/special-education-classroom" className="btn-primary">
+              <Link to="/special-education-classroom" className="btn-primary">
                 Special Education Services
               </Link>
               <Link to="/contact" className="btn-secondary">

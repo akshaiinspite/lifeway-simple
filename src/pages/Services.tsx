@@ -41,21 +41,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ to, title, tagline, descripti
 
 const primaryServices = [
   {
-    to: "/services/occupational-therapy-in-perinthalmanna",
+    to: "/occupational-therapy-in-perinthalmanna",
     title: "Occupational Therapy",
     tagline: "Restoring abilities, strengthening confidence, and supporting growth.",
     description: "Making everyday life easier with Occupational Therapy.",
     bullets: ["ADL training", "Hand function training", "Sensory integration", "Vocational training"],
   },
   {
-    to: "/services/physiotherapy-centre-perinthalmanna",
+    to: "/physiotherapy-centre-perinthalmanna",
     title: "Physiotherapy",
     tagline: "Relieving pain, restoring movement, and rebuilding strength for everyday life.",
     description: "Expert care tailored to you through Physiotherapy.",
     bullets: ["Pain management", "Gait and balance training", "Sports injury recovery", "Strengthening and conditioning"],
   },
   {
-    to: "/services/speech-therapy-perinthalmanna",
+    to: "/speech-therapy-perinthalmanna",
     title: "Speech Therapy",
     description:
       "Comprehensive care for paediatric and neurological conditions, focusing on communication, speech delay or clarity, and swallowing rehabilitation with advanced therapy techniques.",
@@ -65,14 +65,14 @@ const primaryServices = [
 
 const centeredServices = [
   {
-    to: "/services/special-education-classroom",
+    to: "/special-education-classroom",
     title: "Special Education",
     description:
       "Support your child's academic growth and learning potential with our tailored special education programs and strategies.",
     bullets: ["Individualized education plans (IEPs)", "Learning strategies", "School readiness and functional learning"],
   },
   {
-    to: "/services/clinical-psychology-centre-malappuram",
+    to: "/clinical-psychology-centre-malappuram",
     title: "Clinical Psychology",
     description:
       "Comprehensive psychological care for children with behavioural and attention difficulties, along with parent support and neuropsychiatric rehabilitation for all age groups.",

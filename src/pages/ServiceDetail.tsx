@@ -1,11 +1,11 @@
-import { useParams, Navigate, Link } from "react-router-dom";
+import { useParams, Navigate, Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { applyPageSEO } from "@/hooks/usePageSEO";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import PageHeader from "@/components/Layout/PageHeader";
 import SocialFollowSection from "@/components/Common/SocialFollowSection";
-import { serviceDetails } from "@/data/serviceDetails";
+import { findService, getServicePath } from "@/data/serviceDetails";
+import { SITE_URL } from "@/lib/siteConfig";
 const Section = ({ title, items }: { title: string; items?: string[] }) => {
   if (!items || items.length === 0) return null;
   return (
@@ -22,30 +22,50 @@ const Section = ({ title, items }: { title: string; items?: string[] }) => {
 
 const ServiceDetail = () => {
   const { slug } = useParams();
-  
-  // Find service by checking keys or exact slug match in case they were updated
-  const serviceKey = Object.keys(serviceDetails).find(
-    (key) => serviceDetails[key].slug === slug || key === slug
-  );
-  
-  const service = serviceKey ? serviceDetails[serviceKey] : undefined;
+  const { pathname } = useLocation();
 
+  // /services/:slug passes a slug param; root-level SEO routes are matched by pathname
+  const service = findService(slug ?? pathname);
+  const canonicalPath = service ? getServicePath(service) : undefined;
+  const currentPath = pathname.replace(/\/+$/, "") || "/";
+
+  /* BreadcrumbList schema (meta tags are handled by PageSEO) */
   useEffect(() => {
-    if (service) {
-      applyPageSEO({
-        title: service.metaTitle || `${service.title} | Lifeway`,
-        description: service.metaDescription || service.description,
-        path: service.slug.startsWith('/') ? service.slug : `/services/${service.slug}`,
-      });
+    if (!service || !canonicalPath) return;
+    const id = "service-breadcrumb-schema";
+    let el = document.getElementById(id) as HTMLScriptElement | null;
+    if (!el) {
+      el = document.createElement("script");
+      el.id = id;
+      el.type = "application/ld+json";
+      document.head.appendChild(el);
     }
-  }, [service]);
+    el.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+        { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}/services` },
+        { "@type": "ListItem", position: 3, name: service.h1 || service.title, item: `${SITE_URL}${canonicalPath}` },
+      ],
+    });
+    return () => document.getElementById(id)?.remove();
+  }, [service, canonicalPath]);
 
-  if (!service) return <Navigate to="/services" replace />;
+  if (!service || !canonicalPath) return <Navigate to="/services" replace />;
+
+  // Old /services/... URLs (or data keys) → canonical SEO URL
+  if (currentPath !== canonicalPath) return <Navigate to={canonicalPath} replace />;
 
   return (
     <>
       <Navbar />
-      <PageHeader title={service.title} description={service.description} />
+      {/* Visual page title only — the SEO H1 is rendered below */}
+      <PageHeader
+        title={service.title}
+        description={service.description}
+        titleAs={service.h1 ? "p" : "h1"}
+      />
       <main id="main-content" className="py-12 md:py-16 bg-gray-50" tabIndex={-1}>
         <div className="container-custom">
           <div className="mb-8">

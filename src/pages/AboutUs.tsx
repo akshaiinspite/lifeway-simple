@@ -1,6 +1,5 @@
 
-import React, { useEffect } from "react";
-import { applyPageSEO } from "@/hooks/usePageSEO";
+import React from "react";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import PageHeader from "@/components/Layout/PageHeader";
@@ -8,21 +7,16 @@ import WhatsAppButton from "@/components/Common/WhatsAppButton";
 import { Link } from "react-router-dom";
 import lifewayCentreImg from "@/assets/lifeway-centre.webp";
 
+/* Title, description, keywords & canonical for /best-rehabilitation-centre-malappuram
+   are set centrally in src/lib/seoMeta.ts via <PageSEO /> */
 const AboutUs = () => {
-  useEffect(() => {
-    applyPageSEO({
-      title: "Best Rehabilitation Centre Malappuram | Lifeway",
-      description: "Lifeway is a trusted rehabilitation centre in Malappuram offering physiotherapy, occupational therapy, speech therapy, special education and rehabilitation services.",
-      path: "/best-rehabilitation-centre-malappuram",
-    });
-  }, []);
-
   return (
     <>
       <Navbar />
       <PageHeader
         title="About Us"
         description="Learn more about Lifeway Rehabilitation and Child Development Centre"
+        titleAs="p"
       />
       <div className="container-custom py-16 md:py-24 space-y-20">
         

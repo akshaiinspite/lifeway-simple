@@ -116,27 +116,27 @@ const Footer = () => {
             <h4 className="text-xl font-bold mb-6">Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/services/occupational-therapy-in-perinthalmanna" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
+                <Link to="/occupational-therapy-in-perinthalmanna" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Occupational Therapy
                 </Link>
               </li>
               <li>
-                <Link to="/services/physiotherapy-centre-perinthalmanna" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
+                <Link to="/physiotherapy-centre-perinthalmanna" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Physiotherapy
                 </Link>
               </li>
               <li>
-                <Link to="/services/speech-therapy-perinthalmanna" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
+                <Link to="/speech-therapy-perinthalmanna" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Speech Therapy
                 </Link>
               </li>
               <li>
-                <Link to="/services/special-education-classroom" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
+                <Link to="/special-education-classroom" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Special Education
                 </Link>
               </li>
               <li>
-                <Link to="/services/clinical-psychology-centre-malappuram" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
+                <Link to="/clinical-psychology-centre-malappuram" className="text-lifeway-grey hover:text-lifeway-red transition-colors inline-block py-1.5 min-h-[44px]">
                   Clinical Psychology
                 </Link>
               </li>
