@@ -30,3 +30,27 @@
   Header set Cross-Origin-Opener-Policy "same-origin"
   Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>
+
+# ─── URL handling (Apache / LiteSpeed on Linux hosting) ───
+Options -MultiViews
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 301: old service URLs -> SEO slugs (keeps Google rankings & backlinks)
+  RewriteRule ^services/(physiotherapy-centre-perinthalmanna|physiotherapy)/?$ /physiotherapy-centre-perinthalmanna [R=301,L,NC]
+  RewriteRule ^services/(occupational-therapy-in-perinthalmanna|occupational-therapy)/?$ /occupational-therapy-in-perinthalmanna [R=301,L,NC]
+  RewriteRule ^services/(speech-therapy-perinthalmanna|speech-therapy)/?$ /speech-therapy-perinthalmanna [R=301,L,NC]
+  RewriteRule ^services/(special-education-classroom|special-education)/?$ /special-education-classroom [R=301,L,NC]
+  RewriteRule ^services/(clinical-psychology-centre-malappuram|clinical-psychology)/?$ /clinical-psychology-centre-malappuram [R=301,L,NC]
+  RewriteRule ^about-us/directors-message/?$ /best-rehabilitation-centre-malappuram/directors-message [R=301,L,NC]
+  RewriteRule ^about-us/?$ /best-rehabilitation-centre-malappuram [R=301,L,NC]
+
+  # SPA fallback: serve real files/folders directly, everything else -> index.html
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
